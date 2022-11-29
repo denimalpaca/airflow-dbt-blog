@@ -1,0 +1,12 @@
+my-postgres-db:
+  outputs:
+    dev:
+      type: postgres
+      threads: 1
+      host: "{{ env_var('DBT_HOST', 'postgres') }}"
+      port: "{{ env_var('DBT_PORT', 5432) | as_number }}"
+      user: "{{ env_var('DBT_USER', 'postgres') }}"
+      pass: "{{ env_var('DBT_ENV_SECRET_PASSWORD', 'postgres') }}"
+      dbname: postgres
+      schema: "{{ env_var('DBT_SCHEMA', 'public') }}"
+  target: dev
