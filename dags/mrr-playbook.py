@@ -26,6 +26,7 @@ with DAG(
     }
 ) as dag:
 
+    # We're using the dbt seed command here to populate the database for the purpose of this demo
     seed = BashOperator(
         task_id="dbt_seed",
         bash_command=f"dbt seed --profiles-dir {DBT_PROJECT_DIR} --project-dir {DBT_PROJECT_DIR}/mrr-playbook",
