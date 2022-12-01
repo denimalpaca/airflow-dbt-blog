@@ -12,11 +12,11 @@ class DbtDagParser:
     """
     A utility class that parses out a dbt project and creates the respective task groups
 
-    :param model_name: Limit dbt models to this if specified.
+    :param model_name: The model to parse
+    :param dbt_root_dir: The directory containing the models
+    :param dbt_profiles_dir: The directory containing the profiles.yml
     :param dag: The Airflow DAG
     :param dbt_global_cli_flags: Any global flags for the dbt CLI
-    :param dbt_project_dir: The directory containing the _acct__models.yml
-    :param dbt_profiles_dir: The directory containing the profiles.yml
     :param dbt_target: The dbt target profile (e.g. dev, prod)
     :param env_vars: Dict of environment variables to pass to the generated dbt tasks
     :param dbt_run_group_name: Optional override for the task group name.
@@ -25,21 +25,21 @@ class DbtDagParser:
 
     def __init__(
         self,
-        model_name,
+        model_name: str,
+        dbt_root_dir="/usr/local/airflow/include/dbt",
+        dbt_profiles_dir="/usr/local/airflow/include/dbt",
         dag=None,
         dbt_global_cli_flags=None,
-        dbt_project_dir="/usr/local/airflow/include/dbt",
-        dbt_profiles_dir="/usr/local/airflow/include/dbt",
         dbt_target="dev",
         env_vars: dict = None,
         dbt_run_group_name="dbt_run",
         dbt_test_group_name="dbt_test",
     ):
         self.model_name = model_name
+        self.dbt_root_dir = dbt_root_dir
+        self.dbt_profiles_dir = dbt_profiles_dir
         self.dag = dag
         self.dbt_global_cli_flags = dbt_global_cli_flags
-        self.dbt_project_dir = dbt_project_dir
-        self.dbt_profiles_dir = dbt_profiles_dir
         self.dbt_target = dbt_target
         self.env_vars = env_vars
 
@@ -71,10 +71,6 @@ class DbtDagParser:
             task_group = self.dbt_run_group
             outlets = None
 
-        # Get sub-model instead of core
-        if self.model_name:
-            node_name = node_name.replace("core", self.model_name)
-
         # Set default env vars and add to them
         if self.env_vars:
             for key, value in self.env_vars.items():
@@ -86,7 +82,7 @@ class DbtDagParser:
             bash_command=(
                 f"{dbt_cmd} {self.dbt_global_cli_flags} {dbt_verb} "
                 f"--target {self.dbt_target} --models {model_name} "
-                f"--profiles-dir {self.dbt_profiles_dir} --project-dir {self.dbt_project_dir}"
+                f"--profiles-dir {self.dbt_profiles_dir} --project-dir {self.dbt_root_dir}/{self.model_name}"
             ),
             env=dbt_env_vars,
             dag=self.dag,
@@ -104,32 +100,27 @@ class DbtDagParser:
         Returns: None
 
         """
-        manifest_json = load_dbt_manifest(self.dbt_project_dir)
+        project_dir = f"{self.dbt_root_dir}/{self.model_name}"
+        manifest_json = load_dbt_manifest(project_dir=project_dir)
         dbt_tasks = {}
 
         # Create the tasks for each model
         for node_name in manifest_json["nodes"].keys():
             if node_name.split(".")[0] == "model":
-                sub_dir = manifest_json["nodes"][node_name]["fqn"][1]
-                # Only use nodes with the right fqn, if fqn is specified
-                if (self.model_name and self.model_name == sub_dir) or not self.model_name:
-                    # Make the run nodes
-                    dbt_tasks[node_name] = self.make_dbt_task(node_name, "run")
+                # Make the run nodes
+                dbt_tasks[node_name] = self.make_dbt_task(node_name, "run")
 
-                    # Make the test nodes
-                    node_test = node_name.replace("model", "test")
-                    dbt_tasks[node_test] = self.make_dbt_task(node_name, "test")
+                # Make the test nodes
+                node_test = node_name.replace("model", "test")
+                dbt_tasks[node_test] = self.make_dbt_task(node_name, "test")
 
         # Add upstream and downstream dependencies for each run task
         for node_name in manifest_json["nodes"].keys():
             if node_name.split(".")[0] == "model":
-                sub_dir = manifest_json["nodes"][node_name]["fqn"][1]
-                # Only use nodes with the right fqn, if fqn is specified
-                if (self.model_name and self.model_name == sub_dir) or not self.model_name:
-                    for upstream_node in manifest_json["nodes"][node_name]["depends_on"]["nodes"]:
-                        upstream_node_type = upstream_node.split(".")[0]
-                        if upstream_node_type == "model":
-                            dbt_tasks[upstream_node] >> dbt_tasks[node_name]
+                for upstream_node in manifest_json["nodes"][node_name]["depends_on"]["nodes"]:
+                    upstream_node_type = upstream_node.split(".")[0]
+                    if upstream_node_type == "model":
+                        dbt_tasks[upstream_node] >> dbt_tasks[node_name]
 
     def get_dbt_run_group(self):
         """

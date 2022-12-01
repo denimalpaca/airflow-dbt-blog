@@ -2,3 +2,4 @@
 .env
 .DS_Store # macOS specific ignore
 astro
+target/
