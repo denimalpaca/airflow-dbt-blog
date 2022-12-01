@@ -28,8 +28,7 @@ with DAG(
 
     seed = BashOperator(
         task_id="dbt_seed",
-        bash_command=f"source /usr/local/airflow/dbt_venv/bin/activate && \
-                     dbt seed --profiles-dir {DBT_PROJECT_DIR} --project-dir {DBT_PROJECT_DIR}/jaffle_shop",
+        bash_command=f"dbt seed --profiles-dir {DBT_PROJECT_DIR} --project-dir {DBT_PROJECT_DIR}/jaffle_shop",
         env=dbt_env_vars
     )
 

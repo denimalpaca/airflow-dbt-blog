@@ -28,16 +28,14 @@ with DAG(
     jaffle_shop_ls = BashOperator(
         task_id="jaffle_shop_manifest",
         bash_command=(
-            f"source /usr/local/airflow/dbt_venv/bin/activate && \
-             dbt ls --profiles-dir {DBT_PROJECT_DIR} --project-dir {DBT_PROJECT_DIR}/jaffle_shop"
+            f"dbt ls --profiles-dir {DBT_PROJECT_DIR} --project-dir {DBT_PROJECT_DIR}/jaffle_shop"
         ),
     )
 
     mrr_playbook_ls = BashOperator(
         task_id="mrr_playbook_manifest",
         bash_command=(
-            f"source /usr/local/airflow/dbt_venv/bin/activate && \
-             dbt deps --profiles-dir {DBT_PROJECT_DIR} --project-dir {DBT_PROJECT_DIR}/mrr-playbook && \
+            f"dbt deps --profiles-dir {DBT_PROJECT_DIR} --project-dir {DBT_PROJECT_DIR}/mrr-playbook && \
              dbt ls --profiles-dir {DBT_PROJECT_DIR} --project-dir {DBT_PROJECT_DIR}/mrr-playbook"
         )
     )

@@ -19,4 +19,7 @@ RUN python -m virtualenv dbt_venv && source dbt_venv/bin/activate && \
 
 RUN chmod -R 777 ${BASE_DIR}
 
+RUN printf '#!/bin/bash \n source /usr/local/airflow/dbt_venv/bin/activate && dbt $@' > /usr/bin/dbt
+RUN chmod +x /usr/bin/dbt
+
 USER astro

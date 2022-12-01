@@ -70,8 +70,7 @@ class DbtDagParser:
         dbt_task = BashOperator(
             task_id=node_name,
             bash_command=(
-                f"source /usr/local/airflow/dbt_venv/bin/activate && \
-                  dbt {self.dbt_global_cli_flags} {dbt_verb} --target {self.dbt_target} --models {model_name} \
+                f"dbt {self.dbt_global_cli_flags} {dbt_verb} --target {self.dbt_target} --models {model_name} \
                   --profiles-dir {self.dbt_profiles_dir} --project-dir {self.dbt_root_dir}/{self.model_name}"
             ),
             env=dbt_env_vars,
