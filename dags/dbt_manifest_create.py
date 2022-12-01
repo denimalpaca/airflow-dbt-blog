@@ -10,7 +10,6 @@ from datetime import datetime
 
 from airflow import DAG
 from airflow.operators.bash import BashOperator
-from include.utils.dbt_env import dbt_env_vars, dbt_cmd
 
 DBT_PROJECT_DIR = "/usr/local/airflow/include/dbt"
 
@@ -21,7 +20,9 @@ with DAG(
     catchup=False,
     max_active_runs=1,
     doc_md=__doc__,
-    tags=["dbt"],
+    default_args={
+        "owner": "00-PREP"
+    }
 ) as dag:
 
     jaffle_shop_ls = BashOperator(

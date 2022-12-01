@@ -5,8 +5,7 @@ import os
 from airflow.datasets import Dataset
 from airflow.operators.bash import BashOperator
 from airflow.utils.task_group import TaskGroup
-from include.utils.dbt_env import dbt_env_vars, dbt_cmd
-
+from include.utils.dbt_env import dbt_env_vars
 
 class DbtDagParser:
     """
@@ -80,9 +79,9 @@ class DbtDagParser:
             task_id=node_name,
             task_group=task_group,
             bash_command=(
-                f"{dbt_cmd} {self.dbt_global_cli_flags} {dbt_verb} "
-                f"--target {self.dbt_target} --models {model_name} "
-                f"--profiles-dir {self.dbt_profiles_dir} --project-dir {self.dbt_root_dir}/{self.model_name}"
+                f"source /usr/local/airflow/dbt_venv/bin/activate && \
+                  dbt {self.dbt_global_cli_flags} {dbt_verb} --target {self.dbt_target} --models {model_name} \
+                  --profiles-dir {self.dbt_profiles_dir} --project-dir {self.dbt_root_dir}/{self.model_name}"
             ),
             env=dbt_env_vars,
             dag=self.dag,

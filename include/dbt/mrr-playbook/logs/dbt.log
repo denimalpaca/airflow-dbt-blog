@@ -5578,3 +5578,2754 @@ having count(*) > 1
 [0m02:58:59.684921 [info ] [MainThread]: Done. PASS=15 WARN=0 ERROR=0 SKIP=0 TOTAL=15
 [0m02:58:59.686382 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f68a87cebe0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f68a87ceb50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f68a87ce4c0>]}
 [0m02:58:59.687948 [debug] [MainThread]: Flushing usage events
+
+
+============================== 2022-12-01 03:09:34.141526 | 6fbc2bcd-f9dd-469a-865a-f0cb013b2729 ==============================
+[0m03:09:34.141561 [info ] [MainThread]: Running with dbt=1.3.1
+[0m03:09:34.143299 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/usr/local/airflow/include/dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'project_dir': '/usr/local/airflow/include/dbt/mrr-playbook', 'show': False, 'which': 'seed', 'rpc_method': 'seed', 'indirect_selection': 'eager'}
+[0m03:09:34.145302 [debug] [MainThread]: Tracking: tracking
+[0m03:09:34.152972 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3558c0ebb0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3558c0eb20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3558c0eb80>]}
+[0m03:09:34.231532 [info ] [MainThread]: Unable to do partial parsing because config vars, config profile, or config target have changed
+[0m03:09:34.234256 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '6fbc2bcd-f9dd-469a-865a-f0cb013b2729', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3558bd0fd0>]}
+[0m03:09:34.349252 [debug] [MainThread]: Parsing macros/grant_select_on_schema.sql
+[0m03:09:34.352463 [debug] [MainThread]: Parsing macros/adapters.sql
+[0m03:09:34.393996 [debug] [MainThread]: Parsing macros/catalog.sql
+[0m03:09:34.398953 [debug] [MainThread]: Parsing macros/relations.sql
+[0m03:09:34.402433 [debug] [MainThread]: Parsing macros/timestamps.sql
+[0m03:09:34.406227 [debug] [MainThread]: Parsing macros/utils/listagg.sql
+[0m03:09:34.409862 [debug] [MainThread]: Parsing macros/utils/any_value.sql
+[0m03:09:34.411531 [debug] [MainThread]: Parsing macros/utils/last_day.sql
+[0m03:09:34.414113 [debug] [MainThread]: Parsing macros/utils/dateadd.sql
+[0m03:09:34.416072 [debug] [MainThread]: Parsing macros/utils/split_part.sql
+[0m03:09:34.418332 [debug] [MainThread]: Parsing macros/utils/datediff.sql
+[0m03:09:34.429669 [debug] [MainThread]: Parsing macros/materializations/incremental_strategies.sql
+[0m03:09:34.432609 [debug] [MainThread]: Parsing macros/materializations/snapshot_merge.sql
+[0m03:09:34.435655 [debug] [MainThread]: Parsing macros/get_custom_name/get_custom_schema.sql
+[0m03:09:34.439628 [debug] [MainThread]: Parsing macros/get_custom_name/get_custom_database.sql
+[0m03:09:34.442843 [debug] [MainThread]: Parsing macros/get_custom_name/get_custom_alias.sql
+[0m03:09:34.445691 [debug] [MainThread]: Parsing macros/generic_test_sql/relationships.sql
+[0m03:09:34.447703 [debug] [MainThread]: Parsing macros/generic_test_sql/accepted_values.sql
+[0m03:09:34.450316 [debug] [MainThread]: Parsing macros/generic_test_sql/not_null.sql
+[0m03:09:34.452193 [debug] [MainThread]: Parsing macros/generic_test_sql/unique.sql
+[0m03:09:34.453973 [debug] [MainThread]: Parsing macros/python_model/python.sql
+[0m03:09:34.463767 [debug] [MainThread]: Parsing macros/etc/statement.sql
+[0m03:09:34.477216 [debug] [MainThread]: Parsing macros/etc/datetime.sql
+[0m03:09:34.491806 [debug] [MainThread]: Parsing macros/utils/escape_single_quotes.sql
+[0m03:09:34.494933 [debug] [MainThread]: Parsing macros/utils/right.sql
+[0m03:09:34.498611 [debug] [MainThread]: Parsing macros/utils/listagg.sql
+[0m03:09:34.502710 [debug] [MainThread]: Parsing macros/utils/position.sql
+[0m03:09:34.504953 [debug] [MainThread]: Parsing macros/utils/concat.sql
+[0m03:09:34.507039 [debug] [MainThread]: Parsing macros/utils/any_value.sql
+[0m03:09:34.509676 [debug] [MainThread]: Parsing macros/utils/last_day.sql
+[0m03:09:34.512961 [debug] [MainThread]: Parsing macros/utils/dateadd.sql
+[0m03:09:34.515490 [debug] [MainThread]: Parsing macros/utils/split_part.sql
+[0m03:09:34.519187 [debug] [MainThread]: Parsing macros/utils/data_types.sql
+[0m03:09:34.529763 [debug] [MainThread]: Parsing macros/utils/replace.sql
+[0m03:09:34.532889 [debug] [MainThread]: Parsing macros/utils/cast_bool_to_text.sql
+[0m03:09:34.535318 [debug] [MainThread]: Parsing macros/utils/length.sql
+[0m03:09:34.537656 [debug] [MainThread]: Parsing macros/utils/except.sql
+[0m03:09:34.539656 [debug] [MainThread]: Parsing macros/utils/safe_cast.sql
+[0m03:09:34.541897 [debug] [MainThread]: Parsing macros/utils/intersect.sql
+[0m03:09:34.543843 [debug] [MainThread]: Parsing macros/utils/datediff.sql
+[0m03:09:34.546488 [debug] [MainThread]: Parsing macros/utils/hash.sql
+[0m03:09:34.548858 [debug] [MainThread]: Parsing macros/utils/array_construct.sql
+[0m03:09:34.551749 [debug] [MainThread]: Parsing macros/utils/bool_or.sql
+[0m03:09:34.553742 [debug] [MainThread]: Parsing macros/utils/array_concat.sql
+[0m03:09:34.556035 [debug] [MainThread]: Parsing macros/utils/date_trunc.sql
+[0m03:09:34.558421 [debug] [MainThread]: Parsing macros/utils/literal.sql
+[0m03:09:34.560559 [debug] [MainThread]: Parsing macros/utils/array_append.sql
+[0m03:09:34.562939 [debug] [MainThread]: Parsing macros/adapters/columns.sql
+[0m03:09:34.578435 [debug] [MainThread]: Parsing macros/adapters/relation.sql
+[0m03:09:34.602525 [debug] [MainThread]: Parsing macros/adapters/freshness.sql
+[0m03:09:34.607539 [debug] [MainThread]: Parsing macros/adapters/indexes.sql
+[0m03:09:34.613054 [debug] [MainThread]: Parsing macros/adapters/apply_grants.sql
+[0m03:09:34.638645 [debug] [MainThread]: Parsing macros/adapters/schema.sql
+[0m03:09:34.642892 [debug] [MainThread]: Parsing macros/adapters/metadata.sql
+[0m03:09:34.655056 [debug] [MainThread]: Parsing macros/adapters/persist_docs.sql
+[0m03:09:34.663120 [debug] [MainThread]: Parsing macros/adapters/timestamps.sql
+[0m03:09:34.669003 [debug] [MainThread]: Parsing macros/materializations/configs.sql
+[0m03:09:34.674058 [debug] [MainThread]: Parsing macros/materializations/hooks.sql
+[0m03:09:34.680699 [debug] [MainThread]: Parsing macros/materializations/models/table/create_table_as.sql
+[0m03:09:34.687509 [debug] [MainThread]: Parsing macros/materializations/models/table/table.sql
+[0m03:09:34.697261 [debug] [MainThread]: Parsing macros/materializations/models/incremental/column_helpers.sql
+[0m03:09:34.710472 [debug] [MainThread]: Parsing macros/materializations/models/incremental/strategies.sql
+[0m03:09:34.721579 [debug] [MainThread]: Parsing macros/materializations/models/incremental/on_schema_change.sql
+[0m03:09:34.752061 [debug] [MainThread]: Parsing macros/materializations/models/incremental/is_incremental.sql
+[0m03:09:34.755912 [debug] [MainThread]: Parsing macros/materializations/models/incremental/merge.sql
+[0m03:09:34.784416 [debug] [MainThread]: Parsing macros/materializations/models/incremental/incremental.sql
+[0m03:09:34.801750 [debug] [MainThread]: Parsing macros/materializations/models/view/helpers.sql
+[0m03:09:34.806082 [debug] [MainThread]: Parsing macros/materializations/models/view/create_view_as.sql
+[0m03:09:34.810863 [debug] [MainThread]: Parsing macros/materializations/models/view/create_or_replace_view.sql
+[0m03:09:34.817017 [debug] [MainThread]: Parsing macros/materializations/models/view/view.sql
+[0m03:09:34.828520 [debug] [MainThread]: Parsing macros/materializations/snapshots/helpers.sql
+[0m03:09:34.854237 [debug] [MainThread]: Parsing macros/materializations/snapshots/strategies.sql
+[0m03:09:34.880360 [debug] [MainThread]: Parsing macros/materializations/snapshots/snapshot.sql
+[0m03:09:34.899790 [debug] [MainThread]: Parsing macros/materializations/snapshots/snapshot_merge.sql
+[0m03:09:34.903996 [debug] [MainThread]: Parsing macros/materializations/tests/helpers.sql
+[0m03:09:34.908066 [debug] [MainThread]: Parsing macros/materializations/tests/where_subquery.sql
+[0m03:09:34.911580 [debug] [MainThread]: Parsing macros/materializations/tests/test.sql
+[0m03:09:34.918898 [debug] [MainThread]: Parsing macros/materializations/seeds/helpers.sql
+[0m03:09:34.949403 [debug] [MainThread]: Parsing macros/materializations/seeds/seed.sql
+[0m03:09:34.962050 [debug] [MainThread]: Parsing tests/generic/builtin.sql
+[0m03:09:34.967572 [debug] [MainThread]: Parsing macros/cross_db_utils/_is_ephemeral.sql
+[0m03:09:34.971941 [debug] [MainThread]: Parsing macros/cross_db_utils/_is_relation.sql
+[0m03:09:34.974626 [debug] [MainThread]: Parsing macros/cross_db_utils/cast_bool_to_text.sql
+[0m03:09:34.978246 [debug] [MainThread]: Parsing macros/cross_db_utils/concat.sql
+[0m03:09:34.981883 [debug] [MainThread]: Parsing macros/cross_db_utils/current_timestamp.sql
+[0m03:09:34.988373 [debug] [MainThread]: Parsing macros/cross_db_utils/datatypes.sql
+[0m03:09:34.996816 [debug] [MainThread]: Parsing macros/cross_db_utils/date_trunc.sql
+[0m03:09:35.000236 [debug] [MainThread]: Parsing macros/cross_db_utils/dateadd.sql
+[0m03:09:35.004901 [debug] [MainThread]: Parsing macros/cross_db_utils/datediff.sql
+[0m03:09:35.022374 [debug] [MainThread]: Parsing macros/cross_db_utils/except.sql
+[0m03:09:35.026133 [debug] [MainThread]: Parsing macros/cross_db_utils/hash.sql
+[0m03:09:35.029079 [debug] [MainThread]: Parsing macros/cross_db_utils/identifier.sql
+[0m03:09:35.032245 [debug] [MainThread]: Parsing macros/cross_db_utils/intersect.sql
+[0m03:09:35.034572 [debug] [MainThread]: Parsing macros/cross_db_utils/last_day.sql
+[0m03:09:35.039886 [debug] [MainThread]: Parsing macros/cross_db_utils/length.sql
+[0m03:09:35.043152 [debug] [MainThread]: Parsing macros/cross_db_utils/literal.sql
+[0m03:09:35.045411 [debug] [MainThread]: Parsing macros/cross_db_utils/position.sql
+[0m03:09:35.048300 [debug] [MainThread]: Parsing macros/cross_db_utils/replace.sql
+[0m03:09:35.051934 [debug] [MainThread]: Parsing macros/cross_db_utils/right.sql
+[0m03:09:35.061477 [debug] [MainThread]: Parsing macros/cross_db_utils/safe_cast.sql
+[0m03:09:35.064980 [debug] [MainThread]: Parsing macros/cross_db_utils/split_part.sql
+[0m03:09:35.068706 [debug] [MainThread]: Parsing macros/cross_db_utils/width_bucket.sql
+[0m03:09:35.078399 [debug] [MainThread]: Parsing macros/jinja_helpers/log_info.sql
+[0m03:09:35.081091 [debug] [MainThread]: Parsing macros/jinja_helpers/pretty_log_format.sql
+[0m03:09:35.083887 [debug] [MainThread]: Parsing macros/jinja_helpers/pretty_time.sql
+[0m03:09:35.086363 [debug] [MainThread]: Parsing macros/jinja_helpers/slugify.sql
+[0m03:09:35.088877 [debug] [MainThread]: Parsing macros/materializations/insert_by_period_materialization.sql
+[0m03:09:35.128499 [debug] [MainThread]: Parsing macros/schema_tests/accepted_range.sql
+[0m03:09:35.136566 [debug] [MainThread]: Parsing macros/schema_tests/at_least_one.sql
+[0m03:09:35.140073 [debug] [MainThread]: Parsing macros/schema_tests/cardinality_equality.sql
+[0m03:09:35.144899 [debug] [MainThread]: Parsing macros/schema_tests/equal_rowcount.sql
+[0m03:09:35.148037 [debug] [MainThread]: Parsing macros/schema_tests/equality.sql
+[0m03:09:35.154484 [debug] [MainThread]: Parsing macros/schema_tests/expression_is_true.sql
+[0m03:09:35.158672 [debug] [MainThread]: Parsing macros/schema_tests/fewer_rows_than.sql
+[0m03:09:35.163645 [debug] [MainThread]: Parsing macros/schema_tests/mutually_exclusive_ranges.sql
+[0m03:09:35.182055 [debug] [MainThread]: Parsing macros/schema_tests/not_accepted_values.sql
+[0m03:09:35.186897 [debug] [MainThread]: Parsing macros/schema_tests/not_constant.sql
+[0m03:09:35.189599 [debug] [MainThread]: Parsing macros/schema_tests/not_null_proportion.sql
+[0m03:09:35.193641 [debug] [MainThread]: Parsing macros/schema_tests/recency.sql
+[0m03:09:35.196957 [debug] [MainThread]: Parsing macros/schema_tests/relationships_where.sql
+[0m03:09:35.200896 [debug] [MainThread]: Parsing macros/schema_tests/sequential_values.sql
+[0m03:09:35.205302 [debug] [MainThread]: Parsing macros/schema_tests/test_not_null_where.sql
+[0m03:09:35.208585 [debug] [MainThread]: Parsing macros/schema_tests/test_unique_where.sql
+[0m03:09:35.211655 [debug] [MainThread]: Parsing macros/schema_tests/unique_combination_of_columns.sql
+[0m03:09:35.216982 [debug] [MainThread]: Parsing macros/sql/date_spine.sql
+[0m03:09:35.225118 [debug] [MainThread]: Parsing macros/sql/generate_series.sql
+[0m03:09:35.232871 [debug] [MainThread]: Parsing macros/sql/get_column_values.sql
+[0m03:09:35.241274 [debug] [MainThread]: Parsing macros/sql/get_query_results_as_dict.sql
+[0m03:09:35.245789 [debug] [MainThread]: Parsing macros/sql/get_relations_by_pattern.sql
+[0m03:09:35.251653 [debug] [MainThread]: Parsing macros/sql/get_relations_by_prefix.sql
+[0m03:09:35.258000 [debug] [MainThread]: Parsing macros/sql/get_tables_by_pattern_sql.sql
+[0m03:09:35.269131 [debug] [MainThread]: Parsing macros/sql/get_tables_by_prefix_sql.sql
+[0m03:09:35.278401 [debug] [MainThread]: Parsing macros/sql/groupby.sql
+[0m03:09:35.282396 [debug] [MainThread]: Parsing macros/sql/haversine_distance.sql
+[0m03:09:35.292196 [debug] [MainThread]: Parsing macros/sql/nullcheck.sql
+[0m03:09:35.296353 [debug] [MainThread]: Parsing macros/sql/nullcheck_table.sql
+[0m03:09:35.299774 [debug] [MainThread]: Parsing macros/sql/pivot.sql
+[0m03:09:35.306523 [debug] [MainThread]: Parsing macros/sql/safe_add.sql
+[0m03:09:35.310376 [debug] [MainThread]: Parsing macros/sql/star.sql
+[0m03:09:35.317630 [debug] [MainThread]: Parsing macros/sql/surrogate_key.sql
+[0m03:09:35.324481 [debug] [MainThread]: Parsing macros/sql/union.sql
+[0m03:09:35.345058 [debug] [MainThread]: Parsing macros/sql/unpivot.sql
+[0m03:09:35.363639 [debug] [MainThread]: Parsing macros/web/get_url_host.sql
+[0m03:09:35.367967 [debug] [MainThread]: Parsing macros/web/get_url_parameter.sql
+[0m03:09:35.371933 [debug] [MainThread]: Parsing macros/web/get_url_path.sql
+[0m03:09:35.881129 [debug] [MainThread]: 1699: static parser successfully parsed customer_churn_month.sql
+[0m03:09:35.897748 [debug] [MainThread]: 1699: static parser successfully parsed customer_revenue_by_month.sql
+[0m03:09:35.902630 [debug] [MainThread]: 1603: static parser failed on mrr.sql
+[0m03:09:35.916902 [warn ] [MainThread]: 
+Warning: the `surrogate_key` macro now takes a single list argument instead of multiple string arguments. Support for multiple string arguments will be deprecated in a future release of dbt-utils. The acme.mrr model triggered this warning. 
+[0m03:09:35.930093 [debug] [MainThread]: 1602: parser fallback to jinja rendering on mrr.sql
+[0m03:09:35.932873 [debug] [MainThread]: 1603: static parser failed on utils/util_months.sql
+[0m03:09:35.970292 [debug] [MainThread]: 1602: parser fallback to jinja rendering on utils/util_months.sql
+[0m03:09:36.180822 [warn ] [MainThread]: [[33mWARNING[0m]: 'subscription_periods' is a seed node, but it is specified in the models section
+of models/schema.yml. To fix this error, place the `subscription_periods`
+specification under the seeds key instead.
+[0m03:09:36.303321 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '6fbc2bcd-f9dd-469a-865a-f0cb013b2729', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f355812d0d0>]}
+[0m03:09:36.343872 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '6fbc2bcd-f9dd-469a-865a-f0cb013b2729', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f355a43a130>]}
+[0m03:09:36.347238 [info ] [MainThread]: Found 4 models, 21 tests, 0 snapshots, 0 analyses, 477 macros, 0 operations, 1 seed file, 0 sources, 0 exposures, 0 metrics
+[0m03:09:36.348856 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '6fbc2bcd-f9dd-469a-865a-f0cb013b2729', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3558c17bb0>]}
+[0m03:09:36.352142 [info ] [MainThread]: 
+[0m03:09:36.353943 [debug] [MainThread]: Acquiring new ***** connection "master"
+[0m03:09:36.356628 [debug] [ThreadPool]: Acquiring new ***** connection "list_*****"
+[0m03:09:36.367961 [debug] [ThreadPool]: Using ***** connection "list_*****"
+[0m03:09:36.369778 [debug] [ThreadPool]: On list_*****: /* {"app": "dbt", "dbt_version": "1.3.1", "profile_name": "my-*****-db", "target_name": "dev", "connection_name": "list_*****"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m03:09:36.371415 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m03:09:36.382808 [debug] [ThreadPool]: SQL status: SELECT 6 in 0.01 seconds
+[0m03:09:36.386129 [debug] [ThreadPool]: On list_*****: Close
+[0m03:09:36.391202 [debug] [ThreadPool]: Acquiring new ***** connection "list_*****_public"
+[0m03:09:36.402485 [debug] [ThreadPool]: Using ***** connection "list_*****_public"
+[0m03:09:36.404083 [debug] [ThreadPool]: On list_*****_public: BEGIN
+[0m03:09:36.405573 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m03:09:36.412210 [debug] [ThreadPool]: SQL status: BEGIN in 0.01 seconds
+[0m03:09:36.414062 [debug] [ThreadPool]: Using ***** connection "list_*****_public"
+[0m03:09:36.415652 [debug] [ThreadPool]: On list_*****_public: /* {"app": "dbt", "dbt_version": "1.3.1", "profile_name": "my-*****-db", "target_name": "dev", "connection_name": "list_*****_public"} */
+select
+      '*****' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public'
+    union all
+    select
+      '*****' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public'
+  
+[0m03:09:36.419893 [debug] [ThreadPool]: SQL status: SELECT 55 in 0.0 seconds
+[0m03:09:36.424089 [debug] [ThreadPool]: On list_*****_public: ROLLBACK
+[0m03:09:36.425984 [debug] [ThreadPool]: On list_*****_public: Close
+[0m03:09:36.436359 [debug] [MainThread]: Using ***** connection "master"
+[0m03:09:36.438197 [debug] [MainThread]: On master: BEGIN
+[0m03:09:36.439711 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m03:09:36.445705 [debug] [MainThread]: SQL status: BEGIN in 0.01 seconds
+[0m03:09:36.447620 [debug] [MainThread]: Using ***** connection "master"
+[0m03:09:36.448963 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.3.1", "profile_name": "my-*****-db", "target_name": "dev", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select distinct
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+[0m03:09:36.463315 [debug] [MainThread]: SQL status: SELECT 8 in 0.01 seconds
+[0m03:09:36.466714 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '6fbc2bcd-f9dd-469a-865a-f0cb013b2729', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3558144b20>]}
+[0m03:09:36.468415 [debug] [MainThread]: On master: ROLLBACK
+[0m03:09:36.469978 [debug] [MainThread]: Using ***** connection "master"
+[0m03:09:36.471383 [debug] [MainThread]: On master: BEGIN
+[0m03:09:36.474313 [debug] [MainThread]: SQL status: BEGIN in 0.0 seconds
+[0m03:09:36.476776 [debug] [MainThread]: On master: COMMIT
+[0m03:09:36.478632 [debug] [MainThread]: Using ***** connection "master"
+[0m03:09:36.480496 [debug] [MainThread]: On master: COMMIT
+[0m03:09:36.482119 [debug] [MainThread]: SQL status: COMMIT in 0.0 seconds
+[0m03:09:36.483462 [debug] [MainThread]: On master: Close
+[0m03:09:36.485485 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m03:09:36.487634 [info ] [MainThread]: 
+[0m03:09:36.508255 [debug] [Thread-1  ]: Began running node seed.acme.subscription_periods
+[0m03:09:36.510039 [info ] [Thread-1  ]: 1 of 1 START seed file public.subscription_periods ............................. [RUN]
+[0m03:09:36.512203 [debug] [Thread-1  ]: Acquiring new ***** connection "seed.acme.subscription_periods"
+[0m03:09:36.513781 [debug] [Thread-1  ]: Began compiling node seed.acme.subscription_periods
+[0m03:09:36.515556 [debug] [Thread-1  ]: finished collecting timing info
+[0m03:09:36.517040 [debug] [Thread-1  ]: Began executing node seed.acme.subscription_periods
+[0m03:09:36.579010 [debug] [Thread-1  ]: Using ***** connection "seed.acme.subscription_periods"
+[0m03:09:36.580699 [debug] [Thread-1  ]: On seed.acme.subscription_periods: BEGIN
+[0m03:09:36.582051 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m03:09:36.587093 [debug] [Thread-1  ]: SQL status: BEGIN in 0.01 seconds
+[0m03:09:36.588560 [debug] [Thread-1  ]: Using ***** connection "seed.acme.subscription_periods"
+[0m03:09:36.589561 [debug] [Thread-1  ]: On seed.acme.subscription_periods: /* {"app": "dbt", "dbt_version": "1.3.1", "profile_name": "my-*****-db", "target_name": "dev", "node_id": "seed.acme.subscription_periods"} */
+truncate table "*****"."public"."subscription_periods"
+[0m03:09:36.592138 [debug] [Thread-1  ]: SQL status: TRUNCATE TABLE in 0.0 seconds
+[0m03:09:36.757560 [debug] [Thread-1  ]: Using ***** connection "seed.acme.subscription_periods"
+[0m03:09:36.760091 [debug] [Thread-1  ]: On seed.acme.subscription_periods: 
+          insert into "*****"."public"."subscription_periods" (subscription_id, customer_id, start_date, end_date, monthly_amount) values
+          (%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s),(%s...
+[0m03:09:36.765301 [debug] [Thread-1  ]: SQL status: INSERT 0 121 in 0.0 seconds
+[0m03:09:36.773914 [debug] [Thread-1  ]: Writing runtime SQL for node "seed.acme.subscription_periods"
+[0m03:09:36.816290 [debug] [Thread-1  ]: On seed.acme.subscription_periods: COMMIT
+[0m03:09:36.817679 [debug] [Thread-1  ]: Using ***** connection "seed.acme.subscription_periods"
+[0m03:09:36.818805 [debug] [Thread-1  ]: On seed.acme.subscription_periods: COMMIT
+[0m03:09:36.822121 [debug] [Thread-1  ]: SQL status: COMMIT in 0.0 seconds
+[0m03:09:36.823844 [debug] [Thread-1  ]: finished collecting timing info
+[0m03:09:36.825102 [debug] [Thread-1  ]: On seed.acme.subscription_periods: Close
+[0m03:09:36.826762 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '6fbc2bcd-f9dd-469a-865a-f0cb013b2729', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f354bd6a130>]}
+[0m03:09:36.828007 [info ] [Thread-1  ]: 1 of 1 OK loaded seed file public.subscription_periods ......................... [[32mINSERT 121[0m in 0.31s]
+[0m03:09:36.829398 [debug] [Thread-1  ]: Finished running node seed.acme.subscription_periods
+[0m03:09:36.832395 [debug] [MainThread]: Acquiring new ***** connection "master"
+[0m03:09:36.833690 [debug] [MainThread]: Using ***** connection "master"
+[0m03:09:36.834785 [debug] [MainThread]: On master: BEGIN
+[0m03:09:36.835971 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m03:09:36.841193 [debug] [MainThread]: SQL status: BEGIN in 0.01 seconds
+[0m03:09:36.842882 [debug] [MainThread]: On master: COMMIT
+[0m03:09:36.844070 [debug] [MainThread]: Using ***** connection "master"
+[0m03:09:36.845279 [debug] [MainThread]: On master: COMMIT
+[0m03:09:36.846592 [debug] [MainThread]: SQL status: COMMIT in 0.0 seconds
+[0m03:09:36.847732 [debug] [MainThread]: On master: Close
+[0m03:09:36.849629 [info ] [MainThread]: 
+[0m03:09:36.850967 [info ] [MainThread]: Finished running 1 seed in 0 hours 0 minutes and 0.50 seconds (0.50s).
+[0m03:09:36.852214 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m03:09:36.853506 [debug] [MainThread]: Connection 'seed.acme.subscription_periods' was properly closed.
+[0m03:09:36.894106 [info ] [MainThread]: 
+[0m03:09:36.896111 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m03:09:36.897475 [info ] [MainThread]: 
+[0m03:09:36.898779 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+[0m03:09:36.900314 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3558a7ee80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f355812d310>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f354bd6afa0>]}
+[0m03:09:36.902125 [debug] [MainThread]: Flushing usage events
+
+
+============================== 2022-12-01 03:09:41.896570 | 9cfc3218-4a1e-4a7a-8387-0845b30a971a ==============================
+[0m03:09:41.896603 [info ] [MainThread]: Running with dbt=1.3.1
+[0m03:09:41.897816 [debug] [MainThread]: running dbt with arguments {'write_json': False, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/usr/local/airflow/include/dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'project_dir': '/usr/local/airflow/include/dbt/mrr-playbook', 'target': 'dev', 'select': ['util_months'], 'which': 'run', 'rpc_method': 'run', 'indirect_selection': 'eager'}
+[0m03:09:41.899241 [debug] [MainThread]: Tracking: tracking
+[0m03:09:41.906732 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f69f30fc610>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f69f30fcac0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f69f30fcb20>]}
+[0m03:09:42.000088 [info ] [MainThread]: Unable to do partial parsing because config vars, config profile, or config target have changed
+[0m03:09:42.002624 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '9cfc3218-4a1e-4a7a-8387-0845b30a971a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f69f48c17c0>]}
+[0m03:09:42.183160 [debug] [MainThread]: Parsing macros/grant_select_on_schema.sql
+[0m03:09:42.187171 [debug] [MainThread]: Parsing macros/adapters.sql
+[0m03:09:42.245970 [debug] [MainThread]: Parsing macros/catalog.sql
+[0m03:09:42.252621 [debug] [MainThread]: Parsing macros/relations.sql
+[0m03:09:42.257202 [debug] [MainThread]: Parsing macros/timestamps.sql
+[0m03:09:42.261947 [debug] [MainThread]: Parsing macros/utils/listagg.sql
+[0m03:09:42.266053 [debug] [MainThread]: Parsing macros/utils/any_value.sql
+[0m03:09:42.268289 [debug] [MainThread]: Parsing macros/utils/last_day.sql
+[0m03:09:42.273245 [debug] [MainThread]: Parsing macros/utils/dateadd.sql
+[0m03:09:42.275874 [debug] [MainThread]: Parsing macros/utils/split_part.sql
+[0m03:09:42.278832 [debug] [MainThread]: Parsing macros/utils/datediff.sql
+[0m03:09:42.293738 [debug] [MainThread]: Parsing macros/materializations/incremental_strategies.sql
+[0m03:09:42.297496 [debug] [MainThread]: Parsing macros/materializations/snapshot_merge.sql
+[0m03:09:42.301604 [debug] [MainThread]: Parsing macros/get_custom_name/get_custom_schema.sql
+[0m03:09:42.307925 [debug] [MainThread]: Parsing macros/get_custom_name/get_custom_database.sql
+[0m03:09:42.312339 [debug] [MainThread]: Parsing macros/get_custom_name/get_custom_alias.sql
+[0m03:09:42.316368 [debug] [MainThread]: Parsing macros/generic_test_sql/relationships.sql
+[0m03:09:42.320297 [debug] [MainThread]: Parsing macros/generic_test_sql/accepted_values.sql
+[0m03:09:42.323837 [debug] [MainThread]: Parsing macros/generic_test_sql/not_null.sql
+[0m03:09:42.327152 [debug] [MainThread]: Parsing macros/generic_test_sql/unique.sql
+[0m03:09:42.331214 [debug] [MainThread]: Parsing macros/python_model/python.sql
+[0m03:09:42.343674 [debug] [MainThread]: Parsing macros/etc/statement.sql
+[0m03:09:42.358276 [debug] [MainThread]: Parsing macros/etc/datetime.sql
+[0m03:09:42.375313 [debug] [MainThread]: Parsing macros/utils/escape_single_quotes.sql
+[0m03:09:42.378598 [debug] [MainThread]: Parsing macros/utils/right.sql
+[0m03:09:42.381854 [debug] [MainThread]: Parsing macros/utils/listagg.sql
+[0m03:09:42.387042 [debug] [MainThread]: Parsing macros/utils/position.sql
+[0m03:09:42.390059 [debug] [MainThread]: Parsing macros/utils/concat.sql
+[0m03:09:42.392614 [debug] [MainThread]: Parsing macros/utils/any_value.sql
+[0m03:09:42.395266 [debug] [MainThread]: Parsing macros/utils/last_day.sql
+[0m03:09:42.400310 [debug] [MainThread]: Parsing macros/utils/dateadd.sql
+[0m03:09:42.403595 [debug] [MainThread]: Parsing macros/utils/split_part.sql
+[0m03:09:42.408001 [debug] [MainThread]: Parsing macros/utils/data_types.sql
+[0m03:09:42.420824 [debug] [MainThread]: Parsing macros/utils/replace.sql
+[0m03:09:42.424192 [debug] [MainThread]: Parsing macros/utils/cast_bool_to_text.sql
+[0m03:09:42.426862 [debug] [MainThread]: Parsing macros/utils/length.sql
+[0m03:09:42.429706 [debug] [MainThread]: Parsing macros/utils/except.sql
+[0m03:09:42.432003 [debug] [MainThread]: Parsing macros/utils/safe_cast.sql
+[0m03:09:42.437577 [debug] [MainThread]: Parsing macros/utils/intersect.sql
+[0m03:09:42.444525 [debug] [MainThread]: Parsing macros/utils/datediff.sql
+[0m03:09:42.450615 [debug] [MainThread]: Parsing macros/utils/hash.sql
+[0m03:09:42.454263 [debug] [MainThread]: Parsing macros/utils/array_construct.sql
+[0m03:09:42.458578 [debug] [MainThread]: Parsing macros/utils/bool_or.sql
+[0m03:09:42.462367 [debug] [MainThread]: Parsing macros/utils/array_concat.sql
+[0m03:09:42.466111 [debug] [MainThread]: Parsing macros/utils/date_trunc.sql
+[0m03:09:42.470088 [debug] [MainThread]: Parsing macros/utils/literal.sql
+[0m03:09:42.473004 [debug] [MainThread]: Parsing macros/utils/array_append.sql
+[0m03:09:42.475967 [debug] [MainThread]: Parsing macros/adapters/columns.sql
+[0m03:09:42.498186 [debug] [MainThread]: Parsing macros/adapters/relation.sql
+[0m03:09:42.536280 [debug] [MainThread]: Parsing macros/adapters/freshness.sql
+[0m03:09:42.549582 [debug] [MainThread]: Parsing macros/adapters/indexes.sql
+[0m03:09:42.556261 [debug] [MainThread]: Parsing macros/adapters/apply_grants.sql
+[0m03:09:42.582236 [debug] [MainThread]: Parsing macros/adapters/schema.sql
+[0m03:09:42.588752 [debug] [MainThread]: Parsing macros/adapters/metadata.sql
+[0m03:09:42.609997 [debug] [MainThread]: Parsing macros/adapters/persist_docs.sql
+[0m03:09:42.622498 [debug] [MainThread]: Parsing macros/adapters/timestamps.sql
+[0m03:09:42.631047 [debug] [MainThread]: Parsing macros/materializations/configs.sql
+[0m03:09:42.636312 [debug] [MainThread]: Parsing macros/materializations/hooks.sql
+[0m03:09:42.644304 [debug] [MainThread]: Parsing macros/materializations/models/table/create_table_as.sql
+[0m03:09:42.653833 [debug] [MainThread]: Parsing macros/materializations/models/table/table.sql
+[0m03:09:42.668191 [debug] [MainThread]: Parsing macros/materializations/models/incremental/column_helpers.sql
+[0m03:09:42.685421 [debug] [MainThread]: Parsing macros/materializations/models/incremental/strategies.sql
+[0m03:09:42.699116 [debug] [MainThread]: Parsing macros/materializations/models/incremental/on_schema_change.sql
+[0m03:09:42.731090 [debug] [MainThread]: Parsing macros/materializations/models/incremental/is_incremental.sql
+[0m03:09:42.735224 [debug] [MainThread]: Parsing macros/materializations/models/incremental/merge.sql
+[0m03:09:42.761804 [debug] [MainThread]: Parsing macros/materializations/models/incremental/incremental.sql
+[0m03:09:42.778995 [debug] [MainThread]: Parsing macros/materializations/models/view/helpers.sql
+[0m03:09:42.782148 [debug] [MainThread]: Parsing macros/materializations/models/view/create_view_as.sql
+[0m03:09:42.786132 [debug] [MainThread]: Parsing macros/materializations/models/view/create_or_replace_view.sql
+[0m03:09:42.791479 [debug] [MainThread]: Parsing macros/materializations/models/view/view.sql
+[0m03:09:42.800506 [debug] [MainThread]: Parsing macros/materializations/snapshots/helpers.sql
+[0m03:09:42.823729 [debug] [MainThread]: Parsing macros/materializations/snapshots/strategies.sql
+[0m03:09:42.849815 [debug] [MainThread]: Parsing macros/materializations/snapshots/snapshot.sql
+[0m03:09:42.871251 [debug] [MainThread]: Parsing macros/materializations/snapshots/snapshot_merge.sql
+[0m03:09:42.876308 [debug] [MainThread]: Parsing macros/materializations/tests/helpers.sql
+[0m03:09:42.880102 [debug] [MainThread]: Parsing macros/materializations/tests/where_subquery.sql
+[0m03:09:42.883489 [debug] [MainThread]: Parsing macros/materializations/tests/test.sql
+[0m03:09:42.891214 [debug] [MainThread]: Parsing macros/materializations/seeds/helpers.sql
+[0m03:09:42.923835 [debug] [MainThread]: Parsing macros/materializations/seeds/seed.sql
+[0m03:09:42.938847 [debug] [MainThread]: Parsing tests/generic/builtin.sql
+[0m03:09:42.944670 [debug] [MainThread]: Parsing macros/cross_db_utils/_is_ephemeral.sql
+[0m03:09:42.948735 [debug] [MainThread]: Parsing macros/cross_db_utils/_is_relation.sql
+[0m03:09:42.951350 [debug] [MainThread]: Parsing macros/cross_db_utils/cast_bool_to_text.sql
+[0m03:09:42.954430 [debug] [MainThread]: Parsing macros/cross_db_utils/concat.sql
+[0m03:09:42.956635 [debug] [MainThread]: Parsing macros/cross_db_utils/current_timestamp.sql
+[0m03:09:42.962593 [debug] [MainThread]: Parsing macros/cross_db_utils/datatypes.sql
+[0m03:09:42.972194 [debug] [MainThread]: Parsing macros/cross_db_utils/date_trunc.sql
+[0m03:09:42.975632 [debug] [MainThread]: Parsing macros/cross_db_utils/dateadd.sql
+[0m03:09:42.980750 [debug] [MainThread]: Parsing macros/cross_db_utils/datediff.sql
+[0m03:09:42.997783 [debug] [MainThread]: Parsing macros/cross_db_utils/except.sql
+[0m03:09:43.002130 [debug] [MainThread]: Parsing macros/cross_db_utils/hash.sql
+[0m03:09:43.005366 [debug] [MainThread]: Parsing macros/cross_db_utils/identifier.sql
+[0m03:09:43.008589 [debug] [MainThread]: Parsing macros/cross_db_utils/intersect.sql
+[0m03:09:43.011114 [debug] [MainThread]: Parsing macros/cross_db_utils/last_day.sql
+[0m03:09:43.017623 [debug] [MainThread]: Parsing macros/cross_db_utils/length.sql
+[0m03:09:43.020911 [debug] [MainThread]: Parsing macros/cross_db_utils/literal.sql
+[0m03:09:43.023360 [debug] [MainThread]: Parsing macros/cross_db_utils/position.sql
+[0m03:09:43.027153 [debug] [MainThread]: Parsing macros/cross_db_utils/replace.sql
+[0m03:09:43.030513 [debug] [MainThread]: Parsing macros/cross_db_utils/right.sql
+[0m03:09:43.035547 [debug] [MainThread]: Parsing macros/cross_db_utils/safe_cast.sql
+[0m03:09:43.039424 [debug] [MainThread]: Parsing macros/cross_db_utils/split_part.sql
+[0m03:09:43.043204 [debug] [MainThread]: Parsing macros/cross_db_utils/width_bucket.sql
+[0m03:09:43.053747 [debug] [MainThread]: Parsing macros/jinja_helpers/log_info.sql
+[0m03:09:43.057112 [debug] [MainThread]: Parsing macros/jinja_helpers/pretty_log_format.sql
+[0m03:09:43.059714 [debug] [MainThread]: Parsing macros/jinja_helpers/pretty_time.sql
+[0m03:09:43.062934 [debug] [MainThread]: Parsing macros/jinja_helpers/slugify.sql
+[0m03:09:43.065755 [debug] [MainThread]: Parsing macros/materializations/insert_by_period_materialization.sql
+[0m03:09:43.109018 [debug] [MainThread]: Parsing macros/schema_tests/accepted_range.sql
+[0m03:09:43.116055 [debug] [MainThread]: Parsing macros/schema_tests/at_least_one.sql
+[0m03:09:43.120347 [debug] [MainThread]: Parsing macros/schema_tests/cardinality_equality.sql
+[0m03:09:43.125423 [debug] [MainThread]: Parsing macros/schema_tests/equal_rowcount.sql
+[0m03:09:43.142282 [debug] [MainThread]: Parsing macros/schema_tests/equality.sql
+[0m03:09:43.173538 [debug] [MainThread]: Parsing macros/schema_tests/expression_is_true.sql
+[0m03:09:43.187536 [debug] [MainThread]: Parsing macros/schema_tests/fewer_rows_than.sql
+[0m03:09:43.211722 [debug] [MainThread]: Parsing macros/schema_tests/mutually_exclusive_ranges.sql
+[0m03:09:43.268526 [debug] [MainThread]: Parsing macros/schema_tests/not_accepted_values.sql
+[0m03:09:43.277865 [debug] [MainThread]: Parsing macros/schema_tests/not_constant.sql
+[0m03:09:43.282360 [debug] [MainThread]: Parsing macros/schema_tests/not_null_proportion.sql
+[0m03:09:43.289153 [debug] [MainThread]: Parsing macros/schema_tests/recency.sql
+[0m03:09:43.298983 [debug] [MainThread]: Parsing macros/schema_tests/relationships_where.sql
+[0m03:09:43.306058 [debug] [MainThread]: Parsing macros/schema_tests/sequential_values.sql
+[0m03:09:43.313165 [debug] [MainThread]: Parsing macros/schema_tests/test_not_null_where.sql
+[0m03:09:43.318916 [debug] [MainThread]: Parsing macros/schema_tests/test_unique_where.sql
+[0m03:09:43.324645 [debug] [MainThread]: Parsing macros/schema_tests/unique_combination_of_columns.sql
+[0m03:09:43.332549 [debug] [MainThread]: Parsing macros/sql/date_spine.sql
+[0m03:09:43.343149 [debug] [MainThread]: Parsing macros/sql/generate_series.sql
+[0m03:09:43.354057 [debug] [MainThread]: Parsing macros/sql/get_column_values.sql
+[0m03:09:43.365178 [debug] [MainThread]: Parsing macros/sql/get_query_results_as_dict.sql
+[0m03:09:43.371887 [debug] [MainThread]: Parsing macros/sql/get_relations_by_pattern.sql
+[0m03:09:43.379438 [debug] [MainThread]: Parsing macros/sql/get_relations_by_prefix.sql
+[0m03:09:43.388003 [debug] [MainThread]: Parsing macros/sql/get_tables_by_pattern_sql.sql
+[0m03:09:43.401904 [debug] [MainThread]: Parsing macros/sql/get_tables_by_prefix_sql.sql
+[0m03:09:43.406399 [debug] [MainThread]: Parsing macros/sql/groupby.sql
+[0m03:09:43.410137 [debug] [MainThread]: Parsing macros/sql/haversine_distance.sql
+[0m03:09:43.422289 [debug] [MainThread]: Parsing macros/sql/nullcheck.sql
+[0m03:09:43.426667 [debug] [MainThread]: Parsing macros/sql/nullcheck_table.sql
+[0m03:09:43.430659 [debug] [MainThread]: Parsing macros/sql/pivot.sql
+[0m03:09:43.438593 [debug] [MainThread]: Parsing macros/sql/safe_add.sql
+[0m03:09:43.442487 [debug] [MainThread]: Parsing macros/sql/star.sql
+[0m03:09:43.450779 [debug] [MainThread]: Parsing macros/sql/surrogate_key.sql
+[0m03:09:43.458636 [debug] [MainThread]: Parsing macros/sql/union.sql
+[0m03:09:43.478200 [debug] [MainThread]: Parsing macros/sql/unpivot.sql
+[0m03:09:43.494258 [debug] [MainThread]: Parsing macros/web/get_url_host.sql
+[0m03:09:43.498853 [debug] [MainThread]: Parsing macros/web/get_url_parameter.sql
+[0m03:09:43.502706 [debug] [MainThread]: Parsing macros/web/get_url_path.sql
+[0m03:09:44.113249 [debug] [MainThread]: 1699: static parser successfully parsed customer_churn_month.sql
+[0m03:09:44.134604 [debug] [MainThread]: 1699: static parser successfully parsed customer_revenue_by_month.sql
+[0m03:09:44.140108 [debug] [MainThread]: 1603: static parser failed on mrr.sql
+[0m03:09:44.157894 [warn ] [MainThread]: 
+Warning: the `surrogate_key` macro now takes a single list argument instead of multiple string arguments. Support for multiple string arguments will be deprecated in a future release of dbt-utils. The acme.mrr model triggered this warning. 
+[0m03:09:44.171827 [debug] [MainThread]: 1602: parser fallback to jinja rendering on mrr.sql
+[0m03:09:44.175407 [debug] [MainThread]: 1603: static parser failed on utils/util_months.sql
+[0m03:09:44.224364 [debug] [MainThread]: 1602: parser fallback to jinja rendering on utils/util_months.sql
+[0m03:09:44.454829 [warn ] [MainThread]: [[33mWARNING[0m]: 'subscription_periods' is a seed node, but it is specified in the models section
+of models/schema.yml. To fix this error, place the `subscription_periods`
+specification under the seeds key instead.
+[0m03:09:44.590680 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '9cfc3218-4a1e-4a7a-8387-0845b30a971a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f69f24320d0>]}
+[0m03:09:44.595918 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '9cfc3218-4a1e-4a7a-8387-0845b30a971a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f69f3002910>]}
+[0m03:09:44.598556 [info ] [MainThread]: Found 4 models, 21 tests, 0 snapshots, 0 analyses, 477 macros, 0 operations, 1 seed file, 0 sources, 0 exposures, 0 metrics
+[0m03:09:44.600509 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '9cfc3218-4a1e-4a7a-8387-0845b30a971a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f69f30fc610>]}
+[0m03:09:44.606951 [info ] [MainThread]: 
+[0m03:09:44.609845 [debug] [MainThread]: Acquiring new ***** connection "master"
+[0m03:09:44.612830 [debug] [ThreadPool]: Acquiring new ***** connection "list_*****"
+[0m03:09:44.623921 [debug] [ThreadPool]: Using ***** connection "list_*****"
+[0m03:09:44.625952 [debug] [ThreadPool]: On list_*****: /* {"app": "dbt", "dbt_version": "1.3.1", "profile_name": "my-*****-db", "target_name": "dev", "connection_name": "list_*****"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m03:09:44.627500 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m03:09:44.639417 [debug] [ThreadPool]: SQL status: SELECT 6 in 0.01 seconds
+[0m03:09:44.642869 [debug] [ThreadPool]: On list_*****: Close
+[0m03:09:44.647644 [debug] [ThreadPool]: Acquiring new ***** connection "list_*****_public"
+[0m03:09:44.658352 [debug] [ThreadPool]: Using ***** connection "list_*****_public"
+[0m03:09:44.660154 [debug] [ThreadPool]: On list_*****_public: BEGIN
+[0m03:09:44.661363 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m03:09:44.667872 [debug] [ThreadPool]: SQL status: BEGIN in 0.01 seconds
+[0m03:09:44.669365 [debug] [ThreadPool]: Using ***** connection "list_*****_public"
+[0m03:09:44.670773 [debug] [ThreadPool]: On list_*****_public: /* {"app": "dbt", "dbt_version": "1.3.1", "profile_name": "my-*****-db", "target_name": "dev", "connection_name": "list_*****_public"} */
+select
+      '*****' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public'
+    union all
+    select
+      '*****' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public'
+  
+[0m03:09:44.675333 [debug] [ThreadPool]: SQL status: SELECT 55 in 0.0 seconds
+[0m03:09:44.679430 [debug] [ThreadPool]: On list_*****_public: ROLLBACK
+[0m03:09:44.683932 [debug] [ThreadPool]: On list_*****_public: Close
+[0m03:09:44.698850 [debug] [MainThread]: Using ***** connection "master"
+[0m03:09:44.700415 [debug] [MainThread]: On master: BEGIN
+[0m03:09:44.701763 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m03:09:44.707692 [debug] [MainThread]: SQL status: BEGIN in 0.01 seconds
+[0m03:09:44.709361 [debug] [MainThread]: Using ***** connection "master"
+[0m03:09:44.710842 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.3.1", "profile_name": "my-*****-db", "target_name": "dev", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select distinct
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+[0m03:09:44.723197 [debug] [MainThread]: SQL status: SELECT 8 in 0.01 seconds
+[0m03:09:44.726576 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '9cfc3218-4a1e-4a7a-8387-0845b30a971a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f69f2423a30>]}
+[0m03:09:44.728286 [debug] [MainThread]: On master: ROLLBACK
+[0m03:09:44.730061 [debug] [MainThread]: Using ***** connection "master"
+[0m03:09:44.731764 [debug] [MainThread]: On master: BEGIN
+[0m03:09:44.733615 [debug] [MainThread]: SQL status: BEGIN in 0.0 seconds
+[0m03:09:44.734771 [debug] [MainThread]: On master: COMMIT
+[0m03:09:44.736314 [debug] [MainThread]: Using ***** connection "master"
+[0m03:09:44.737632 [debug] [MainThread]: On master: COMMIT
+[0m03:09:44.739637 [debug] [MainThread]: SQL status: COMMIT in 0.0 seconds
+[0m03:09:44.741559 [debug] [MainThread]: On master: Close
+[0m03:09:44.743828 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m03:09:44.745956 [info ] [MainThread]: 
+[0m03:09:44.767728 [debug] [Thread-1  ]: Began running node model.acme.util_months
+[0m03:09:44.770116 [info ] [Thread-1  ]: 1 of 1 START sql view model public.util_months ................................. [RUN]
+[0m03:09:44.772892 [debug] [Thread-1  ]: Acquiring new ***** connection "model.acme.util_months"
+[0m03:09:44.774532 [debug] [Thread-1  ]: Began compiling node model.acme.util_months
+[0m03:09:44.775899 [debug] [Thread-1  ]: Compiling model.acme.util_months
+[0m03:09:44.802187 [debug] [Thread-1  ]: Using ***** connection "model.acme.util_months"
+[0m03:09:44.804110 [debug] [Thread-1  ]: On model.acme.util_months: BEGIN
+[0m03:09:44.805745 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m03:09:44.812165 [debug] [Thread-1  ]: SQL status: BEGIN in 0.01 seconds
+[0m03:09:44.813792 [debug] [Thread-1  ]: Using ***** connection "model.acme.util_months"
+[0m03:09:44.815568 [debug] [Thread-1  ]: On model.acme.util_months: /* {"app": "dbt", "dbt_version": "1.3.1", "profile_name": "my-*****-db", "target_name": "dev", "node_id": "model.acme.util_months"} */
+
+
+        select 
+
+    
+        (
+
+    
+        (date_part('year', (date_trunc('month', current_date))::date) - date_part('year', ('2018-01-01'::date)::date))
+    
+
+ * 12 + date_part('month', (date_trunc('month', current_date))::date) - date_part('month', ('2018-01-01'::date)::date))
+    
+
+
+[0m03:09:44.823809 [debug] [Thread-1  ]: SQL status: SELECT 1 in 0.01 seconds
+[0m03:09:44.828473 [debug] [Thread-1  ]: Writing injected SQL for node "model.acme.util_months"
+[0m03:09:44.851712 [debug] [Thread-1  ]: finished collecting timing info
+[0m03:09:44.853056 [debug] [Thread-1  ]: Began executing node model.acme.util_months
+[0m03:09:44.918718 [debug] [Thread-1  ]: Writing runtime sql for node "model.acme.util_months"
+[0m03:09:44.925351 [debug] [Thread-1  ]: Using ***** connection "model.acme.util_months"
+[0m03:09:44.926795 [debug] [Thread-1  ]: On model.acme.util_months: /* {"app": "dbt", "dbt_version": "1.3.1", "profile_name": "my-*****-db", "target_name": "dev", "node_id": "model.acme.util_months"} */
+
+  create view "*****"."public"."util_months__dbt_tmp" as (
+    
+
+/*
+call as follows:
+
+date_spine(
+    "day",
+    "to_date('01/01/2016', 'mm/dd/yyyy')",
+    "dateadd(week, 1, current_date)"
+)
+
+*/
+
+with rawdata as (
+
+    
+
+    
+
+    with p as (
+        select 0 as generated_number union all select 1
+    ), unioned as (
+
+    select
+
+    
+    p0.generated_number * power(2, 0)
+     + 
+    
+    p1.generated_number * power(2, 1)
+     + 
+    
+    p2.generated_number * power(2, 2)
+     + 
+    
+    p3.generated_number * power(2, 3)
+     + 
+    
+    p4.generated_number * power(2, 4)
+     + 
+    
+    p5.generated_number * power(2, 5)
+    
+    
+    + 1
+    as generated_number
+
+    from
+
+    
+    p as p0
+     cross join 
+    
+    p as p1
+     cross join 
+    
+    p as p2
+     cross join 
+    
+    p as p3
+     cross join 
+    
+    p as p4
+     cross join 
+    
+    p as p5
+    
+    
+
+    )
+
+    select *
+    from unioned
+    where generated_number <= 59.0
+    order by generated_number
+
+
+
+),
+
+all_periods as (
+
+    select (
+        
+
+    '2018-01-01'::date + ((interval '1 month') * (row_number() over (order by 1) - 1))
+
+
+    ) as date_month
+    from rawdata
+
+),
+
+filtered as (
+
+    select *
+    from all_periods
+    where date_month <= date_trunc('month', current_date)
+
+)
+
+select * from filtered
+
+
+  );
+[0m03:09:44.944191 [debug] [Thread-1  ]: SQL status: CREATE VIEW in 0.02 seconds
+[0m03:09:44.953601 [debug] [Thread-1  ]: Using ***** connection "model.acme.util_months"
+[0m03:09:44.955204 [debug] [Thread-1  ]: On model.acme.util_months: /* {"app": "dbt", "dbt_version": "1.3.1", "profile_name": "my-*****-db", "target_name": "dev", "node_id": "model.acme.util_months"} */
+alter table "*****"."public"."util_months" rename to "util_months__dbt_backup"
+[0m03:09:44.957603 [debug] [Thread-1  ]: SQL status: ALTER TABLE in 0.0 seconds
+[0m03:09:44.961929 [debug] [Thread-1  ]: Using ***** connection "model.acme.util_months"
+[0m03:09:44.963117 [debug] [Thread-1  ]: On model.acme.util_months: /* {"app": "dbt", "dbt_version": "1.3.1", "profile_name": "my-*****-db", "target_name": "dev", "node_id": "model.acme.util_months"} */
+alter table "*****"."public"."util_months__dbt_tmp" rename to "util_months"
+[0m03:09:44.964851 [debug] [Thread-1  ]: SQL status: ALTER TABLE in 0.0 seconds
+[0m03:09:44.990162 [debug] [Thread-1  ]: On model.acme.util_months: COMMIT
+[0m03:09:44.992017 [debug] [Thread-1  ]: Using ***** connection "model.acme.util_months"
+[0m03:09:44.993297 [debug] [Thread-1  ]: On model.acme.util_months: COMMIT
+[0m03:09:44.995238 [debug] [Thread-1  ]: SQL status: COMMIT in 0.0 seconds
+[0m03:09:45.002351 [debug] [Thread-1  ]: Using ***** connection "model.acme.util_months"
+[0m03:09:45.003619 [debug] [Thread-1  ]: On model.acme.util_months: /* {"app": "dbt", "dbt_version": "1.3.1", "profile_name": "my-*****-db", "target_name": "dev", "node_id": "model.acme.util_months"} */
+drop view if exists "*****"."public"."util_months__dbt_backup" cascade
+[0m03:09:45.011877 [debug] [Thread-1  ]: SQL status: DROP VIEW in 0.01 seconds
+[0m03:09:45.014120 [debug] [Thread-1  ]: finished collecting timing info
+[0m03:09:45.015145 [debug] [Thread-1  ]: On model.acme.util_months: Close
+[0m03:09:45.016747 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '9cfc3218-4a1e-4a7a-8387-0845b30a971a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f69f23afc10>]}
+[0m03:09:45.017935 [info ] [Thread-1  ]: 1 of 1 OK created sql view model public.util_months ............................ [[32mCREATE VIEW[0m in 0.24s]
+[0m03:09:45.019196 [debug] [Thread-1  ]: Finished running node model.acme.util_months
+[0m03:09:45.021715 [debug] [MainThread]: Acquiring new ***** connection "master"
+[0m03:09:45.022644 [debug] [MainThread]: Using ***** connection "master"
+[0m03:09:45.023499 [debug] [MainThread]: On master: BEGIN
+[0m03:09:45.024350 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m03:09:45.028840 [debug] [MainThread]: SQL status: BEGIN in 0.0 seconds
+[0m03:09:45.029911 [debug] [MainThread]: On master: COMMIT
+[0m03:09:45.030834 [debug] [MainThread]: Using ***** connection "master"
+[0m03:09:45.031697 [debug] [MainThread]: On master: COMMIT
+[0m03:09:45.032658 [debug] [MainThread]: SQL status: COMMIT in 0.0 seconds
+[0m03:09:45.033514 [debug] [MainThread]: On master: Close
+[0m03:09:45.034938 [info ] [MainThread]: 
+[0m03:09:45.035971 [info ] [MainThread]: Finished running 1 view model in 0 hours 0 minutes and 0.43 seconds (0.43s).
+[0m03:09:45.037326 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m03:09:45.038135 [debug] [MainThread]: Connection 'list_*****' was properly closed.
+[0m03:09:45.039128 [debug] [MainThread]: Connection 'model.acme.util_months' was properly closed.
+[0m03:09:45.040013 [info ] [MainThread]: 
+[0m03:09:45.040988 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m03:09:45.042036 [info ] [MainThread]: 
+[0m03:09:45.043090 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+[0m03:09:45.045097 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f69f2435b20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f69f13403d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f69f1340d30>]}
+[0m03:09:45.046201 [debug] [MainThread]: Flushing usage events
+
+
+============================== 2022-12-01 03:09:49.652502 | 20fdea3c-89d1-4c78-85ff-f75cd91c036d ==============================
+[0m03:09:49.652529 [info ] [MainThread]: Running with dbt=1.3.1
+[0m03:09:49.653679 [debug] [MainThread]: running dbt with arguments {'write_json': False, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/usr/local/airflow/include/dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'project_dir': '/usr/local/airflow/include/dbt/mrr-playbook', 'target': 'dev', 'select': ['customer_revenue_by_month'], 'which': 'run', 'rpc_method': 'run', 'indirect_selection': 'eager'}
+[0m03:09:49.654837 [debug] [MainThread]: Tracking: tracking
+[0m03:09:49.661001 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff045b79cd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff045b79af0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff045b79b50>]}
+[0m03:09:49.832387 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m03:09:49.833395 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m03:09:49.843330 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '20fdea3c-89d1-4c78-85ff-f75cd91c036d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff0458ee0d0>]}
+[0m03:09:49.846520 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '20fdea3c-89d1-4c78-85ff-f75cd91c036d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff045a27640>]}
+[0m03:09:49.847807 [info ] [MainThread]: Found 4 models, 21 tests, 0 snapshots, 0 analyses, 477 macros, 0 operations, 1 seed file, 0 sources, 0 exposures, 0 metrics
+[0m03:09:49.848978 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '20fdea3c-89d1-4c78-85ff-f75cd91c036d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff045a27880>]}
+[0m03:09:49.851643 [info ] [MainThread]: 
+[0m03:09:49.853122 [debug] [MainThread]: Acquiring new ***** connection "master"
+[0m03:09:49.854916 [debug] [ThreadPool]: Acquiring new ***** connection "list_*****"
+[0m03:09:49.869532 [debug] [ThreadPool]: Using ***** connection "list_*****"
+[0m03:09:49.871383 [debug] [ThreadPool]: On list_*****: /* {"app": "dbt", "dbt_version": "1.3.1", "profile_name": "my-*****-db", "target_name": "dev", "connection_name": "list_*****"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m03:09:49.872798 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m03:09:49.884273 [debug] [ThreadPool]: SQL status: SELECT 6 in 0.01 seconds
+[0m03:09:49.886745 [debug] [ThreadPool]: On list_*****: Close
+[0m03:09:49.889643 [debug] [ThreadPool]: Acquiring new ***** connection "list_*****_public"
+[0m03:09:49.898662 [debug] [ThreadPool]: Using ***** connection "list_*****_public"
+[0m03:09:49.899856 [debug] [ThreadPool]: On list_*****_public: BEGIN
+[0m03:09:49.900854 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m03:09:49.905459 [debug] [ThreadPool]: SQL status: BEGIN in 0.0 seconds
+[0m03:09:49.906401 [debug] [ThreadPool]: Using ***** connection "list_*****_public"
+[0m03:09:49.907145 [debug] [ThreadPool]: On list_*****_public: /* {"app": "dbt", "dbt_version": "1.3.1", "profile_name": "my-*****-db", "target_name": "dev", "connection_name": "list_*****_public"} */
+select
+      '*****' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public'
+    union all
+    select
+      '*****' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public'
+  
+[0m03:09:49.910138 [debug] [ThreadPool]: SQL status: SELECT 52 in 0.0 seconds
+[0m03:09:49.913160 [debug] [ThreadPool]: On list_*****_public: ROLLBACK
+[0m03:09:49.914073 [debug] [ThreadPool]: On list_*****_public: Close
+[0m03:09:49.921824 [debug] [MainThread]: Using ***** connection "master"
+[0m03:09:49.923152 [debug] [MainThread]: On master: BEGIN
+[0m03:09:49.924513 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m03:09:49.929029 [debug] [MainThread]: SQL status: BEGIN in 0.0 seconds
+[0m03:09:49.930060 [debug] [MainThread]: Using ***** connection "master"
+[0m03:09:49.931936 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.3.1", "profile_name": "my-*****-db", "target_name": "dev", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select distinct
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+[0m03:09:49.940752 [debug] [MainThread]: SQL status: SELECT 3 in 0.01 seconds
+[0m03:09:49.943397 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '20fdea3c-89d1-4c78-85ff-f75cd91c036d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff045b7a880>]}
+[0m03:09:49.945258 [debug] [MainThread]: On master: ROLLBACK
+[0m03:09:49.946500 [debug] [MainThread]: Using ***** connection "master"
+[0m03:09:49.947385 [debug] [MainThread]: On master: BEGIN
+[0m03:09:49.948932 [debug] [MainThread]: SQL status: BEGIN in 0.0 seconds
+[0m03:09:49.950277 [debug] [MainThread]: On master: COMMIT
+[0m03:09:49.951250 [debug] [MainThread]: Using ***** connection "master"
+[0m03:09:49.952214 [debug] [MainThread]: On master: COMMIT
+[0m03:09:49.953297 [debug] [MainThread]: SQL status: COMMIT in 0.0 seconds
+[0m03:09:49.954363 [debug] [MainThread]: On master: Close
+[0m03:09:49.955788 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m03:09:49.957040 [info ] [MainThread]: 
+[0m03:09:49.990695 [debug] [Thread-1  ]: Began running node model.acme.customer_revenue_by_month
+[0m03:09:49.992720 [info ] [Thread-1  ]: 1 of 1 START sql view model public.customer_revenue_by_month ................... [RUN]
+[0m03:09:49.994652 [debug] [Thread-1  ]: Acquiring new ***** connection "model.acme.customer_revenue_by_month"
+[0m03:09:49.996129 [debug] [Thread-1  ]: Began compiling node model.acme.customer_revenue_by_month
+[0m03:09:49.997414 [debug] [Thread-1  ]: Compiling model.acme.customer_revenue_by_month
+[0m03:09:50.007103 [debug] [Thread-1  ]: Writing injected SQL for node "model.acme.customer_revenue_by_month"
+[0m03:09:50.012599 [debug] [Thread-1  ]: finished collecting timing info
+[0m03:09:50.013802 [debug] [Thread-1  ]: Began executing node model.acme.customer_revenue_by_month
+[0m03:09:50.079497 [debug] [Thread-1  ]: Writing runtime sql for node "model.acme.customer_revenue_by_month"
+[0m03:09:50.085536 [debug] [Thread-1  ]: Using ***** connection "model.acme.customer_revenue_by_month"
+[0m03:09:50.088404 [debug] [Thread-1  ]: On model.acme.customer_revenue_by_month: BEGIN
+[0m03:09:50.089649 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m03:09:50.094541 [debug] [Thread-1  ]: SQL status: BEGIN in 0.0 seconds
+[0m03:09:50.095781 [debug] [Thread-1  ]: Using ***** connection "model.acme.customer_revenue_by_month"
+[0m03:09:50.096791 [debug] [Thread-1  ]: On model.acme.customer_revenue_by_month: /* {"app": "dbt", "dbt_version": "1.3.1", "profile_name": "my-*****-db", "target_name": "dev", "node_id": "model.acme.customer_revenue_by_month"} */
+
+  create view "*****"."public"."customer_revenue_by_month__dbt_tmp" as (
+    with subscription_periods as (
+
+    select * from "*****"."public"."subscription_periods"
+
+),
+
+months as (
+
+    select * from "*****"."public"."util_months"
+
+),
+
+-- determine when a given account had its first and last (or most recent) month
+customers as (
+
+    select
+        customer_id,
+        date_trunc('month', min(start_date)) as date_month_start,
+        date_trunc('month', max(end_date)) as date_month_end
+
+    from subscription_periods
+
+    group by 1
+
+),
+
+-- create one record per month between a customer's first and last month
+-- (example of a date spine)
+customer_months as (
+
+    select
+        customers.customer_id,
+        months.date_month
+
+    from customers
+
+    inner join months
+        -- all months after start date
+        on  months.date_month >= customers.date_month_start
+        -- and before end date
+        and months.date_month < customers.date_month_end
+
+),
+
+-- join the account-month spine to MRR base model, pulling through most recent dates
+-- and plan info for month rows that have no invoices (i.e. churns)
+joined as (
+
+    select
+        customer_months.date_month,
+        customer_months.customer_id,
+        coalesce(subscription_periods.monthly_amount, 0) as mrr
+
+    from customer_months
+
+    left join subscription_periods
+        on customer_months.customer_id = subscription_periods.customer_id
+        -- month is after a subscription start date
+        and customer_months.date_month >= subscription_periods.start_date
+        -- month is before a subscription end date (and handle null case)
+        and (customer_months.date_month < subscription_periods.end_date
+                or subscription_periods.end_date is null)
+
+),
+
+final as (
+
+    select
+        date_month,
+        customer_id,
+        mrr,
+
+        mrr > 0 as is_active,
+
+        -- calculate first and last months
+        min(case when mrr > 0 then date_month end) over (
+            partition by customer_id
+        ) as first_active_month,
+
+        max(case when mrr > 0 then date_month end) over (
+            partition by customer_id
+        ) as last_active_month,
+
+        -- calculate if this record is the first or last month
+        case
+          when min(case when mrr > 0 then date_month end) over (
+            partition by customer_id
+        ) = date_month then true
+          else false end as is_first_month,
+        case
+          when max(case when mrr > 0 then date_month end) over (
+            partition by customer_id
+        ) = date_month then true
+          else false end as is_last_month
+
+    from joined
+
+)
+
+select * from final
+  );
+[0m03:09:50.103364 [debug] [Thread-1  ]: SQL status: CREATE VIEW in 0.01 seconds
+[0m03:09:50.114319 [debug] [Thread-1  ]: Using ***** connection "model.acme.customer_revenue_by_month"
+[0m03:09:50.115785 [debug] [Thread-1  ]: On model.acme.customer_revenue_by_month: /* {"app": "dbt", "dbt_version": "1.3.1", "profile_name": "my-*****-db", "target_name": "dev", "node_id": "model.acme.customer_revenue_by_month"} */
+alter table "*****"."public"."customer_revenue_by_month__dbt_tmp" rename to "customer_revenue_by_month"
+[0m03:09:50.117322 [debug] [Thread-1  ]: SQL status: ALTER TABLE in 0.0 seconds
+[0m03:09:50.141232 [debug] [Thread-1  ]: On model.acme.customer_revenue_by_month: COMMIT
+[0m03:09:50.143042 [debug] [Thread-1  ]: Using ***** connection "model.acme.customer_revenue_by_month"
+[0m03:09:50.144230 [debug] [Thread-1  ]: On model.acme.customer_revenue_by_month: COMMIT
+[0m03:09:50.146315 [debug] [Thread-1  ]: SQL status: COMMIT in 0.0 seconds
+[0m03:09:50.153815 [debug] [Thread-1  ]: Using ***** connection "model.acme.customer_revenue_by_month"
+[0m03:09:50.155223 [debug] [Thread-1  ]: On model.acme.customer_revenue_by_month: /* {"app": "dbt", "dbt_version": "1.3.1", "profile_name": "my-*****-db", "target_name": "dev", "node_id": "model.acme.customer_revenue_by_month"} */
+drop view if exists "*****"."public"."customer_revenue_by_month__dbt_backup" cascade
+[0m03:09:50.156709 [debug] [Thread-1  ]: SQL status: DROP VIEW in 0.0 seconds
+[0m03:09:50.158904 [debug] [Thread-1  ]: finished collecting timing info
+[0m03:09:50.160004 [debug] [Thread-1  ]: On model.acme.customer_revenue_by_month: Close
+[0m03:09:50.162134 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '20fdea3c-89d1-4c78-85ff-f75cd91c036d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff0450b6c70>]}
+[0m03:09:50.163670 [info ] [Thread-1  ]: 1 of 1 OK created sql view model public.customer_revenue_by_month .............. [[32mCREATE VIEW[0m in 0.17s]
+[0m03:09:50.165185 [debug] [Thread-1  ]: Finished running node model.acme.customer_revenue_by_month
+[0m03:09:50.167650 [debug] [MainThread]: Acquiring new ***** connection "master"
+[0m03:09:50.168593 [debug] [MainThread]: Using ***** connection "master"
+[0m03:09:50.169410 [debug] [MainThread]: On master: BEGIN
+[0m03:09:50.170348 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m03:09:50.175141 [debug] [MainThread]: SQL status: BEGIN in 0.0 seconds
+[0m03:09:50.176182 [debug] [MainThread]: On master: COMMIT
+[0m03:09:50.177129 [debug] [MainThread]: Using ***** connection "master"
+[0m03:09:50.178032 [debug] [MainThread]: On master: COMMIT
+[0m03:09:50.179120 [debug] [MainThread]: SQL status: COMMIT in 0.0 seconds
+[0m03:09:50.180148 [debug] [MainThread]: On master: Close
+[0m03:09:50.181504 [info ] [MainThread]: 
+[0m03:09:50.182593 [info ] [MainThread]: Finished running 1 view model in 0 hours 0 minutes and 0.33 seconds (0.33s).
+[0m03:09:50.183989 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m03:09:50.184932 [debug] [MainThread]: Connection 'model.acme.customer_revenue_by_month' was properly closed.
+[0m03:09:50.185950 [info ] [MainThread]: 
+[0m03:09:50.186972 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m03:09:50.188054 [info ] [MainThread]: 
+[0m03:09:50.189133 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+[0m03:09:50.190202 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff0450b92e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff0450b9970>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff0450b9490>]}
+[0m03:09:50.191268 [debug] [MainThread]: Flushing usage events
+
+
+============================== 2022-12-01 03:09:54.308627 | 1e9848fa-6bd7-41a3-8e2a-4c88d2d71f16 ==============================
+[0m03:09:54.308654 [info ] [MainThread]: Running with dbt=1.3.1
+[0m03:09:54.310297 [debug] [MainThread]: running dbt with arguments {'write_json': False, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/usr/local/airflow/include/dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'project_dir': '/usr/local/airflow/include/dbt/mrr-playbook', 'target': 'dev', 'select': ['customer_churn_month'], 'which': 'run', 'rpc_method': 'run', 'indirect_selection': 'eager'}
+[0m03:09:54.312109 [debug] [MainThread]: Tracking: tracking
+[0m03:09:54.319394 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9affdb6b80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9affdb6430>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9affdb6ac0>]}
+[0m03:09:54.536617 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m03:09:54.538071 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m03:09:54.547679 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '1e9848fa-6bd7-41a3-8e2a-4c88d2d71f16', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9affb240d0>]}
+[0m03:09:54.551552 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '1e9848fa-6bd7-41a3-8e2a-4c88d2d71f16', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9affc61610>]}
+[0m03:09:54.553087 [info ] [MainThread]: Found 4 models, 21 tests, 0 snapshots, 0 analyses, 477 macros, 0 operations, 1 seed file, 0 sources, 0 exposures, 0 metrics
+[0m03:09:54.554237 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '1e9848fa-6bd7-41a3-8e2a-4c88d2d71f16', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9affc61850>]}
+[0m03:09:54.557727 [info ] [MainThread]: 
+[0m03:09:54.559293 [debug] [MainThread]: Acquiring new ***** connection "master"
+[0m03:09:54.561198 [debug] [ThreadPool]: Acquiring new ***** connection "list_*****"
+[0m03:09:54.580768 [debug] [ThreadPool]: Using ***** connection "list_*****"
+[0m03:09:54.582205 [debug] [ThreadPool]: On list_*****: /* {"app": "dbt", "dbt_version": "1.3.1", "profile_name": "my-*****-db", "target_name": "dev", "connection_name": "list_*****"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m03:09:54.583293 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m03:09:54.589405 [debug] [ThreadPool]: SQL status: SELECT 6 in 0.01 seconds
+[0m03:09:54.591930 [debug] [ThreadPool]: On list_*****: Close
+[0m03:09:54.594779 [debug] [ThreadPool]: Acquiring new ***** connection "list_*****_public"
+[0m03:09:54.603875 [debug] [ThreadPool]: Using ***** connection "list_*****_public"
+[0m03:09:54.605808 [debug] [ThreadPool]: On list_*****_public: BEGIN
+[0m03:09:54.607019 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m03:09:54.612512 [debug] [ThreadPool]: SQL status: BEGIN in 0.01 seconds
+[0m03:09:54.614413 [debug] [ThreadPool]: Using ***** connection "list_*****_public"
+[0m03:09:54.616069 [debug] [ThreadPool]: On list_*****_public: /* {"app": "dbt", "dbt_version": "1.3.1", "profile_name": "my-*****-db", "target_name": "dev", "connection_name": "list_*****_public"} */
+select
+      '*****' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public'
+    union all
+    select
+      '*****' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public'
+  
+[0m03:09:54.619995 [debug] [ThreadPool]: SQL status: SELECT 53 in 0.0 seconds
+[0m03:09:54.624565 [debug] [ThreadPool]: On list_*****_public: ROLLBACK
+[0m03:09:54.626221 [debug] [ThreadPool]: On list_*****_public: Close
+[0m03:09:54.636210 [debug] [MainThread]: Using ***** connection "master"
+[0m03:09:54.637930 [debug] [MainThread]: On master: BEGIN
+[0m03:09:54.639582 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m03:09:54.645903 [debug] [MainThread]: SQL status: BEGIN in 0.01 seconds
+[0m03:09:54.647242 [debug] [MainThread]: Using ***** connection "master"
+[0m03:09:54.648435 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.3.1", "profile_name": "my-*****-db", "target_name": "dev", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select distinct
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+[0m03:09:54.657975 [debug] [MainThread]: SQL status: SELECT 5 in 0.01 seconds
+[0m03:09:54.660708 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '1e9848fa-6bd7-41a3-8e2a-4c88d2d71f16', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9affc61220>]}
+[0m03:09:54.662775 [debug] [MainThread]: On master: ROLLBACK
+[0m03:09:54.664266 [debug] [MainThread]: Using ***** connection "master"
+[0m03:09:54.665322 [debug] [MainThread]: On master: BEGIN
+[0m03:09:54.667101 [debug] [MainThread]: SQL status: BEGIN in 0.0 seconds
+[0m03:09:54.668730 [debug] [MainThread]: On master: COMMIT
+[0m03:09:54.669980 [debug] [MainThread]: Using ***** connection "master"
+[0m03:09:54.671190 [debug] [MainThread]: On master: COMMIT
+[0m03:09:54.673090 [debug] [MainThread]: SQL status: COMMIT in 0.0 seconds
+[0m03:09:54.674296 [debug] [MainThread]: On master: Close
+[0m03:09:54.676221 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m03:09:54.678121 [info ] [MainThread]: 
+[0m03:09:54.704883 [debug] [Thread-1  ]: Began running node model.acme.customer_churn_month
+[0m03:09:54.707010 [info ] [Thread-1  ]: 1 of 1 START sql view model public.customer_churn_month ........................ [RUN]
+[0m03:09:54.709327 [debug] [Thread-1  ]: Acquiring new ***** connection "model.acme.customer_churn_month"
+[0m03:09:54.710944 [debug] [Thread-1  ]: Began compiling node model.acme.customer_churn_month
+[0m03:09:54.712579 [debug] [Thread-1  ]: Compiling model.acme.customer_churn_month
+[0m03:09:54.719579 [debug] [Thread-1  ]: Writing injected SQL for node "model.acme.customer_churn_month"
+[0m03:09:54.727278 [debug] [Thread-1  ]: finished collecting timing info
+[0m03:09:54.729038 [debug] [Thread-1  ]: Began executing node model.acme.customer_churn_month
+[0m03:09:54.803234 [debug] [Thread-1  ]: Writing runtime sql for node "model.acme.customer_churn_month"
+[0m03:09:54.808931 [debug] [Thread-1  ]: Using ***** connection "model.acme.customer_churn_month"
+[0m03:09:54.810190 [debug] [Thread-1  ]: On model.acme.customer_churn_month: BEGIN
+[0m03:09:54.811629 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m03:09:54.817255 [debug] [Thread-1  ]: SQL status: BEGIN in 0.01 seconds
+[0m03:09:54.818804 [debug] [Thread-1  ]: Using ***** connection "model.acme.customer_churn_month"
+[0m03:09:54.820225 [debug] [Thread-1  ]: On model.acme.customer_churn_month: /* {"app": "dbt", "dbt_version": "1.3.1", "profile_name": "my-*****-db", "target_name": "dev", "node_id": "model.acme.customer_churn_month"} */
+
+  create view "*****"."public"."customer_churn_month__dbt_tmp" as (
+    with mrr as (
+
+    select * from "*****"."public"."customer_revenue_by_month"
+
+),
+
+-- row for month *after* last month of activity
+joined as (
+
+    select
+        date_month + interval '1 month' as date_month,
+        customer_id,
+        0::float as mrr,
+        false as is_active,
+        first_active_month,
+        last_active_month,
+        false as is_first_month,
+        false as is_last_month
+
+    from mrr
+
+    where is_last_month
+
+)
+
+select * from joined
+  );
+[0m03:09:54.825270 [debug] [Thread-1  ]: SQL status: CREATE VIEW in 0.0 seconds
+[0m03:09:54.835673 [debug] [Thread-1  ]: Using ***** connection "model.acme.customer_churn_month"
+[0m03:09:54.837820 [debug] [Thread-1  ]: On model.acme.customer_churn_month: /* {"app": "dbt", "dbt_version": "1.3.1", "profile_name": "my-*****-db", "target_name": "dev", "node_id": "model.acme.customer_churn_month"} */
+alter table "*****"."public"."customer_churn_month__dbt_tmp" rename to "customer_churn_month"
+[0m03:09:54.841046 [debug] [Thread-1  ]: SQL status: ALTER TABLE in 0.0 seconds
+[0m03:09:54.865499 [debug] [Thread-1  ]: On model.acme.customer_churn_month: COMMIT
+[0m03:09:54.867588 [debug] [Thread-1  ]: Using ***** connection "model.acme.customer_churn_month"
+[0m03:09:54.868687 [debug] [Thread-1  ]: On model.acme.customer_churn_month: COMMIT
+[0m03:09:54.871756 [debug] [Thread-1  ]: SQL status: COMMIT in 0.0 seconds
+[0m03:09:54.879714 [debug] [Thread-1  ]: Using ***** connection "model.acme.customer_churn_month"
+[0m03:09:54.881523 [debug] [Thread-1  ]: On model.acme.customer_churn_month: /* {"app": "dbt", "dbt_version": "1.3.1", "profile_name": "my-*****-db", "target_name": "dev", "node_id": "model.acme.customer_churn_month"} */
+drop view if exists "*****"."public"."customer_churn_month__dbt_backup" cascade
+[0m03:09:54.883735 [debug] [Thread-1  ]: SQL status: DROP VIEW in 0.0 seconds
+[0m03:09:54.886055 [debug] [Thread-1  ]: finished collecting timing info
+[0m03:09:54.887657 [debug] [Thread-1  ]: On model.acme.customer_churn_month: Close
+[0m03:09:54.889568 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '1e9848fa-6bd7-41a3-8e2a-4c88d2d71f16', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9aff2de4f0>]}
+[0m03:09:54.891667 [info ] [Thread-1  ]: 1 of 1 OK created sql view model public.customer_churn_month ................... [[32mCREATE VIEW[0m in 0.18s]
+[0m03:09:54.893211 [debug] [Thread-1  ]: Finished running node model.acme.customer_churn_month
+[0m03:09:54.896155 [debug] [MainThread]: Acquiring new ***** connection "master"
+[0m03:09:54.897523 [debug] [MainThread]: Using ***** connection "master"
+[0m03:09:54.898501 [debug] [MainThread]: On master: BEGIN
+[0m03:09:54.899827 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m03:09:54.905173 [debug] [MainThread]: SQL status: BEGIN in 0.01 seconds
+[0m03:09:54.906605 [debug] [MainThread]: On master: COMMIT
+[0m03:09:54.907736 [debug] [MainThread]: Using ***** connection "master"
+[0m03:09:54.908861 [debug] [MainThread]: On master: COMMIT
+[0m03:09:54.910155 [debug] [MainThread]: SQL status: COMMIT in 0.0 seconds
+[0m03:09:54.911421 [debug] [MainThread]: On master: Close
+[0m03:09:54.913167 [info ] [MainThread]: 
+[0m03:09:54.914368 [info ] [MainThread]: Finished running 1 view model in 0 hours 0 minutes and 0.35 seconds (0.35s).
+[0m03:09:54.915717 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m03:09:54.916845 [debug] [MainThread]: Connection 'model.acme.customer_churn_month' was properly closed.
+[0m03:09:54.917954 [info ] [MainThread]: 
+[0m03:09:54.919610 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m03:09:54.920953 [info ] [MainThread]: 
+[0m03:09:54.922256 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+[0m03:09:54.923684 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9aff2de4f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9affb41ac0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9affb411c0>]}
+[0m03:09:54.924982 [debug] [MainThread]: Flushing usage events
+
+
+============================== 2022-12-01 03:10:00.610570 | e27d793a-d5cd-48d0-b9b4-81a38f96d1d2 ==============================
+[0m03:10:00.610602 [info ] [MainThread]: Running with dbt=1.3.1
+[0m03:10:00.612609 [debug] [MainThread]: running dbt with arguments {'write_json': False, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/usr/local/airflow/include/dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'project_dir': '/usr/local/airflow/include/dbt/mrr-playbook', 'target': 'dev', 'select': ['mrr'], 'which': 'run', 'rpc_method': 'run', 'indirect_selection': 'eager'}
+[0m03:10:00.614596 [debug] [MainThread]: Tracking: tracking
+[0m03:10:00.623217 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd1a1aa5b80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd1a1aa5430>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd1a1aa5ac0>]}
+[0m03:10:00.836621 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m03:10:00.838017 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m03:10:00.877743 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'e27d793a-d5cd-48d0-b9b4-81a38f96d1d2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd1a18120d0>]}
+[0m03:10:00.883324 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'e27d793a-d5cd-48d0-b9b4-81a38f96d1d2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd1a1950610>]}
+[0m03:10:00.885193 [info ] [MainThread]: Found 4 models, 21 tests, 0 snapshots, 0 analyses, 477 macros, 0 operations, 1 seed file, 0 sources, 0 exposures, 0 metrics
+[0m03:10:00.886535 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'e27d793a-d5cd-48d0-b9b4-81a38f96d1d2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd1a1950850>]}
+[0m03:10:00.889540 [info ] [MainThread]: 
+[0m03:10:00.891328 [debug] [MainThread]: Acquiring new ***** connection "master"
+[0m03:10:00.893326 [debug] [ThreadPool]: Acquiring new ***** connection "list_*****"
+[0m03:10:00.908248 [debug] [ThreadPool]: Using ***** connection "list_*****"
+[0m03:10:00.909873 [debug] [ThreadPool]: On list_*****: /* {"app": "dbt", "dbt_version": "1.3.1", "profile_name": "my-*****-db", "target_name": "dev", "connection_name": "list_*****"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m03:10:00.911242 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m03:10:00.918853 [debug] [ThreadPool]: SQL status: SELECT 6 in 0.01 seconds
+[0m03:10:00.921529 [debug] [ThreadPool]: On list_*****: Close
+[0m03:10:00.924241 [debug] [ThreadPool]: Acquiring new ***** connection "list_*****_public"
+[0m03:10:00.933016 [debug] [ThreadPool]: Using ***** connection "list_*****_public"
+[0m03:10:00.934788 [debug] [ThreadPool]: On list_*****_public: BEGIN
+[0m03:10:00.936075 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m03:10:00.942061 [debug] [ThreadPool]: SQL status: BEGIN in 0.01 seconds
+[0m03:10:00.943353 [debug] [ThreadPool]: Using ***** connection "list_*****_public"
+[0m03:10:00.944405 [debug] [ThreadPool]: On list_*****_public: /* {"app": "dbt", "dbt_version": "1.3.1", "profile_name": "my-*****-db", "target_name": "dev", "connection_name": "list_*****_public"} */
+select
+      '*****' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public'
+    union all
+    select
+      '*****' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public'
+  
+[0m03:10:00.948235 [debug] [ThreadPool]: SQL status: SELECT 54 in 0.0 seconds
+[0m03:10:00.951848 [debug] [ThreadPool]: On list_*****_public: ROLLBACK
+[0m03:10:00.953370 [debug] [ThreadPool]: On list_*****_public: Close
+[0m03:10:00.963287 [debug] [MainThread]: Using ***** connection "master"
+[0m03:10:00.964811 [debug] [MainThread]: On master: BEGIN
+[0m03:10:00.965942 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m03:10:00.971501 [debug] [MainThread]: SQL status: BEGIN in 0.01 seconds
+[0m03:10:00.973000 [debug] [MainThread]: Using ***** connection "master"
+[0m03:10:00.974435 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.3.1", "profile_name": "my-*****-db", "target_name": "dev", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select distinct
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+[0m03:10:00.987907 [debug] [MainThread]: SQL status: SELECT 6 in 0.01 seconds
+[0m03:10:00.990921 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'e27d793a-d5cd-48d0-b9b4-81a38f96d1d2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd1a1950220>]}
+[0m03:10:00.992674 [debug] [MainThread]: On master: ROLLBACK
+[0m03:10:00.994188 [debug] [MainThread]: Using ***** connection "master"
+[0m03:10:00.995426 [debug] [MainThread]: On master: BEGIN
+[0m03:10:00.997207 [debug] [MainThread]: SQL status: BEGIN in 0.0 seconds
+[0m03:10:00.998768 [debug] [MainThread]: On master: COMMIT
+[0m03:10:01.001756 [debug] [MainThread]: Using ***** connection "master"
+[0m03:10:01.003154 [debug] [MainThread]: On master: COMMIT
+[0m03:10:01.004789 [debug] [MainThread]: SQL status: COMMIT in 0.0 seconds
+[0m03:10:01.005968 [debug] [MainThread]: On master: Close
+[0m03:10:01.007871 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m03:10:01.009124 [info ] [MainThread]: 
+[0m03:10:01.028328 [debug] [Thread-1  ]: Began running node model.acme.mrr
+[0m03:10:01.029852 [info ] [Thread-1  ]: 1 of 1 START sql view model public.mrr ......................................... [RUN]
+[0m03:10:01.032168 [debug] [Thread-1  ]: Acquiring new ***** connection "model.acme.mrr"
+[0m03:10:01.034667 [debug] [Thread-1  ]: Began compiling node model.acme.mrr
+[0m03:10:01.035995 [debug] [Thread-1  ]: Compiling model.acme.mrr
+[0m03:10:01.056668 [warn ] [Thread-1  ]: 
+Warning: the `surrogate_key` macro now takes a single list argument instead of multiple string arguments. Support for multiple string arguments will be deprecated in a future release of dbt-utils. The acme.mrr model triggered this warning. 
+[0m03:10:01.068985 [debug] [Thread-1  ]: Writing injected SQL for node "model.acme.mrr"
+[0m03:10:01.076812 [debug] [Thread-1  ]: finished collecting timing info
+[0m03:10:01.078148 [debug] [Thread-1  ]: Began executing node model.acme.mrr
+[0m03:10:01.133038 [debug] [Thread-1  ]: Writing runtime sql for node "model.acme.mrr"
+[0m03:10:01.139391 [debug] [Thread-1  ]: Using ***** connection "model.acme.mrr"
+[0m03:10:01.142201 [debug] [Thread-1  ]: On model.acme.mrr: BEGIN
+[0m03:10:01.144652 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m03:10:01.150356 [debug] [Thread-1  ]: SQL status: BEGIN in 0.01 seconds
+[0m03:10:01.151831 [debug] [Thread-1  ]: Using ***** connection "model.acme.mrr"
+[0m03:10:01.153679 [debug] [Thread-1  ]: On model.acme.mrr: /* {"app": "dbt", "dbt_version": "1.3.1", "profile_name": "my-*****-db", "target_name": "dev", "node_id": "model.acme.mrr"} */
+
+  create view "*****"."public"."mrr__dbt_tmp" as (
+    with unioned as (
+
+    select * from "*****"."public"."customer_revenue_by_month"
+
+    union all
+
+    select * from "*****"."public"."customer_churn_month"
+
+),
+
+-- get prior month MRR and calculate MRR change
+mrr_with_changes as (
+
+    select
+        *,
+
+        coalesce(
+            lag(is_active) over (partition by customer_id order by date_month),
+            false
+        ) as previous_month_is_active,
+
+        coalesce(
+            lag(mrr) over (partition by customer_id order by date_month),
+            0
+        ) as previous_month_mrr,
+
+        mrr - coalesce(
+            lag(mrr) over (partition by customer_id order by date_month),
+            0
+        ) as mrr_change
+
+    from unioned
+
+),
+
+-- classify months as new, churn, reactivation, upgrade, downgrade (or null)
+-- also add an ID column
+final as (
+
+    select
+        md5(cast(coalesce(cast(date_month as 
+    varchar
+), '') || '-' || coalesce(cast(customer_id as 
+    varchar
+), '') as 
+    varchar
+)) as id,
+
+        *,
+
+        case
+            when is_first_month
+                then 'new'
+            when not(is_active) and previous_month_is_active
+                then 'churn'
+            when is_active and not(previous_month_is_active)
+                then 'reactivation'
+            when mrr_change > 0 then 'upgrade'
+            when mrr_change < 0 then 'downgrade'
+        end as change_category,
+
+        least(mrr, previous_month_mrr) as renewal_amount
+
+    from mrr_with_changes
+
+)
+
+select * from final
+  );
+[0m03:10:01.159996 [debug] [Thread-1  ]: SQL status: CREATE VIEW in 0.01 seconds
+[0m03:10:01.168409 [debug] [Thread-1  ]: Using ***** connection "model.acme.mrr"
+[0m03:10:01.169765 [debug] [Thread-1  ]: On model.acme.mrr: /* {"app": "dbt", "dbt_version": "1.3.1", "profile_name": "my-*****-db", "target_name": "dev", "node_id": "model.acme.mrr"} */
+alter table "*****"."public"."mrr__dbt_tmp" rename to "mrr"
+[0m03:10:01.171539 [debug] [Thread-1  ]: SQL status: ALTER TABLE in 0.0 seconds
+[0m03:10:01.197857 [debug] [Thread-1  ]: On model.acme.mrr: COMMIT
+[0m03:10:01.199515 [debug] [Thread-1  ]: Using ***** connection "model.acme.mrr"
+[0m03:10:01.200783 [debug] [Thread-1  ]: On model.acme.mrr: COMMIT
+[0m03:10:01.202689 [debug] [Thread-1  ]: SQL status: COMMIT in 0.0 seconds
+[0m03:10:01.212007 [debug] [Thread-1  ]: Using ***** connection "model.acme.mrr"
+[0m03:10:01.213312 [debug] [Thread-1  ]: On model.acme.mrr: /* {"app": "dbt", "dbt_version": "1.3.1", "profile_name": "my-*****-db", "target_name": "dev", "node_id": "model.acme.mrr"} */
+drop view if exists "*****"."public"."mrr__dbt_backup" cascade
+[0m03:10:01.214909 [debug] [Thread-1  ]: SQL status: DROP VIEW in 0.0 seconds
+[0m03:10:01.217172 [debug] [Thread-1  ]: finished collecting timing info
+[0m03:10:01.218297 [debug] [Thread-1  ]: On model.acme.mrr: Close
+[0m03:10:01.219985 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'e27d793a-d5cd-48d0-b9b4-81a38f96d1d2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd1a0f80850>]}
+[0m03:10:01.221288 [info ] [Thread-1  ]: 1 of 1 OK created sql view model public.mrr .................................... [[32mCREATE VIEW[0m in 0.19s]
+[0m03:10:01.222872 [debug] [Thread-1  ]: Finished running node model.acme.mrr
+[0m03:10:01.225939 [debug] [MainThread]: Acquiring new ***** connection "master"
+[0m03:10:01.227505 [debug] [MainThread]: Using ***** connection "master"
+[0m03:10:01.228820 [debug] [MainThread]: On master: BEGIN
+[0m03:10:01.230174 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m03:10:01.237109 [debug] [MainThread]: SQL status: BEGIN in 0.01 seconds
+[0m03:10:01.238864 [debug] [MainThread]: On master: COMMIT
+[0m03:10:01.240591 [debug] [MainThread]: Using ***** connection "master"
+[0m03:10:01.241850 [debug] [MainThread]: On master: COMMIT
+[0m03:10:01.243750 [debug] [MainThread]: SQL status: COMMIT in 0.0 seconds
+[0m03:10:01.244922 [debug] [MainThread]: On master: Close
+[0m03:10:01.246659 [info ] [MainThread]: 
+[0m03:10:01.247964 [info ] [MainThread]: Finished running 1 view model in 0 hours 0 minutes and 0.36 seconds (0.36s).
+[0m03:10:01.249182 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m03:10:01.250230 [debug] [MainThread]: Connection 'model.acme.mrr' was properly closed.
+[0m03:10:01.251504 [info ] [MainThread]: 
+[0m03:10:01.252899 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m03:10:01.254242 [info ] [MainThread]: 
+[0m03:10:01.255396 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+[0m03:10:01.256904 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd1a181f130>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd1a181f280>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd1a181f460>]}
+[0m03:10:01.258273 [debug] [MainThread]: Flushing usage events
+
+
+============================== 2022-12-01 03:10:07.327189 | 543afeeb-4b11-4bbe-abcf-03895e6580dd ==============================
+[0m03:10:07.327218 [info ] [MainThread]: Running with dbt=1.3.1
+[0m03:10:07.328533 [debug] [MainThread]: running dbt with arguments {'write_json': False, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/usr/local/airflow/include/dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'project_dir': '/usr/local/airflow/include/dbt/mrr-playbook', 'target': 'dev', 'indirect_selection': 'eager', 'select': ['mrr'], 'which': 'test', 'rpc_method': 'test'}
+[0m03:10:07.330381 [debug] [MainThread]: Tracking: tracking
+[0m03:10:07.336542 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f39662d6610>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f39662d6ac0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f39662d6b20>]}
+
+
+============================== 2022-12-01 03:10:07.530228 | cf844e58-58ca-4ed0-8abc-fa0484fe06b9 ==============================
+[0m03:10:07.530260 [info ] [MainThread]: Running with dbt=1.3.1
+[0m03:10:07.532065 [debug] [MainThread]: running dbt with arguments {'write_json': False, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/usr/local/airflow/include/dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'project_dir': '/usr/local/airflow/include/dbt/mrr-playbook', 'target': 'dev', 'indirect_selection': 'eager', 'select': ['util_months'], 'which': 'test', 'rpc_method': 'test'}
+[0m03:10:07.534133 [debug] [MainThread]: Tracking: tracking
+[0m03:10:07.556085 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3fbf52ec70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3fbf52e070>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3fbf52eb20>]}
+
+
+============================== 2022-12-01 03:10:07.630458 | a3a4ece7-c101-4e8d-ab19-54a1e9d0d8b2 ==============================
+[0m03:10:07.630505 [info ] [MainThread]: Running with dbt=1.3.1
+[0m03:10:07.632761 [debug] [MainThread]: running dbt with arguments {'write_json': False, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/usr/local/airflow/include/dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'project_dir': '/usr/local/airflow/include/dbt/mrr-playbook', 'target': 'dev', 'indirect_selection': 'eager', 'select': ['customer_churn_month'], 'which': 'test', 'rpc_method': 'test'}
+[0m03:10:07.637172 [debug] [MainThread]: Tracking: tracking
+[0m03:10:07.668356 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f44da6c4b80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f44da6c4af0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f44da6c4b50>]}
+
+
+============================== 2022-12-01 03:10:07.700807 | 826dfcf4-6f89-4f7b-9427-5a4145a1dc31 ==============================
+[0m03:10:07.700839 [info ] [MainThread]: Running with dbt=1.3.1
+[0m03:10:07.703175 [debug] [MainThread]: running dbt with arguments {'write_json': False, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/usr/local/airflow/include/dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'project_dir': '/usr/local/airflow/include/dbt/mrr-playbook', 'target': 'dev', 'indirect_selection': 'eager', 'select': ['customer_revenue_by_month'], 'which': 'test', 'rpc_method': 'test'}
+[0m03:10:07.708341 [debug] [MainThread]: Tracking: tracking
+[0m03:10:07.741753 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f08b8718cd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f08b8718af0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f08b8718b50>]}
+[0m03:10:07.823823 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m03:10:07.829512 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m03:10:07.880766 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '543afeeb-4b11-4bbe-abcf-03895e6580dd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3966043fd0>]}
+[0m03:10:07.892962 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '543afeeb-4b11-4bbe-abcf-03895e6580dd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f396616f5e0>]}
+[0m03:10:07.895934 [info ] [MainThread]: Found 4 models, 21 tests, 0 snapshots, 0 analyses, 477 macros, 0 operations, 1 seed file, 0 sources, 0 exposures, 0 metrics
+[0m03:10:07.898503 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '543afeeb-4b11-4bbe-abcf-03895e6580dd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f396616f820>]}
+[0m03:10:07.907436 [info ] [MainThread]: 
+[0m03:10:07.911117 [debug] [MainThread]: Acquiring new ***** connection "master"
+[0m03:10:07.917088 [debug] [ThreadPool]: Acquiring new ***** connection "list_*****_public"
+[0m03:10:07.944744 [debug] [ThreadPool]: Using ***** connection "list_*****_public"
+[0m03:10:07.947355 [debug] [ThreadPool]: On list_*****_public: BEGIN
+[0m03:10:07.949071 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m03:10:07.961191 [debug] [ThreadPool]: SQL status: BEGIN in 0.01 seconds
+[0m03:10:07.962897 [debug] [ThreadPool]: Using ***** connection "list_*****_public"
+[0m03:10:07.964778 [debug] [ThreadPool]: On list_*****_public: /* {"app": "dbt", "dbt_version": "1.3.1", "profile_name": "my-*****-db", "target_name": "dev", "connection_name": "list_*****_public"} */
+select
+      '*****' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public'
+    union all
+    select
+      '*****' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public'
+  
+[0m03:10:07.974927 [debug] [ThreadPool]: SQL status: SELECT 55 in 0.01 seconds
+[0m03:10:07.983380 [debug] [ThreadPool]: On list_*****_public: ROLLBACK
+[0m03:10:07.992037 [debug] [ThreadPool]: On list_*****_public: Close
+[0m03:10:08.026345 [debug] [MainThread]: Using ***** connection "master"
+[0m03:10:08.029635 [debug] [MainThread]: On master: BEGIN
+[0m03:10:08.033475 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m03:10:08.047264 [debug] [MainThread]: SQL status: BEGIN in 0.01 seconds
+[0m03:10:08.064080 [debug] [MainThread]: Using ***** connection "master"
+[0m03:10:08.078606 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.3.1", "profile_name": "my-*****-db", "target_name": "dev", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select distinct
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+[0m03:10:08.141524 [debug] [MainThread]: SQL status: SELECT 8 in 0.05 seconds
+[0m03:10:08.160854 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '543afeeb-4b11-4bbe-abcf-03895e6580dd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f396616f430>]}
+[0m03:10:08.178127 [debug] [MainThread]: On master: ROLLBACK
+[0m03:10:08.187657 [debug] [MainThread]: Using ***** connection "master"
+[0m03:10:08.190879 [debug] [MainThread]: On master: BEGIN
+[0m03:10:08.197597 [debug] [MainThread]: SQL status: BEGIN in 0.0 seconds
+[0m03:10:08.202165 [debug] [MainThread]: On master: COMMIT
+[0m03:10:08.205491 [debug] [MainThread]: Using ***** connection "master"
+[0m03:10:08.212165 [debug] [MainThread]: On master: COMMIT
+[0m03:10:08.219639 [debug] [MainThread]: SQL status: COMMIT in 0.0 seconds
+[0m03:10:08.225885 [debug] [MainThread]: On master: Close
+[0m03:10:08.236386 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m03:10:08.246302 [info ] [MainThread]: 
+[0m03:10:08.314065 [debug] [Thread-1  ]: Began running node test.acme.dbt_utils_expression_is_true_mrr_date_month_date_trunc_month_current_date_.8e3ee48bc6
+[0m03:10:08.319718 [info ] [Thread-1  ]: 1 of 15 START test dbt_utils_expression_is_true_mrr_date_month_date_trunc_month_current_date_  [RUN]
+[0m03:10:08.327472 [debug] [Thread-1  ]: Acquiring new ***** connection "test.acme.dbt_utils_expression_is_true_mrr_date_month_date_trunc_month_current_date_.8e3ee48bc6"
+[0m03:10:08.332559 [debug] [Thread-1  ]: Began compiling node test.acme.dbt_utils_expression_is_true_mrr_date_month_date_trunc_month_current_date_.8e3ee48bc6
+[0m03:10:08.336680 [debug] [Thread-1  ]: Compiling test.acme.dbt_utils_expression_is_true_mrr_date_month_date_trunc_month_current_date_.8e3ee48bc6
+[0m03:10:08.337474 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m03:10:08.342688 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m03:10:08.393577 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'cf844e58-58ca-4ed0-8abc-fa0484fe06b9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3fbf29c0d0>]}
+[0m03:10:08.407891 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m03:10:08.412682 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m03:10:08.413629 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'cf844e58-58ca-4ed0-8abc-fa0484fe06b9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3fbf3c9670>]}
+[0m03:10:08.420696 [info ] [MainThread]: Found 4 models, 21 tests, 0 snapshots, 0 analyses, 477 macros, 0 operations, 1 seed file, 0 sources, 0 exposures, 0 metrics
+[0m03:10:08.423725 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'cf844e58-58ca-4ed0-8abc-fa0484fe06b9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3fbf3c98b0>]}
+[0m03:10:08.425550 [debug] [Thread-1  ]: Writing injected SQL for node "test.acme.dbt_utils_expression_is_true_mrr_date_month_date_trunc_month_current_date_.8e3ee48bc6"
+[0m03:10:08.458366 [info ] [MainThread]: 
+[0m03:10:08.464580 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'a3a4ece7-c101-4e8d-ab19-54a1e9d0d8b2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f44da4310d0>]}
+[0m03:10:08.466744 [warn ] [MainThread]: [[33mWARNING[0m]: Nothing to do. Try checking your model configs and model specification args
+[0m03:10:08.478524 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'a3a4ece7-c101-4e8d-ab19-54a1e9d0d8b2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f44da5706a0>]}
+[0m03:10:08.475853 [debug] [Thread-1  ]: finished collecting timing info
+[0m03:10:08.484399 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m03:10:08.483532 [info ] [MainThread]: Found 4 models, 21 tests, 0 snapshots, 0 analyses, 477 macros, 0 operations, 1 seed file, 0 sources, 0 exposures, 0 metrics
+[0m03:10:08.478246 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3fbf3c93a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3fbf3c98b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3fbf3c94f0>]}
+[0m03:10:08.496930 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m03:10:08.490773 [debug] [Thread-1  ]: Began executing node test.acme.dbt_utils_expression_is_true_mrr_date_month_date_trunc_month_current_date_.8e3ee48bc6
+[0m03:10:08.498801 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'a3a4ece7-c101-4e8d-ab19-54a1e9d0d8b2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f44da5708e0>]}
+[0m03:10:08.501792 [debug] [MainThread]: Flushing usage events
+[0m03:10:08.564818 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '826dfcf4-6f89-4f7b-9427-5a4145a1dc31', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f08b84850d0>]}
+[0m03:10:08.579822 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '826dfcf4-6f89-4f7b-9427-5a4145a1dc31', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f08b859c640>]}
+[0m03:10:08.576499 [info ] [MainThread]: 
+[0m03:10:08.638740 [info ] [MainThread]: Found 4 models, 21 tests, 0 snapshots, 0 analyses, 477 macros, 0 operations, 1 seed file, 0 sources, 0 exposures, 0 metrics
+[0m03:10:08.654375 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '826dfcf4-6f89-4f7b-9427-5a4145a1dc31', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f08b859c880>]}
+[0m03:10:08.648171 [debug] [MainThread]: Acquiring new ***** connection "master"
+[0m03:10:08.658928 [info ] [MainThread]: 
+[0m03:10:08.662003 [debug] [ThreadPool]: Acquiring new ***** connection "list_*****_public"
+[0m03:10:08.670458 [debug] [MainThread]: Acquiring new ***** connection "master"
+[0m03:10:08.755382 [debug] [ThreadPool]: Acquiring new ***** connection "list_*****_public"
+[0m03:10:08.795091 [debug] [ThreadPool]: Using ***** connection "list_*****_public"
+[0m03:10:08.799254 [debug] [ThreadPool]: On list_*****_public: BEGIN
+[0m03:10:08.805432 [debug] [ThreadPool]: Using ***** connection "list_*****_public"
+[0m03:10:08.803557 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m03:10:08.807081 [debug] [ThreadPool]: On list_*****_public: BEGIN
+[0m03:10:08.815776 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m03:10:08.809444 [debug] [Thread-1  ]: Writing runtime sql for node "test.acme.dbt_utils_expression_is_true_mrr_date_month_date_trunc_month_current_date_.8e3ee48bc6"
+[0m03:10:08.866276 [debug] [Thread-1  ]: Using ***** connection "test.acme.dbt_utils_expression_is_true_mrr_date_month_date_trunc_month_current_date_.8e3ee48bc6"
+[0m03:10:08.868467 [debug] [Thread-1  ]: On test.acme.dbt_utils_expression_is_true_mrr_date_month_date_trunc_month_current_date_.8e3ee48bc6: BEGIN
+[0m03:10:08.872354 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m03:10:08.870563 [debug] [ThreadPool]: SQL status: BEGIN in 0.07 seconds
+[0m03:10:08.874075 [debug] [ThreadPool]: SQL status: BEGIN in 0.06 seconds
+[0m03:10:08.876409 [debug] [ThreadPool]: Using ***** connection "list_*****_public"
+[0m03:10:08.880756 [debug] [ThreadPool]: Using ***** connection "list_*****_public"
+[0m03:10:08.884782 [debug] [ThreadPool]: On list_*****_public: /* {"app": "dbt", "dbt_version": "1.3.1", "profile_name": "my-*****-db", "target_name": "dev", "connection_name": "list_*****_public"} */
+select
+      '*****' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public'
+    union all
+    select
+      '*****' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public'
+  
+[0m03:10:08.907336 [debug] [ThreadPool]: On list_*****_public: /* {"app": "dbt", "dbt_version": "1.3.1", "profile_name": "my-*****-db", "target_name": "dev", "connection_name": "list_*****_public"} */
+select
+      '*****' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public'
+    union all
+    select
+      '*****' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public'
+  
+[0m03:10:08.932991 [debug] [Thread-1  ]: SQL status: BEGIN in 0.06 seconds
+[0m03:10:08.935684 [debug] [ThreadPool]: SQL status: SELECT 55 in 0.0 seconds
+[0m03:10:08.935657 [debug] [Thread-1  ]: Using ***** connection "test.acme.dbt_utils_expression_is_true_mrr_date_month_date_trunc_month_current_date_.8e3ee48bc6"
+[0m03:10:08.937729 [debug] [Thread-1  ]: On test.acme.dbt_utils_expression_is_true_mrr_date_month_date_trunc_month_current_date_.8e3ee48bc6: /* {"app": "dbt", "dbt_version": "1.3.1", "profile_name": "my-*****-db", "target_name": "dev", "node_id": "test.acme.dbt_utils_expression_is_true_mrr_date_month_date_trunc_month_current_date_.8e3ee48bc6"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+
+with meet_condition as (
+    select * from "*****"."public"."mrr" where 1=1
+)
+
+select
+    *
+from meet_condition
+
+where not(date_month <= date_trunc('month', current_date))
+
+
+      
+    ) dbt_internal_test
+[0m03:10:08.939180 [debug] [ThreadPool]: SQL status: SELECT 55 in 0.02 seconds
+[0m03:10:08.942489 [debug] [ThreadPool]: On list_*****_public: ROLLBACK
+[0m03:10:08.944704 [debug] [ThreadPool]: On list_*****_public: Close
+[0m03:10:08.948228 [debug] [ThreadPool]: On list_*****_public: ROLLBACK
+[0m03:10:08.951869 [debug] [ThreadPool]: On list_*****_public: Close
+[0m03:10:08.985326 [debug] [MainThread]: Using ***** connection "master"
+[0m03:10:08.996011 [debug] [MainThread]: Using ***** connection "master"
+[0m03:10:09.006598 [debug] [Thread-1  ]: SQL status: SELECT 1 in 0.07 seconds
+[0m03:10:09.009130 [debug] [MainThread]: On master: BEGIN
+[0m03:10:09.017189 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m03:10:09.000724 [debug] [MainThread]: On master: BEGIN
+[0m03:10:09.017803 [debug] [Thread-1  ]: finished collecting timing info
+[0m03:10:09.021179 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m03:10:09.030371 [debug] [Thread-1  ]: On test.acme.dbt_utils_expression_is_true_mrr_date_month_date_trunc_month_current_date_.8e3ee48bc6: ROLLBACK
+[0m03:10:09.074471 [debug] [Thread-1  ]: On test.acme.dbt_utils_expression_is_true_mrr_date_month_date_trunc_month_current_date_.8e3ee48bc6: Close
+[0m03:10:09.077591 [info ] [Thread-1  ]: 1 of 15 PASS dbt_utils_expression_is_true_mrr_date_month_date_trunc_month_current_date_  [[32mPASS[0m in 0.75s]
+[0m03:10:09.080878 [debug] [Thread-1  ]: Finished running node test.acme.dbt_utils_expression_is_true_mrr_date_month_date_trunc_month_current_date_.8e3ee48bc6
+[0m03:10:09.084150 [debug] [Thread-1  ]: Began running node test.acme.dbt_utils_unique_combination_of_columns_mrr_customer_id__date_month.7a5b0199cb
+[0m03:10:09.087365 [debug] [MainThread]: SQL status: BEGIN in 0.07 seconds
+[0m03:10:09.087144 [debug] [MainThread]: SQL status: BEGIN in 0.07 seconds
+[0m03:10:09.090364 [debug] [MainThread]: Using ***** connection "master"
+[0m03:10:09.088114 [info ] [Thread-1  ]: 2 of 15 START test dbt_utils_unique_combination_of_columns_mrr_customer_id__date_month  [RUN]
+[0m03:10:09.089505 [debug] [MainThread]: Using ***** connection "master"
+[0m03:10:09.094795 [debug] [Thread-1  ]: Acquiring new ***** connection "test.acme.dbt_utils_unique_combination_of_columns_mrr_customer_id__date_month.7a5b0199cb"
+[0m03:10:09.092741 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.3.1", "profile_name": "my-*****-db", "target_name": "dev", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select distinct
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+[0m03:10:09.096364 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.3.1", "profile_name": "my-*****-db", "target_name": "dev", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select distinct
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+[0m03:10:09.098802 [debug] [Thread-1  ]: Began compiling node test.acme.dbt_utils_unique_combination_of_columns_mrr_customer_id__date_month.7a5b0199cb
+[0m03:10:09.108201 [debug] [Thread-1  ]: Compiling test.acme.dbt_utils_unique_combination_of_columns_mrr_customer_id__date_month.7a5b0199cb
+[0m03:10:09.122744 [debug] [MainThread]: SQL status: SELECT 8 in 0.02 seconds
+[0m03:10:09.126733 [debug] [MainThread]: SQL status: SELECT 8 in 0.03 seconds
+[0m03:10:09.135735 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '826dfcf4-6f89-4f7b-9427-5a4145a1dc31', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f08b859c3d0>]}
+[0m03:10:09.134312 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'a3a4ece7-c101-4e8d-ab19-54a1e9d0d8b2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f44da6c4730>]}
+[0m03:10:09.139477 [debug] [MainThread]: On master: ROLLBACK
+[0m03:10:09.142436 [debug] [MainThread]: On master: ROLLBACK
+[0m03:10:09.147790 [debug] [MainThread]: Using ***** connection "master"
+[0m03:10:09.154825 [debug] [MainThread]: On master: BEGIN
+[0m03:10:09.152569 [debug] [MainThread]: Using ***** connection "master"
+[0m03:10:09.166068 [debug] [MainThread]: SQL status: BEGIN in 0.0 seconds
+[0m03:10:09.167758 [debug] [MainThread]: On master: BEGIN
+[0m03:10:09.174559 [debug] [MainThread]: On master: COMMIT
+[0m03:10:09.182698 [debug] [MainThread]: SQL status: BEGIN in 0.0 seconds
+[0m03:10:09.185904 [debug] [MainThread]: Using ***** connection "master"
+[0m03:10:09.224192 [debug] [Thread-1  ]: Writing injected SQL for node "test.acme.dbt_utils_unique_combination_of_columns_mrr_customer_id__date_month.7a5b0199cb"
+[0m03:10:09.215880 [debug] [MainThread]: On master: COMMIT
+[0m03:10:09.250089 [debug] [MainThread]: On master: COMMIT
+[0m03:10:09.264729 [debug] [MainThread]: Using ***** connection "master"
+[0m03:10:09.269556 [debug] [Thread-1  ]: finished collecting timing info
+[0m03:10:09.316258 [debug] [MainThread]: On master: COMMIT
+[0m03:10:09.317093 [debug] [Thread-1  ]: Began executing node test.acme.dbt_utils_unique_combination_of_columns_mrr_customer_id__date_month.7a5b0199cb
+[0m03:10:09.324602 [debug] [MainThread]: SQL status: COMMIT in 0.0 seconds
+[0m03:10:09.330313 [debug] [MainThread]: On master: Close
+[0m03:10:09.330275 [debug] [MainThread]: SQL status: COMMIT in 0.0 seconds
+[0m03:10:09.334414 [debug] [Thread-1  ]: Writing runtime sql for node "test.acme.dbt_utils_unique_combination_of_columns_mrr_customer_id__date_month.7a5b0199cb"
+[0m03:10:09.340075 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m03:10:09.336807 [debug] [MainThread]: On master: Close
+[0m03:10:09.344114 [info ] [MainThread]: 
+[0m03:10:09.346836 [debug] [Thread-1  ]: Using ***** connection "test.acme.dbt_utils_unique_combination_of_columns_mrr_customer_id__date_month.7a5b0199cb"
+[0m03:10:09.434946 [debug] [Thread-1  ]: On test.acme.dbt_utils_unique_combination_of_columns_mrr_customer_id__date_month.7a5b0199cb: BEGIN
+[0m03:10:09.506565 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m03:10:09.493480 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m03:10:09.516878 [info ] [MainThread]: 
+[0m03:10:09.624907 [debug] [Thread-1  ]: SQL status: BEGIN in 0.11 seconds
+[0m03:10:09.643627 [debug] [Thread-1  ]: Using ***** connection "test.acme.dbt_utils_unique_combination_of_columns_mrr_customer_id__date_month.7a5b0199cb"
+[0m03:10:09.670587 [debug] [Thread-1  ]: On test.acme.dbt_utils_unique_combination_of_columns_mrr_customer_id__date_month.7a5b0199cb: /* {"app": "dbt", "dbt_version": "1.3.1", "profile_name": "my-*****-db", "target_name": "dev", "node_id": "test.acme.dbt_utils_unique_combination_of_columns_mrr_customer_id__date_month.7a5b0199cb"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+
+
+
+
+
+with validation_errors as (
+
+    select
+        customer_id, date_month
+    from "*****"."public"."mrr"
+    group by customer_id, date_month
+    having count(*) > 1
+
+)
+
+select *
+from validation_errors
+
+
+
+      
+    ) dbt_internal_test
+[0m03:10:09.678767 [debug] [Thread-1  ]: Began running node test.acme.not_null_customer_churn_month_customer_id.99e28f508c
+[0m03:10:09.700499 [info ] [Thread-1  ]: 1 of 2 START test not_null_customer_churn_month_customer_id .................... [RUN]
+[0m03:10:09.730589 [debug] [Thread-1  ]: Acquiring new ***** connection "test.acme.not_null_customer_churn_month_customer_id.99e28f508c"
+[0m03:10:09.736603 [debug] [Thread-1  ]: Began compiling node test.acme.not_null_customer_churn_month_customer_id.99e28f508c
+[0m03:10:09.740227 [debug] [Thread-1  ]: Compiling test.acme.not_null_customer_churn_month_customer_id.99e28f508c
+[0m03:10:09.736931 [debug] [Thread-1  ]: SQL status: SELECT 1 in 0.06 seconds
+[0m03:10:09.777868 [debug] [Thread-1  ]: finished collecting timing info
+[0m03:10:09.782174 [debug] [Thread-1  ]: On test.acme.dbt_utils_unique_combination_of_columns_mrr_customer_id__date_month.7a5b0199cb: ROLLBACK
+[0m03:10:09.786301 [debug] [Thread-1  ]: On test.acme.dbt_utils_unique_combination_of_columns_mrr_customer_id__date_month.7a5b0199cb: Close
+[0m03:10:09.793329 [info ] [Thread-1  ]: 2 of 15 PASS dbt_utils_unique_combination_of_columns_mrr_customer_id__date_month  [[32mPASS[0m in 0.70s]
+[0m03:10:09.870205 [debug] [Thread-1  ]: Began running node test.acme.dbt_utils_unique_combination_of_columns_customer_revenue_by_month_customer_id__date_month.e8886ba716
+[0m03:10:09.874261 [debug] [Thread-1  ]: Finished running node test.acme.dbt_utils_unique_combination_of_columns_mrr_customer_id__date_month.7a5b0199cb
+[0m03:10:09.938010 [info ] [Thread-1  ]: 1 of 1 START test dbt_utils_unique_combination_of_columns_customer_revenue_by_month_customer_id__date_month  [RUN]
+[0m03:10:09.932147 [debug] [Thread-1  ]: Began running node test.acme.not_null_mrr_customer_id.adf44c0fb5
+[0m03:10:10.023795 [info ] [Thread-1  ]: 3 of 15 START test not_null_mrr_customer_id .................................... [RUN]
+[0m03:10:10.048601 [debug] [Thread-1  ]: Acquiring new ***** connection "test.acme.dbt_utils_unique_combination_of_columns_customer_revenue_by_month_customer_id__date_month.e8886ba716"
+[0m03:10:10.054588 [debug] [Thread-1  ]: Began compiling node test.acme.dbt_utils_unique_combination_of_columns_customer_revenue_by_month_customer_id__date_month.e8886ba716
+[0m03:10:10.053177 [debug] [Thread-1  ]: Acquiring new ***** connection "test.acme.not_null_mrr_customer_id.adf44c0fb5"
+[0m03:10:10.060429 [debug] [Thread-1  ]: Began compiling node test.acme.not_null_mrr_customer_id.adf44c0fb5
+[0m03:10:10.060538 [debug] [Thread-1  ]: Compiling test.acme.dbt_utils_unique_combination_of_columns_customer_revenue_by_month_customer_id__date_month.e8886ba716
+[0m03:10:10.063104 [debug] [Thread-1  ]: Compiling test.acme.not_null_mrr_customer_id.adf44c0fb5
+[0m03:10:10.157640 [debug] [Thread-1  ]: Writing injected SQL for node "test.acme.not_null_mrr_customer_id.adf44c0fb5"
+[0m03:10:10.186295 [debug] [Thread-1  ]: Writing injected SQL for node "test.acme.not_null_customer_churn_month_customer_id.99e28f508c"
+[0m03:10:10.192577 [debug] [Thread-1  ]: finished collecting timing info
+[0m03:10:10.199659 [debug] [Thread-1  ]: finished collecting timing info
+[0m03:10:10.227184 [debug] [Thread-1  ]: Began executing node test.acme.not_null_customer_churn_month_customer_id.99e28f508c
+[0m03:10:10.201246 [debug] [Thread-1  ]: Began executing node test.acme.not_null_mrr_customer_id.adf44c0fb5
+[0m03:10:10.272030 [debug] [Thread-1  ]: Writing injected SQL for node "test.acme.dbt_utils_unique_combination_of_columns_customer_revenue_by_month_customer_id__date_month.e8886ba716"
+[0m03:10:10.288423 [debug] [Thread-1  ]: finished collecting timing info
+[0m03:10:10.289390 [debug] [Thread-1  ]: Writing runtime sql for node "test.acme.not_null_mrr_customer_id.adf44c0fb5"
+[0m03:10:10.293174 [debug] [Thread-1  ]: Began executing node test.acme.dbt_utils_unique_combination_of_columns_customer_revenue_by_month_customer_id__date_month.e8886ba716
+[0m03:10:10.381755 [debug] [Thread-1  ]: Using ***** connection "test.acme.not_null_mrr_customer_id.adf44c0fb5"
+[0m03:10:10.384868 [debug] [Thread-1  ]: On test.acme.not_null_mrr_customer_id.adf44c0fb5: BEGIN
+[0m03:10:10.388083 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m03:10:10.431220 [debug] [Thread-1  ]: SQL status: BEGIN in 0.04 seconds
+[0m03:10:10.450575 [debug] [Thread-1  ]: Using ***** connection "test.acme.not_null_mrr_customer_id.adf44c0fb5"
+[0m03:10:10.463080 [debug] [Thread-1  ]: On test.acme.not_null_mrr_customer_id.adf44c0fb5: /* {"app": "dbt", "dbt_version": "1.3.1", "profile_name": "my-*****-db", "target_name": "dev", "node_id": "test.acme.not_null_mrr_customer_id.adf44c0fb5"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select customer_id
+from "*****"."public"."mrr"
+where customer_id is null
+
+
+
+      
+    ) dbt_internal_test
+[0m03:10:10.478019 [debug] [Thread-1  ]: Writing runtime sql for node "test.acme.not_null_customer_churn_month_customer_id.99e28f508c"
+[0m03:10:10.571730 [debug] [Thread-1  ]: SQL status: SELECT 1 in 0.11 seconds
+[0m03:10:10.631858 [debug] [Thread-1  ]: Using ***** connection "test.acme.not_null_customer_churn_month_customer_id.99e28f508c"
+[0m03:10:10.664510 [debug] [Thread-1  ]: finished collecting timing info
+[0m03:10:10.669332 [debug] [Thread-1  ]: On test.acme.not_null_customer_churn_month_customer_id.99e28f508c: BEGIN
+[0m03:10:10.671709 [debug] [Thread-1  ]: On test.acme.not_null_mrr_customer_id.adf44c0fb5: ROLLBACK
+[0m03:10:10.673492 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m03:10:10.676157 [debug] [Thread-1  ]: On test.acme.not_null_mrr_customer_id.adf44c0fb5: Close
+[0m03:10:10.718527 [info ] [Thread-1  ]: 3 of 15 PASS not_null_mrr_customer_id .......................................... [[32mPASS[0m in 0.67s]
+[0m03:10:10.726412 [debug] [Thread-1  ]: Finished running node test.acme.not_null_mrr_customer_id.adf44c0fb5
+[0m03:10:10.730054 [debug] [Thread-1  ]: Began running node test.acme.not_null_mrr_date_month.d7121d9ce6
+[0m03:10:10.736431 [debug] [Thread-1  ]: SQL status: BEGIN in 0.06 seconds
+[0m03:10:10.753884 [debug] [Thread-1  ]: Using ***** connection "test.acme.not_null_customer_churn_month_customer_id.99e28f508c"
+[0m03:10:10.745836 [info ] [Thread-1  ]: 4 of 15 START test not_null_mrr_date_month ..................................... [RUN]
+[0m03:10:10.772740 [debug] [Thread-1  ]: On test.acme.not_null_customer_churn_month_customer_id.99e28f508c: /* {"app": "dbt", "dbt_version": "1.3.1", "profile_name": "my-*****-db", "target_name": "dev", "node_id": "test.acme.not_null_customer_churn_month_customer_id.99e28f508c"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select customer_id
+from "*****"."public"."customer_churn_month"
+where customer_id is null
+
+
+
+      
+    ) dbt_internal_test
+[0m03:10:10.777389 [debug] [Thread-1  ]: Writing runtime sql for node "test.acme.dbt_utils_unique_combination_of_columns_customer_revenue_by_month_customer_id__date_month.e8886ba716"
+[0m03:10:10.778234 [debug] [Thread-1  ]: Acquiring new ***** connection "test.acme.not_null_mrr_date_month.d7121d9ce6"
+[0m03:10:10.795104 [debug] [Thread-1  ]: SQL status: SELECT 1 in 0.02 seconds
+[0m03:10:10.836219 [debug] [Thread-1  ]: Using ***** connection "test.acme.dbt_utils_unique_combination_of_columns_customer_revenue_by_month_customer_id__date_month.e8886ba716"
+[0m03:10:10.843002 [debug] [Thread-1  ]: On test.acme.dbt_utils_unique_combination_of_columns_customer_revenue_by_month_customer_id__date_month.e8886ba716: BEGIN
+[0m03:10:10.825463 [debug] [Thread-1  ]: Began compiling node test.acme.not_null_mrr_date_month.d7121d9ce6
+[0m03:10:10.868915 [debug] [Thread-1  ]: Compiling test.acme.not_null_mrr_date_month.d7121d9ce6
+[0m03:10:10.878143 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m03:10:10.917520 [debug] [Thread-1  ]: finished collecting timing info
+[0m03:10:10.925856 [debug] [Thread-1  ]: On test.acme.not_null_customer_churn_month_customer_id.99e28f508c: ROLLBACK
+[0m03:10:10.930484 [debug] [Thread-1  ]: On test.acme.not_null_customer_churn_month_customer_id.99e28f508c: Close
+[0m03:10:10.979621 [info ] [Thread-1  ]: 1 of 2 PASS not_null_customer_churn_month_customer_id .......................... [[32mPASS[0m in 1.27s]
+[0m03:10:10.980204 [debug] [Thread-1  ]: Writing injected SQL for node "test.acme.not_null_mrr_date_month.d7121d9ce6"
+[0m03:10:10.995440 [debug] [Thread-1  ]: Finished running node test.acme.not_null_customer_churn_month_customer_id.99e28f508c
+[0m03:10:10.996812 [debug] [Thread-1  ]: finished collecting timing info
+[0m03:10:11.001000 [debug] [Thread-1  ]: Began running node test.acme.unique_customer_churn_month_customer_id.a402b7af3f
+[0m03:10:11.003466 [debug] [Thread-1  ]: Began executing node test.acme.not_null_mrr_date_month.d7121d9ce6
+[0m03:10:11.004088 [debug] [Thread-1  ]: SQL status: BEGIN in 0.14 seconds
+[0m03:10:11.006803 [debug] [Thread-1  ]: Using ***** connection "test.acme.dbt_utils_unique_combination_of_columns_customer_revenue_by_month_customer_id__date_month.e8886ba716"
+[0m03:10:11.005048 [info ] [Thread-1  ]: 2 of 2 START test unique_customer_churn_month_customer_id ...................... [RUN]
+[0m03:10:11.034461 [debug] [Thread-1  ]: On test.acme.dbt_utils_unique_combination_of_columns_customer_revenue_by_month_customer_id__date_month.e8886ba716: /* {"app": "dbt", "dbt_version": "1.3.1", "profile_name": "my-*****-db", "target_name": "dev", "node_id": "test.acme.dbt_utils_unique_combination_of_columns_customer_revenue_by_month_customer_id__date_month.e8886ba716"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+
+
+
+
+
+with validation_errors as (
+
+    select
+        customer_id, date_month
+    from "*****"."public"."customer_revenue_by_month"
+    group by customer_id, date_month
+    having count(*) > 1
+
+)
+
+select *
+from validation_errors
+
+
+
+      
+    ) dbt_internal_test
+[0m03:10:11.058203 [debug] [Thread-1  ]: Writing runtime sql for node "test.acme.not_null_mrr_date_month.d7121d9ce6"
+[0m03:10:11.058841 [debug] [Thread-1  ]: Acquiring new ***** connection "test.acme.unique_customer_churn_month_customer_id.a402b7af3f"
+[0m03:10:11.063578 [debug] [Thread-1  ]: Began compiling node test.acme.unique_customer_churn_month_customer_id.a402b7af3f
+[0m03:10:11.066309 [debug] [Thread-1  ]: Using ***** connection "test.acme.not_null_mrr_date_month.d7121d9ce6"
+[0m03:10:11.068056 [debug] [Thread-1  ]: Compiling test.acme.unique_customer_churn_month_customer_id.a402b7af3f
+[0m03:10:11.069478 [debug] [Thread-1  ]: On test.acme.not_null_mrr_date_month.d7121d9ce6: BEGIN
+[0m03:10:11.073545 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m03:10:11.080014 [debug] [Thread-1  ]: SQL status: SELECT 1 in 0.02 seconds
+[0m03:10:11.118828 [debug] [Thread-1  ]: SQL status: BEGIN in 0.05 seconds
+[0m03:10:11.122067 [debug] [Thread-1  ]: Using ***** connection "test.acme.not_null_mrr_date_month.d7121d9ce6"
+[0m03:10:11.131201 [debug] [Thread-1  ]: On test.acme.not_null_mrr_date_month.d7121d9ce6: /* {"app": "dbt", "dbt_version": "1.3.1", "profile_name": "my-*****-db", "target_name": "dev", "node_id": "test.acme.not_null_mrr_date_month.d7121d9ce6"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select date_month
+from "*****"."public"."mrr"
+where date_month is null
+
+
+
+      
+    ) dbt_internal_test
+[0m03:10:11.163444 [debug] [Thread-1  ]: Writing injected SQL for node "test.acme.unique_customer_churn_month_customer_id.a402b7af3f"
+[0m03:10:11.177062 [debug] [Thread-1  ]: finished collecting timing info
+[0m03:10:11.180802 [debug] [Thread-1  ]: Began executing node test.acme.unique_customer_churn_month_customer_id.a402b7af3f
+[0m03:10:11.209176 [debug] [Thread-1  ]: SQL status: SELECT 1 in 0.07 seconds
+[0m03:10:11.222404 [debug] [Thread-1  ]: finished collecting timing info
+[0m03:10:11.225131 [debug] [Thread-1  ]: On test.acme.not_null_mrr_date_month.d7121d9ce6: ROLLBACK
+[0m03:10:11.227731 [debug] [Thread-1  ]: Writing runtime sql for node "test.acme.unique_customer_churn_month_customer_id.a402b7af3f"
+[0m03:10:11.230468 [debug] [Thread-1  ]: On test.acme.not_null_mrr_date_month.d7121d9ce6: Close
+[0m03:10:11.237093 [info ] [Thread-1  ]: 4 of 15 PASS not_null_mrr_date_month ........................................... [[32mPASS[0m in 0.46s]
+[0m03:10:11.241872 [debug] [Thread-1  ]: Finished running node test.acme.not_null_mrr_date_month.d7121d9ce6
+[0m03:10:11.245612 [debug] [Thread-1  ]: Began running node test.acme.not_null_mrr_first_active_month.a9078832e9
+[0m03:10:11.248267 [info ] [Thread-1  ]: 5 of 15 START test not_null_mrr_first_active_month ............................. [RUN]
+[0m03:10:11.245186 [debug] [Thread-1  ]: finished collecting timing info
+[0m03:10:11.248409 [debug] [Thread-1  ]: Using ***** connection "test.acme.unique_customer_churn_month_customer_id.a402b7af3f"
+[0m03:10:11.253906 [debug] [Thread-1  ]: On test.acme.dbt_utils_unique_combination_of_columns_customer_revenue_by_month_customer_id__date_month.e8886ba716: ROLLBACK
+[0m03:10:11.253492 [debug] [Thread-1  ]: Acquiring new ***** connection "test.acme.not_null_mrr_first_active_month.a9078832e9"
+[0m03:10:11.258563 [debug] [Thread-1  ]: On test.acme.dbt_utils_unique_combination_of_columns_customer_revenue_by_month_customer_id__date_month.e8886ba716: Close
+[0m03:10:11.260340 [debug] [Thread-1  ]: Began compiling node test.acme.not_null_mrr_first_active_month.a9078832e9
+[0m03:10:11.267144 [debug] [Thread-1  ]: Compiling test.acme.not_null_mrr_first_active_month.a9078832e9
+[0m03:10:11.255706 [debug] [Thread-1  ]: On test.acme.unique_customer_churn_month_customer_id.a402b7af3f: BEGIN
+[0m03:10:11.269546 [info ] [Thread-1  ]: 1 of 1 PASS dbt_utils_unique_combination_of_columns_customer_revenue_by_month_customer_id__date_month  [[32mPASS[0m in 1.28s]
+[0m03:10:11.273472 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m03:10:11.278753 [debug] [Thread-1  ]: Finished running node test.acme.dbt_utils_unique_combination_of_columns_customer_revenue_by_month_customer_id__date_month.e8886ba716
+[0m03:10:11.293513 [debug] [Thread-1  ]: SQL status: BEGIN in 0.02 seconds
+[0m03:10:11.315890 [debug] [MainThread]: Acquiring new ***** connection "master"
+[0m03:10:11.329268 [debug] [Thread-1  ]: Using ***** connection "test.acme.unique_customer_churn_month_customer_id.a402b7af3f"
+[0m03:10:11.343779 [debug] [Thread-1  ]: On test.acme.unique_customer_churn_month_customer_id.a402b7af3f: /* {"app": "dbt", "dbt_version": "1.3.1", "profile_name": "my-*****-db", "target_name": "dev", "node_id": "test.acme.unique_customer_churn_month_customer_id.a402b7af3f"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+select
+    customer_id as unique_field,
+    count(*) as n_records
+
+from "*****"."public"."customer_churn_month"
+where customer_id is not null
+group by customer_id
+having count(*) > 1
+
+
+
+      
+    ) dbt_internal_test
+[0m03:10:11.324415 [debug] [Thread-1  ]: Writing injected SQL for node "test.acme.not_null_mrr_first_active_month.a9078832e9"
+[0m03:10:11.331513 [debug] [MainThread]: Using ***** connection "master"
+[0m03:10:11.363624 [debug] [MainThread]: On master: BEGIN
+[0m03:10:11.364120 [debug] [Thread-1  ]: SQL status: SELECT 1 in 0.02 seconds
+[0m03:10:11.367053 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m03:10:11.373830 [debug] [Thread-1  ]: finished collecting timing info
+[0m03:10:11.382710 [debug] [Thread-1  ]: Began executing node test.acme.not_null_mrr_first_active_month.a9078832e9
+[0m03:10:11.385096 [debug] [Thread-1  ]: finished collecting timing info
+[0m03:10:11.391655 [debug] [Thread-1  ]: On test.acme.unique_customer_churn_month_customer_id.a402b7af3f: ROLLBACK
+[0m03:10:11.393180 [debug] [MainThread]: SQL status: BEGIN in 0.03 seconds
+[0m03:10:11.395404 [debug] [Thread-1  ]: On test.acme.unique_customer_churn_month_customer_id.a402b7af3f: Close
+[0m03:10:11.397684 [debug] [MainThread]: On master: COMMIT
+[0m03:10:11.408209 [debug] [MainThread]: Using ***** connection "master"
+[0m03:10:11.409107 [info ] [Thread-1  ]: 2 of 2 PASS unique_customer_churn_month_customer_id ............................ [[32mPASS[0m in 0.35s]
+[0m03:10:11.411297 [debug] [MainThread]: On master: COMMIT
+[0m03:10:11.415444 [debug] [Thread-1  ]: Finished running node test.acme.unique_customer_churn_month_customer_id.a402b7af3f
+[0m03:10:11.417386 [debug] [Thread-1  ]: Writing runtime sql for node "test.acme.not_null_mrr_first_active_month.a9078832e9"
+[0m03:10:11.419246 [debug] [MainThread]: SQL status: COMMIT in 0.0 seconds
+[0m03:10:11.425101 [debug] [MainThread]: On master: Close
+[0m03:10:11.428921 [info ] [MainThread]: 
+[0m03:10:11.429304 [debug] [MainThread]: Acquiring new ***** connection "master"
+[0m03:10:11.432170 [info ] [MainThread]: Finished running 1 test in 0 hours 0 minutes and 2.76 seconds (2.76s).
+[0m03:10:11.434527 [debug] [MainThread]: Using ***** connection "master"
+[0m03:10:11.435412 [debug] [Thread-1  ]: Using ***** connection "test.acme.not_null_mrr_first_active_month.a9078832e9"
+[0m03:10:11.437080 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m03:10:11.438375 [debug] [MainThread]: On master: BEGIN
+[0m03:10:11.448318 [debug] [MainThread]: Connection 'test.acme.dbt_utils_unique_combination_of_columns_customer_revenue_by_month_customer_id__date_month.e8886ba716' was properly closed.
+[0m03:10:11.440354 [debug] [Thread-1  ]: On test.acme.not_null_mrr_first_active_month.a9078832e9: BEGIN
+[0m03:10:11.485085 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m03:10:11.479287 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m03:10:11.484228 [info ] [MainThread]: 
+[0m03:10:11.500014 [debug] [Thread-1  ]: SQL status: BEGIN in 0.01 seconds
+[0m03:10:11.505724 [debug] [MainThread]: SQL status: BEGIN in 0.03 seconds
+[0m03:10:11.503844 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m03:10:11.508910 [debug] [MainThread]: On master: COMMIT
+[0m03:10:11.506260 [debug] [Thread-1  ]: Using ***** connection "test.acme.not_null_mrr_first_active_month.a9078832e9"
+[0m03:10:11.510507 [info ] [MainThread]: 
+[0m03:10:11.512281 [debug] [MainThread]: Using ***** connection "master"
+[0m03:10:11.516996 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+[0m03:10:11.517759 [debug] [MainThread]: On master: COMMIT
+[0m03:10:11.513431 [debug] [Thread-1  ]: On test.acme.not_null_mrr_first_active_month.a9078832e9: /* {"app": "dbt", "dbt_version": "1.3.1", "profile_name": "my-*****-db", "target_name": "dev", "node_id": "test.acme.not_null_mrr_first_active_month.a9078832e9"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select first_active_month
+from "*****"."public"."mrr"
+where first_active_month is null
+
+
+
+      
+    ) dbt_internal_test
+[0m03:10:11.524410 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f08b7c49850>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f08b7c49730>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f08b7c49af0>]}
+[0m03:10:11.523988 [debug] [MainThread]: SQL status: COMMIT in 0.0 seconds
+[0m03:10:11.529478 [debug] [MainThread]: On master: Close
+[0m03:10:11.529969 [debug] [MainThread]: Flushing usage events
+[0m03:10:11.535413 [info ] [MainThread]: 
+[0m03:10:11.540302 [info ] [MainThread]: Finished running 2 tests in 0 hours 0 minutes and 2.89 seconds (2.89s).
+[0m03:10:11.542977 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m03:10:11.545400 [debug] [MainThread]: Connection 'test.acme.unique_customer_churn_month_customer_id.a402b7af3f' was properly closed.
+[0m03:10:11.549868 [info ] [MainThread]: 
+[0m03:10:11.555306 [debug] [Thread-1  ]: SQL status: SELECT 1 in 0.03 seconds
+[0m03:10:11.554328 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m03:10:11.568033 [info ] [MainThread]: 
+[0m03:10:11.571316 [info ] [MainThread]: Done. PASS=2 WARN=0 ERROR=0 SKIP=0 TOTAL=2
+[0m03:10:11.569871 [debug] [Thread-1  ]: finished collecting timing info
+[0m03:10:11.578060 [debug] [Thread-1  ]: On test.acme.not_null_mrr_first_active_month.a9078832e9: ROLLBACK
+[0m03:10:11.579022 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f44d9bf6550>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f44d9bf68e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f44d9bf6760>]}
+[0m03:10:11.582511 [debug] [Thread-1  ]: On test.acme.not_null_mrr_first_active_month.a9078832e9: Close
+[0m03:10:11.627874 [debug] [MainThread]: Flushing usage events
+[0m03:10:11.635329 [info ] [Thread-1  ]: 5 of 15 PASS not_null_mrr_first_active_month ................................... [[32mPASS[0m in 0.38s]
+[0m03:10:11.639554 [debug] [Thread-1  ]: Finished running node test.acme.not_null_mrr_first_active_month.a9078832e9
+[0m03:10:11.643542 [debug] [Thread-1  ]: Began running node test.acme.not_null_mrr_id.45914052fb
+[0m03:10:11.645887 [info ] [Thread-1  ]: 6 of 15 START test not_null_mrr_id ............................................. [RUN]
+[0m03:10:11.656895 [debug] [Thread-1  ]: Acquiring new ***** connection "test.acme.not_null_mrr_id.45914052fb"
+[0m03:10:11.666825 [debug] [Thread-1  ]: Began compiling node test.acme.not_null_mrr_id.45914052fb
+[0m03:10:11.668453 [debug] [Thread-1  ]: Compiling test.acme.not_null_mrr_id.45914052fb
+[0m03:10:11.686390 [debug] [Thread-1  ]: Writing injected SQL for node "test.acme.not_null_mrr_id.45914052fb"
+[0m03:10:11.749451 [debug] [Thread-1  ]: finished collecting timing info
+[0m03:10:11.756816 [debug] [Thread-1  ]: Began executing node test.acme.not_null_mrr_id.45914052fb
+[0m03:10:11.795456 [debug] [Thread-1  ]: Writing runtime sql for node "test.acme.not_null_mrr_id.45914052fb"
+[0m03:10:11.837761 [debug] [Thread-1  ]: Using ***** connection "test.acme.not_null_mrr_id.45914052fb"
+[0m03:10:11.842141 [debug] [Thread-1  ]: On test.acme.not_null_mrr_id.45914052fb: BEGIN
+[0m03:10:11.846830 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m03:10:11.863708 [debug] [Thread-1  ]: SQL status: BEGIN in 0.02 seconds
+[0m03:10:11.866922 [debug] [Thread-1  ]: Using ***** connection "test.acme.not_null_mrr_id.45914052fb"
+[0m03:10:11.869404 [debug] [Thread-1  ]: On test.acme.not_null_mrr_id.45914052fb: /* {"app": "dbt", "dbt_version": "1.3.1", "profile_name": "my-*****-db", "target_name": "dev", "node_id": "test.acme.not_null_mrr_id.45914052fb"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select id
+from "*****"."public"."mrr"
+where id is null
+
+
+
+      
+    ) dbt_internal_test
+[0m03:10:11.896360 [debug] [Thread-1  ]: SQL status: SELECT 1 in 0.02 seconds
+[0m03:10:11.900882 [debug] [Thread-1  ]: finished collecting timing info
+[0m03:10:11.902589 [debug] [Thread-1  ]: On test.acme.not_null_mrr_id.45914052fb: ROLLBACK
+[0m03:10:11.904475 [debug] [Thread-1  ]: On test.acme.not_null_mrr_id.45914052fb: Close
+[0m03:10:11.906760 [info ] [Thread-1  ]: 6 of 15 PASS not_null_mrr_id ................................................... [[32mPASS[0m in 0.25s]
+[0m03:10:11.909362 [debug] [Thread-1  ]: Finished running node test.acme.not_null_mrr_id.45914052fb
+[0m03:10:11.911217 [debug] [Thread-1  ]: Began running node test.acme.not_null_mrr_is_active.66e2203f7d
+[0m03:10:11.912689 [info ] [Thread-1  ]: 7 of 15 START test not_null_mrr_is_active ...................................... [RUN]
+[0m03:10:11.915065 [debug] [Thread-1  ]: Acquiring new ***** connection "test.acme.not_null_mrr_is_active.66e2203f7d"
+[0m03:10:11.916734 [debug] [Thread-1  ]: Began compiling node test.acme.not_null_mrr_is_active.66e2203f7d
+[0m03:10:11.918522 [debug] [Thread-1  ]: Compiling test.acme.not_null_mrr_is_active.66e2203f7d
+[0m03:10:11.930869 [debug] [Thread-1  ]: Writing injected SQL for node "test.acme.not_null_mrr_is_active.66e2203f7d"
+[0m03:10:11.936131 [debug] [Thread-1  ]: finished collecting timing info
+[0m03:10:11.937814 [debug] [Thread-1  ]: Began executing node test.acme.not_null_mrr_is_active.66e2203f7d
+[0m03:10:11.957342 [debug] [Thread-1  ]: Writing runtime sql for node "test.acme.not_null_mrr_is_active.66e2203f7d"
+[0m03:10:11.967905 [debug] [Thread-1  ]: Using ***** connection "test.acme.not_null_mrr_is_active.66e2203f7d"
+[0m03:10:11.969366 [debug] [Thread-1  ]: On test.acme.not_null_mrr_is_active.66e2203f7d: BEGIN
+[0m03:10:11.971047 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m03:10:11.978310 [debug] [Thread-1  ]: SQL status: BEGIN in 0.01 seconds
+[0m03:10:11.979941 [debug] [Thread-1  ]: Using ***** connection "test.acme.not_null_mrr_is_active.66e2203f7d"
+[0m03:10:11.982132 [debug] [Thread-1  ]: On test.acme.not_null_mrr_is_active.66e2203f7d: /* {"app": "dbt", "dbt_version": "1.3.1", "profile_name": "my-*****-db", "target_name": "dev", "node_id": "test.acme.not_null_mrr_is_active.66e2203f7d"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select is_active
+from "*****"."public"."mrr"
+where is_active is null
+
+
+
+      
+    ) dbt_internal_test
+[0m03:10:12.010241 [debug] [Thread-1  ]: SQL status: SELECT 1 in 0.03 seconds
+[0m03:10:12.018063 [debug] [Thread-1  ]: finished collecting timing info
+[0m03:10:12.022317 [debug] [Thread-1  ]: On test.acme.not_null_mrr_is_active.66e2203f7d: ROLLBACK
+[0m03:10:12.031919 [debug] [Thread-1  ]: On test.acme.not_null_mrr_is_active.66e2203f7d: Close
+[0m03:10:12.041224 [info ] [Thread-1  ]: 7 of 15 PASS not_null_mrr_is_active ............................................ [[32mPASS[0m in 0.13s]
+[0m03:10:12.049968 [debug] [Thread-1  ]: Finished running node test.acme.not_null_mrr_is_active.66e2203f7d
+[0m03:10:12.055180 [debug] [Thread-1  ]: Began running node test.acme.not_null_mrr_is_first_month.97ecc2049e
+[0m03:10:12.059586 [info ] [Thread-1  ]: 8 of 15 START test not_null_mrr_is_first_month ................................. [RUN]
+[0m03:10:12.067295 [debug] [Thread-1  ]: Acquiring new ***** connection "test.acme.not_null_mrr_is_first_month.97ecc2049e"
+[0m03:10:12.070812 [debug] [Thread-1  ]: Began compiling node test.acme.not_null_mrr_is_first_month.97ecc2049e
+[0m03:10:12.073954 [debug] [Thread-1  ]: Compiling test.acme.not_null_mrr_is_first_month.97ecc2049e
+[0m03:10:12.099519 [debug] [Thread-1  ]: Writing injected SQL for node "test.acme.not_null_mrr_is_first_month.97ecc2049e"
+[0m03:10:12.157256 [debug] [Thread-1  ]: finished collecting timing info
+[0m03:10:12.160457 [debug] [Thread-1  ]: Began executing node test.acme.not_null_mrr_is_first_month.97ecc2049e
+[0m03:10:12.171169 [debug] [Thread-1  ]: Writing runtime sql for node "test.acme.not_null_mrr_is_first_month.97ecc2049e"
+[0m03:10:12.184627 [debug] [Thread-1  ]: Using ***** connection "test.acme.not_null_mrr_is_first_month.97ecc2049e"
+[0m03:10:12.187571 [debug] [Thread-1  ]: On test.acme.not_null_mrr_is_first_month.97ecc2049e: BEGIN
+[0m03:10:12.190043 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m03:10:12.207916 [debug] [Thread-1  ]: SQL status: BEGIN in 0.02 seconds
+[0m03:10:12.211227 [debug] [Thread-1  ]: Using ***** connection "test.acme.not_null_mrr_is_first_month.97ecc2049e"
+[0m03:10:12.215333 [debug] [Thread-1  ]: On test.acme.not_null_mrr_is_first_month.97ecc2049e: /* {"app": "dbt", "dbt_version": "1.3.1", "profile_name": "my-*****-db", "target_name": "dev", "node_id": "test.acme.not_null_mrr_is_first_month.97ecc2049e"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select is_first_month
+from "*****"."public"."mrr"
+where is_first_month is null
+
+
+
+      
+    ) dbt_internal_test
+[0m03:10:12.324520 [debug] [Thread-1  ]: SQL status: SELECT 1 in 0.09 seconds
+[0m03:10:12.341897 [debug] [Thread-1  ]: finished collecting timing info
+[0m03:10:12.346870 [debug] [Thread-1  ]: On test.acme.not_null_mrr_is_first_month.97ecc2049e: ROLLBACK
+[0m03:10:12.350281 [debug] [Thread-1  ]: On test.acme.not_null_mrr_is_first_month.97ecc2049e: Close
+[0m03:10:12.353433 [info ] [Thread-1  ]: 8 of 15 PASS not_null_mrr_is_first_month ....................................... [[32mPASS[0m in 0.29s]
+[0m03:10:12.357501 [debug] [Thread-1  ]: Finished running node test.acme.not_null_mrr_is_first_month.97ecc2049e
+[0m03:10:12.360673 [debug] [Thread-1  ]: Began running node test.acme.not_null_mrr_is_last_month.a91990c0de
+[0m03:10:12.364640 [info ] [Thread-1  ]: 9 of 15 START test not_null_mrr_is_last_month .................................. [RUN]
+[0m03:10:12.373296 [debug] [Thread-1  ]: Acquiring new ***** connection "test.acme.not_null_mrr_is_last_month.a91990c0de"
+[0m03:10:12.376603 [debug] [Thread-1  ]: Began compiling node test.acme.not_null_mrr_is_last_month.a91990c0de
+[0m03:10:12.380732 [debug] [Thread-1  ]: Compiling test.acme.not_null_mrr_is_last_month.a91990c0de
+[0m03:10:12.405349 [debug] [Thread-1  ]: Writing injected SQL for node "test.acme.not_null_mrr_is_last_month.a91990c0de"
+[0m03:10:12.442447 [debug] [Thread-1  ]: finished collecting timing info
+[0m03:10:12.446065 [debug] [Thread-1  ]: Began executing node test.acme.not_null_mrr_is_last_month.a91990c0de
+[0m03:10:12.455997 [debug] [Thread-1  ]: Writing runtime sql for node "test.acme.not_null_mrr_is_last_month.a91990c0de"
+[0m03:10:12.474506 [debug] [Thread-1  ]: Using ***** connection "test.acme.not_null_mrr_is_last_month.a91990c0de"
+[0m03:10:12.476040 [debug] [Thread-1  ]: On test.acme.not_null_mrr_is_last_month.a91990c0de: BEGIN
+[0m03:10:12.477279 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m03:10:12.485044 [debug] [Thread-1  ]: SQL status: BEGIN in 0.01 seconds
+[0m03:10:12.487606 [debug] [Thread-1  ]: Using ***** connection "test.acme.not_null_mrr_is_last_month.a91990c0de"
+[0m03:10:12.489848 [debug] [Thread-1  ]: On test.acme.not_null_mrr_is_last_month.a91990c0de: /* {"app": "dbt", "dbt_version": "1.3.1", "profile_name": "my-*****-db", "target_name": "dev", "node_id": "test.acme.not_null_mrr_is_last_month.a91990c0de"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select is_last_month
+from "*****"."public"."mrr"
+where is_last_month is null
+
+
+
+      
+    ) dbt_internal_test
+[0m03:10:12.507597 [debug] [Thread-1  ]: SQL status: SELECT 1 in 0.02 seconds
+[0m03:10:12.513062 [debug] [Thread-1  ]: finished collecting timing info
+[0m03:10:12.515348 [debug] [Thread-1  ]: On test.acme.not_null_mrr_is_last_month.a91990c0de: ROLLBACK
+[0m03:10:12.518346 [debug] [Thread-1  ]: On test.acme.not_null_mrr_is_last_month.a91990c0de: Close
+[0m03:10:12.520710 [info ] [Thread-1  ]: 9 of 15 PASS not_null_mrr_is_last_month ........................................ [[32mPASS[0m in 0.15s]
+[0m03:10:12.522829 [debug] [Thread-1  ]: Finished running node test.acme.not_null_mrr_is_last_month.a91990c0de
+[0m03:10:12.524866 [debug] [Thread-1  ]: Began running node test.acme.not_null_mrr_last_active_month.c5f2565121
+[0m03:10:12.527149 [info ] [Thread-1  ]: 10 of 15 START test not_null_mrr_last_active_month ............................. [RUN]
+[0m03:10:12.530641 [debug] [Thread-1  ]: Acquiring new ***** connection "test.acme.not_null_mrr_last_active_month.c5f2565121"
+[0m03:10:12.532812 [debug] [Thread-1  ]: Began compiling node test.acme.not_null_mrr_last_active_month.c5f2565121
+[0m03:10:12.534912 [debug] [Thread-1  ]: Compiling test.acme.not_null_mrr_last_active_month.c5f2565121
+[0m03:10:12.545191 [debug] [Thread-1  ]: Writing injected SQL for node "test.acme.not_null_mrr_last_active_month.c5f2565121"
+[0m03:10:12.569142 [debug] [Thread-1  ]: finished collecting timing info
+[0m03:10:12.579677 [debug] [Thread-1  ]: Began executing node test.acme.not_null_mrr_last_active_month.c5f2565121
+[0m03:10:12.593044 [debug] [Thread-1  ]: Writing runtime sql for node "test.acme.not_null_mrr_last_active_month.c5f2565121"
+[0m03:10:12.619896 [debug] [Thread-1  ]: Using ***** connection "test.acme.not_null_mrr_last_active_month.c5f2565121"
+[0m03:10:12.622577 [debug] [Thread-1  ]: On test.acme.not_null_mrr_last_active_month.c5f2565121: BEGIN
+[0m03:10:12.624658 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m03:10:12.632775 [debug] [Thread-1  ]: SQL status: BEGIN in 0.01 seconds
+[0m03:10:12.634959 [debug] [Thread-1  ]: Using ***** connection "test.acme.not_null_mrr_last_active_month.c5f2565121"
+[0m03:10:12.636850 [debug] [Thread-1  ]: On test.acme.not_null_mrr_last_active_month.c5f2565121: /* {"app": "dbt", "dbt_version": "1.3.1", "profile_name": "my-*****-db", "target_name": "dev", "node_id": "test.acme.not_null_mrr_last_active_month.c5f2565121"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select last_active_month
+from "*****"."public"."mrr"
+where last_active_month is null
+
+
+
+      
+    ) dbt_internal_test
+[0m03:10:12.672573 [debug] [Thread-1  ]: SQL status: SELECT 1 in 0.03 seconds
+[0m03:10:12.683653 [debug] [Thread-1  ]: finished collecting timing info
+[0m03:10:12.687652 [debug] [Thread-1  ]: On test.acme.not_null_mrr_last_active_month.c5f2565121: ROLLBACK
+[0m03:10:12.691336 [debug] [Thread-1  ]: On test.acme.not_null_mrr_last_active_month.c5f2565121: Close
+[0m03:10:12.695722 [info ] [Thread-1  ]: 10 of 15 PASS not_null_mrr_last_active_month ................................... [[32mPASS[0m in 0.17s]
+[0m03:10:12.700320 [debug] [Thread-1  ]: Finished running node test.acme.not_null_mrr_last_active_month.c5f2565121
+[0m03:10:12.703728 [debug] [Thread-1  ]: Began running node test.acme.not_null_mrr_mrr.7e419847d2
+[0m03:10:12.706383 [info ] [Thread-1  ]: 11 of 15 START test not_null_mrr_mrr ........................................... [RUN]
+[0m03:10:12.710169 [debug] [Thread-1  ]: Acquiring new ***** connection "test.acme.not_null_mrr_mrr.7e419847d2"
+[0m03:10:12.713384 [debug] [Thread-1  ]: Began compiling node test.acme.not_null_mrr_mrr.7e419847d2
+[0m03:10:12.715773 [debug] [Thread-1  ]: Compiling test.acme.not_null_mrr_mrr.7e419847d2
+[0m03:10:12.737410 [debug] [Thread-1  ]: Writing injected SQL for node "test.acme.not_null_mrr_mrr.7e419847d2"
+[0m03:10:12.746679 [debug] [Thread-1  ]: finished collecting timing info
+[0m03:10:12.751639 [debug] [Thread-1  ]: Began executing node test.acme.not_null_mrr_mrr.7e419847d2
+[0m03:10:12.768370 [debug] [Thread-1  ]: Writing runtime sql for node "test.acme.not_null_mrr_mrr.7e419847d2"
+[0m03:10:12.780234 [debug] [Thread-1  ]: Using ***** connection "test.acme.not_null_mrr_mrr.7e419847d2"
+[0m03:10:12.783710 [debug] [Thread-1  ]: On test.acme.not_null_mrr_mrr.7e419847d2: BEGIN
+[0m03:10:12.842195 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m03:10:12.895495 [debug] [Thread-1  ]: SQL status: BEGIN in 0.05 seconds
+[0m03:10:12.947156 [debug] [Thread-1  ]: Using ***** connection "test.acme.not_null_mrr_mrr.7e419847d2"
+[0m03:10:12.950061 [debug] [Thread-1  ]: On test.acme.not_null_mrr_mrr.7e419847d2: /* {"app": "dbt", "dbt_version": "1.3.1", "profile_name": "my-*****-db", "target_name": "dev", "node_id": "test.acme.not_null_mrr_mrr.7e419847d2"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select mrr
+from "*****"."public"."mrr"
+where mrr is null
+
+
+
+      
+    ) dbt_internal_test
+[0m03:10:13.083004 [debug] [Thread-1  ]: SQL status: SELECT 1 in 0.13 seconds
+[0m03:10:13.158080 [debug] [Thread-1  ]: finished collecting timing info
+[0m03:10:13.167492 [debug] [Thread-1  ]: On test.acme.not_null_mrr_mrr.7e419847d2: ROLLBACK
+[0m03:10:13.177914 [debug] [Thread-1  ]: On test.acme.not_null_mrr_mrr.7e419847d2: Close
+[0m03:10:13.186391 [info ] [Thread-1  ]: 11 of 15 PASS not_null_mrr_mrr ................................................. [[32mPASS[0m in 0.48s]
+[0m03:10:13.193308 [debug] [Thread-1  ]: Finished running node test.acme.not_null_mrr_mrr.7e419847d2
+[0m03:10:13.198332 [debug] [Thread-1  ]: Began running node test.acme.not_null_mrr_mrr_change.0329647bd8
+[0m03:10:13.212052 [info ] [Thread-1  ]: 12 of 15 START test not_null_mrr_mrr_change .................................... [RUN]
+[0m03:10:13.227733 [debug] [Thread-1  ]: Acquiring new ***** connection "test.acme.not_null_mrr_mrr_change.0329647bd8"
+[0m03:10:13.242425 [debug] [Thread-1  ]: Began compiling node test.acme.not_null_mrr_mrr_change.0329647bd8
+[0m03:10:13.265067 [debug] [Thread-1  ]: Compiling test.acme.not_null_mrr_mrr_change.0329647bd8
+[0m03:10:13.363542 [debug] [Thread-1  ]: Writing injected SQL for node "test.acme.not_null_mrr_mrr_change.0329647bd8"
+[0m03:10:13.371790 [debug] [Thread-1  ]: finished collecting timing info
+[0m03:10:13.375735 [debug] [Thread-1  ]: Began executing node test.acme.not_null_mrr_mrr_change.0329647bd8
+[0m03:10:13.384558 [debug] [Thread-1  ]: Writing runtime sql for node "test.acme.not_null_mrr_mrr_change.0329647bd8"
+[0m03:10:13.416354 [debug] [Thread-1  ]: Using ***** connection "test.acme.not_null_mrr_mrr_change.0329647bd8"
+[0m03:10:13.420121 [debug] [Thread-1  ]: On test.acme.not_null_mrr_mrr_change.0329647bd8: BEGIN
+[0m03:10:13.422029 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m03:10:13.430014 [debug] [Thread-1  ]: SQL status: BEGIN in 0.01 seconds
+[0m03:10:13.432259 [debug] [Thread-1  ]: Using ***** connection "test.acme.not_null_mrr_mrr_change.0329647bd8"
+[0m03:10:13.434214 [debug] [Thread-1  ]: On test.acme.not_null_mrr_mrr_change.0329647bd8: /* {"app": "dbt", "dbt_version": "1.3.1", "profile_name": "my-*****-db", "target_name": "dev", "node_id": "test.acme.not_null_mrr_mrr_change.0329647bd8"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select mrr_change
+from "*****"."public"."mrr"
+where mrr_change is null
+
+
+
+      
+    ) dbt_internal_test
+[0m03:10:13.495688 [debug] [Thread-1  ]: SQL status: SELECT 1 in 0.06 seconds
+[0m03:10:13.502979 [debug] [Thread-1  ]: finished collecting timing info
+[0m03:10:13.504988 [debug] [Thread-1  ]: On test.acme.not_null_mrr_mrr_change.0329647bd8: ROLLBACK
+[0m03:10:13.506709 [debug] [Thread-1  ]: On test.acme.not_null_mrr_mrr_change.0329647bd8: Close
+[0m03:10:13.511105 [info ] [Thread-1  ]: 12 of 15 PASS not_null_mrr_mrr_change .......................................... [[32mPASS[0m in 0.29s]
+[0m03:10:13.515278 [debug] [Thread-1  ]: Finished running node test.acme.not_null_mrr_mrr_change.0329647bd8
+[0m03:10:13.517334 [debug] [Thread-1  ]: Began running node test.acme.not_null_mrr_previous_month_is_active.836f1724d2
+[0m03:10:13.519060 [info ] [Thread-1  ]: 13 of 15 START test not_null_mrr_previous_month_is_active ...................... [RUN]
+[0m03:10:13.522068 [debug] [Thread-1  ]: Acquiring new ***** connection "test.acme.not_null_mrr_previous_month_is_active.836f1724d2"
+[0m03:10:13.523778 [debug] [Thread-1  ]: Began compiling node test.acme.not_null_mrr_previous_month_is_active.836f1724d2
+[0m03:10:13.525752 [debug] [Thread-1  ]: Compiling test.acme.not_null_mrr_previous_month_is_active.836f1724d2
+[0m03:10:13.543595 [debug] [Thread-1  ]: Writing injected SQL for node "test.acme.not_null_mrr_previous_month_is_active.836f1724d2"
+[0m03:10:13.552053 [debug] [Thread-1  ]: finished collecting timing info
+[0m03:10:13.554138 [debug] [Thread-1  ]: Began executing node test.acme.not_null_mrr_previous_month_is_active.836f1724d2
+[0m03:10:13.635040 [debug] [Thread-1  ]: Writing runtime sql for node "test.acme.not_null_mrr_previous_month_is_active.836f1724d2"
+[0m03:10:13.644510 [debug] [Thread-1  ]: Using ***** connection "test.acme.not_null_mrr_previous_month_is_active.836f1724d2"
+[0m03:10:13.646308 [debug] [Thread-1  ]: On test.acme.not_null_mrr_previous_month_is_active.836f1724d2: BEGIN
+[0m03:10:13.648355 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m03:10:13.657773 [debug] [Thread-1  ]: SQL status: BEGIN in 0.01 seconds
+[0m03:10:13.659512 [debug] [Thread-1  ]: Using ***** connection "test.acme.not_null_mrr_previous_month_is_active.836f1724d2"
+[0m03:10:13.660794 [debug] [Thread-1  ]: On test.acme.not_null_mrr_previous_month_is_active.836f1724d2: /* {"app": "dbt", "dbt_version": "1.3.1", "profile_name": "my-*****-db", "target_name": "dev", "node_id": "test.acme.not_null_mrr_previous_month_is_active.836f1724d2"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select previous_month_is_active
+from "*****"."public"."mrr"
+where previous_month_is_active is null
+
+
+
+      
+    ) dbt_internal_test
+[0m03:10:13.680578 [debug] [Thread-1  ]: SQL status: SELECT 1 in 0.02 seconds
+[0m03:10:13.683992 [debug] [Thread-1  ]: finished collecting timing info
+[0m03:10:13.685450 [debug] [Thread-1  ]: On test.acme.not_null_mrr_previous_month_is_active.836f1724d2: ROLLBACK
+[0m03:10:13.687255 [debug] [Thread-1  ]: On test.acme.not_null_mrr_previous_month_is_active.836f1724d2: Close
+[0m03:10:13.692618 [info ] [Thread-1  ]: 13 of 15 PASS not_null_mrr_previous_month_is_active ............................ [[32mPASS[0m in 0.17s]
+[0m03:10:13.699682 [debug] [Thread-1  ]: Finished running node test.acme.not_null_mrr_previous_month_is_active.836f1724d2
+[0m03:10:13.718166 [debug] [Thread-1  ]: Began running node test.acme.not_null_mrr_previous_month_mrr.9a7dfac4d7
+[0m03:10:13.720148 [info ] [Thread-1  ]: 14 of 15 START test not_null_mrr_previous_month_mrr ............................ [RUN]
+[0m03:10:13.722105 [debug] [Thread-1  ]: Acquiring new ***** connection "test.acme.not_null_mrr_previous_month_mrr.9a7dfac4d7"
+[0m03:10:13.723329 [debug] [Thread-1  ]: Began compiling node test.acme.not_null_mrr_previous_month_mrr.9a7dfac4d7
+[0m03:10:13.724483 [debug] [Thread-1  ]: Compiling test.acme.not_null_mrr_previous_month_mrr.9a7dfac4d7
+[0m03:10:13.733674 [debug] [Thread-1  ]: Writing injected SQL for node "test.acme.not_null_mrr_previous_month_mrr.9a7dfac4d7"
+[0m03:10:13.739342 [debug] [Thread-1  ]: finished collecting timing info
+[0m03:10:13.741077 [debug] [Thread-1  ]: Began executing node test.acme.not_null_mrr_previous_month_mrr.9a7dfac4d7
+[0m03:10:13.748154 [debug] [Thread-1  ]: Writing runtime sql for node "test.acme.not_null_mrr_previous_month_mrr.9a7dfac4d7"
+[0m03:10:13.826759 [debug] [Thread-1  ]: Using ***** connection "test.acme.not_null_mrr_previous_month_mrr.9a7dfac4d7"
+[0m03:10:13.882025 [debug] [Thread-1  ]: On test.acme.not_null_mrr_previous_month_mrr.9a7dfac4d7: BEGIN
+[0m03:10:13.884550 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m03:10:13.899516 [debug] [Thread-1  ]: SQL status: BEGIN in 0.01 seconds
+[0m03:10:13.904204 [debug] [Thread-1  ]: Using ***** connection "test.acme.not_null_mrr_previous_month_mrr.9a7dfac4d7"
+[0m03:10:13.906531 [debug] [Thread-1  ]: On test.acme.not_null_mrr_previous_month_mrr.9a7dfac4d7: /* {"app": "dbt", "dbt_version": "1.3.1", "profile_name": "my-*****-db", "target_name": "dev", "node_id": "test.acme.not_null_mrr_previous_month_mrr.9a7dfac4d7"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select previous_month_mrr
+from "*****"."public"."mrr"
+where previous_month_mrr is null
+
+
+
+      
+    ) dbt_internal_test
+[0m03:10:13.935908 [debug] [Thread-1  ]: SQL status: SELECT 1 in 0.02 seconds
+[0m03:10:13.944548 [debug] [Thread-1  ]: finished collecting timing info
+[0m03:10:13.948135 [debug] [Thread-1  ]: On test.acme.not_null_mrr_previous_month_mrr.9a7dfac4d7: ROLLBACK
+[0m03:10:13.950820 [debug] [Thread-1  ]: On test.acme.not_null_mrr_previous_month_mrr.9a7dfac4d7: Close
+[0m03:10:13.955846 [info ] [Thread-1  ]: 14 of 15 PASS not_null_mrr_previous_month_mrr .................................. [[32mPASS[0m in 0.23s]
+[0m03:10:13.959677 [debug] [Thread-1  ]: Finished running node test.acme.not_null_mrr_previous_month_mrr.9a7dfac4d7
+[0m03:10:13.961053 [debug] [Thread-1  ]: Began running node test.acme.unique_mrr_id.a14d6c26bd
+[0m03:10:13.962569 [info ] [Thread-1  ]: 15 of 15 START test unique_mrr_id .............................................. [RUN]
+[0m03:10:13.965308 [debug] [Thread-1  ]: Acquiring new ***** connection "test.acme.unique_mrr_id.a14d6c26bd"
+[0m03:10:13.967320 [debug] [Thread-1  ]: Began compiling node test.acme.unique_mrr_id.a14d6c26bd
+[0m03:10:13.969599 [debug] [Thread-1  ]: Compiling test.acme.unique_mrr_id.a14d6c26bd
+[0m03:10:13.990780 [debug] [Thread-1  ]: Writing injected SQL for node "test.acme.unique_mrr_id.a14d6c26bd"
+[0m03:10:13.998264 [debug] [Thread-1  ]: finished collecting timing info
+[0m03:10:14.001060 [debug] [Thread-1  ]: Began executing node test.acme.unique_mrr_id.a14d6c26bd
+[0m03:10:14.009324 [debug] [Thread-1  ]: Writing runtime sql for node "test.acme.unique_mrr_id.a14d6c26bd"
+[0m03:10:14.018853 [debug] [Thread-1  ]: Using ***** connection "test.acme.unique_mrr_id.a14d6c26bd"
+[0m03:10:14.020408 [debug] [Thread-1  ]: On test.acme.unique_mrr_id.a14d6c26bd: BEGIN
+[0m03:10:14.021803 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m03:10:14.028577 [debug] [Thread-1  ]: SQL status: BEGIN in 0.01 seconds
+[0m03:10:14.030143 [debug] [Thread-1  ]: Using ***** connection "test.acme.unique_mrr_id.a14d6c26bd"
+[0m03:10:14.032077 [debug] [Thread-1  ]: On test.acme.unique_mrr_id.a14d6c26bd: /* {"app": "dbt", "dbt_version": "1.3.1", "profile_name": "my-*****-db", "target_name": "dev", "node_id": "test.acme.unique_mrr_id.a14d6c26bd"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+select
+    id as unique_field,
+    count(*) as n_records
+
+from "*****"."public"."mrr"
+where id is not null
+group by id
+having count(*) > 1
+
+
+
+      
+    ) dbt_internal_test
+[0m03:10:14.053694 [debug] [Thread-1  ]: SQL status: SELECT 1 in 0.02 seconds
+[0m03:10:14.058208 [debug] [Thread-1  ]: finished collecting timing info
+[0m03:10:14.059706 [debug] [Thread-1  ]: On test.acme.unique_mrr_id.a14d6c26bd: ROLLBACK
+[0m03:10:14.073738 [debug] [Thread-1  ]: On test.acme.unique_mrr_id.a14d6c26bd: Close
+[0m03:10:14.088607 [info ] [Thread-1  ]: 15 of 15 PASS unique_mrr_id .................................................... [[32mPASS[0m in 0.12s]
+[0m03:10:14.100472 [debug] [Thread-1  ]: Finished running node test.acme.unique_mrr_id.a14d6c26bd
+[0m03:10:14.108647 [debug] [MainThread]: Acquiring new ***** connection "master"
+[0m03:10:14.110199 [debug] [MainThread]: Using ***** connection "master"
+[0m03:10:14.111651 [debug] [MainThread]: On master: BEGIN
+[0m03:10:14.113141 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m03:10:14.123335 [debug] [MainThread]: SQL status: BEGIN in 0.01 seconds
+[0m03:10:14.125239 [debug] [MainThread]: On master: COMMIT
+[0m03:10:14.126905 [debug] [MainThread]: Using ***** connection "master"
+[0m03:10:14.128313 [debug] [MainThread]: On master: COMMIT
+[0m03:10:14.130315 [debug] [MainThread]: SQL status: COMMIT in 0.0 seconds
+[0m03:10:14.132092 [debug] [MainThread]: On master: Close
+[0m03:10:14.135996 [info ] [MainThread]: 
+[0m03:10:14.138647 [info ] [MainThread]: Finished running 15 tests in 0 hours 0 minutes and 6.23 seconds (6.23s).
+[0m03:10:14.140470 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m03:10:14.141724 [debug] [MainThread]: Connection 'test.acme.unique_mrr_id.a14d6c26bd' was properly closed.
+[0m03:10:14.147313 [info ] [MainThread]: 
+[0m03:10:14.153484 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m03:10:14.156879 [info ] [MainThread]: 
+[0m03:10:14.165044 [info ] [MainThread]: Done. PASS=15 WARN=0 ERROR=0 SKIP=0 TOTAL=15
+[0m03:10:14.168821 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f39657a45e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f39657a4580>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f39657c6be0>]}
+[0m03:10:14.172635 [debug] [MainThread]: Flushing usage events
