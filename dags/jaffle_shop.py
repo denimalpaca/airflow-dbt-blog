@@ -1,6 +1,6 @@
 """
 >Insert description here.
-
+https://github.com/dbt-labs/jaffle_shop
 """
 
 from pendulum import datetime
@@ -39,7 +39,6 @@ with DAG(
             dbt_global_cli_flags="--no-write-json"
         )
 
-        dag_parser.dbt_run_group >> dag_parser.dbt_test_group
-
+    seed >> dbt
 
 

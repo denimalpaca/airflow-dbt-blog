@@ -1,6 +1,6 @@
 """
 >Insert description here.
-
+https://github.com/dbt-labs/mrr-playbook
 """
 
 from pendulum import datetime
@@ -38,9 +38,6 @@ with DAG(
             model_name="mrr-playbook",
             dbt_global_cli_flags="--no-write-json"
         )
-
-        dag_parser.dbt_run_group >> dag_parser.dbt_test_group
-
 
     seed >> dbt
 

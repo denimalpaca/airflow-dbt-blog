@@ -18,8 +18,6 @@ class DbtDagParser:
     :param dbt_global_cli_flags: Any global flags for the dbt CLI
     :param dbt_target: The dbt target profile (e.g. dev, prod)
     :param env_vars: Dict of environment variables to pass to the generated dbt tasks
-    :param dbt_run_group_name: Optional override for the task group name.
-    :param dbt_test_group_name: Optional override for the task group name.
     """
 
     def __init__(
@@ -31,8 +29,6 @@ class DbtDagParser:
         dbt_global_cli_flags=None,
         dbt_target="dev",
         env_vars: dict = None,
-        dbt_run_group_name="dbt_run",
-        dbt_test_group_name="dbt_test",
     ):
         self.model_name = model_name
         self.dbt_root_dir = dbt_root_dir
@@ -42,8 +38,6 @@ class DbtDagParser:
         self.dbt_target = dbt_target
         self.env_vars = env_vars
 
-        self.dbt_run_group = TaskGroup(dbt_run_group_name)
-        self.dbt_test_group = TaskGroup(dbt_test_group_name)
 
         # Parse the manifest and populate the two task groups
         self.make_dbt_task_groups()
@@ -64,10 +58,8 @@ class DbtDagParser:
         model_name = node_name.split(".")[-1]
         if dbt_verb == "test":
             node_name = node_name.replace("model", "test")  # Just a cosmetic renaming of the task
-            task_group = self.dbt_test_group
             outlets = [Dataset(f"DBT://{model_name}".upper())]
         else:
-            task_group = self.dbt_run_group
             outlets = None
 
         # Set default env vars and add to them
@@ -77,7 +69,6 @@ class DbtDagParser:
 
         dbt_task = BashOperator(
             task_id=node_name,
-            task_group=task_group,
             bash_command=(
                 f"source /usr/local/airflow/dbt_venv/bin/activate && \
                   dbt {self.dbt_global_cli_flags} {dbt_verb} --target {self.dbt_target} --models {model_name} \
@@ -89,7 +80,7 @@ class DbtDagParser:
         )
 
         # Keeping the log output, it's convenient to see when testing the python code outside of Airflow
-        logging.info("Created task: %s", node_name)
+        logging.info("Created task: %s", node_name.replace(".", "_"))
         return dbt_task
 
     def make_dbt_task_groups(self):
@@ -102,16 +93,19 @@ class DbtDagParser:
         project_dir = f"{self.dbt_root_dir}/{self.model_name}"
         manifest_json = load_dbt_manifest(project_dir=project_dir)
         dbt_tasks = {}
+        groups = {}
 
         # Create the tasks for each model
         for node_name in manifest_json["nodes"].keys():
             if node_name.split(".")[0] == "model":
-                # Make the run nodes
-                dbt_tasks[node_name] = self.make_dbt_task(node_name, "run")
-
-                # Make the test nodes
-                node_test = node_name.replace("model", "test")
-                dbt_tasks[node_test] = self.make_dbt_task(node_name, "test")
+                with TaskGroup(group_id=node_name.replace(".", "_").replace("core", self.model_name)) as node_group:
+                    # Make the run nodes
+                    dbt_tasks[node_name] = self.make_dbt_task(node_name, "run")
+                    # Make the test nodes
+                    node_test = node_name.replace("model", "test")
+                    dbt_tasks[node_test] = self.make_dbt_task(node_name, "test")
+                    dbt_tasks[node_name] >> dbt_tasks[node_test]
+                    groups[node_name.replace(".", "_")] = node_group
 
         # Add upstream and downstream dependencies for each run task
         for node_name in manifest_json["nodes"].keys():
@@ -119,23 +113,19 @@ class DbtDagParser:
                 for upstream_node in manifest_json["nodes"][node_name]["depends_on"]["nodes"]:
                     upstream_node_type = upstream_node.split(".")[0]
                     if upstream_node_type == "model":
-                        dbt_tasks[upstream_node] >> dbt_tasks[node_name]
+                        groups[upstream_node.replace(".", "_")] >> groups[node_name.replace(".", "_")]
 
     def get_dbt_run_group(self):
         """
         Getter method to retrieve the previously constructed dbt tasks.
-
         Returns: An Airflow task group with dbt run nodes.
-
         """
         return self.dbt_run_group
 
     def get_dbt_test_group(self):
         """
         Getter method to retrieve the previously constructed dbt tasks.
-
         Returns: An Airflow task group with dbt test nodes.
-
         """
         return self.dbt_test_group
 
