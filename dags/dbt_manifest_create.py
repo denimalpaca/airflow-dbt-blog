@@ -39,3 +39,10 @@ with DAG(
              dbt ls --profiles-dir {DBT_PROJECT_DIR} --project-dir {DBT_PROJECT_DIR}/mrr-playbook"
         )
     )
+
+    attribution_playbook = BashOperator(
+        task_id="attribution_playbook_manifest",
+        bash_command=(
+            f"dbt ls --profiles-dir {DBT_PROJECT_DIR} --project-dir {DBT_PROJECT_DIR}/attribution-playbook"
+        )
+    )

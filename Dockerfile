@@ -12,6 +12,7 @@ RUN python -m virtualenv dbt_venv && source dbt_venv/bin/activate && \
     pip install --no-cache-dir dbt-core==1.3.1 && \
     pip install --no-cache-dir dbt-postgres==1.3.1 && \
     dbt ls --profiles-dir ${BASE_DIR} --project-dir ${BASE_DIR}/jaffle_shop && \
+    dbt ls --profiles-dir ${BASE_DIR} --project-dir ${BASE_DIR}/attribution-playbook && \
     dbt deps --profiles-dir ${BASE_DIR} --project-dir ${BASE_DIR}/mrr-playbook && \
     dbt ls --profiles-dir ${BASE_DIR} --project-dir ${BASE_DIR}/mrr-playbook && deactivate
 
