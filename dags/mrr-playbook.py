@@ -33,11 +33,22 @@ with DAG(
         env=dbt_env_vars
     )
 
-    with TaskGroup(group_id="dbt") as dbt:
-        dag_parser = DbtDagParser(
-            model_name="mrr-playbook",
-            dbt_global_cli_flags="--no-write-json"
-        )
+    docs = BashOperator(
+        task_id="dbt_docs",
+        bash_command=f"dbt-ol docs generate --profiles-dir {DBT_PROJECT_DIR} --project-dir {DBT_PROJECT_DIR}/mrr-playbook",
+        env=dbt_env_vars
+    )
+    
+    run = BashOperator(
+        task_id="dbt_run",
+        bash_command=f"dbt-ol run --profiles-dir {DBT_PROJECT_DIR} --project-dir {DBT_PROJECT_DIR}/mrr-playbook",
+        env=dbt_env_vars
+    )
 
-    seed >> dbt
+    # with TaskGroup(group_id="dbt") as dbt:
+    #     dag_parser = DbtDagParser(
+    #         model_name="attribution-playbook",
+    #         dbt_global_cli_flags="--no-write-json"
+    #     )
 
+    seed >> docs >> run
