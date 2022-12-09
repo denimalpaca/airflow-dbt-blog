@@ -35,7 +35,7 @@ with DAG(
 
     docs = BashOperator(
         task_id="dbt_docs",
-        bash_command=f"dbt-ol docs generate --profiles-dir {DBT_PROJECT_DIR} --project-dir {DBT_PROJECT_DIR}/attribution-playbook",
+        bash_command=f"dbt docs generate --profiles-dir {DBT_PROJECT_DIR} --project-dir {DBT_PROJECT_DIR}/attribution-playbook",
         env=dbt_env_vars
     )
     

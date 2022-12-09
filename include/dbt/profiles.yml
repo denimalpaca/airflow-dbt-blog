@@ -1,12 +1,16 @@
-my-postgres-db:
+snowflake:
+  target: sandbox
   outputs:
-    dev:
-      type: postgres
+    sandbox:
+      type: snowflake
+      account: "{{ env_var('SNOWFLAKE_ACCOUNT') }}"
+      # User/password auth
+      user: benji
+      password: "{{ env_var('SNOWFLAKE_PASSWORD') }}"
+      role: BENJI
+      database: SANDBOX
+      warehouse: HUMANS
+      schema: BENJI
       threads: 1
-      host: "{{ env_var('DBT_HOST', 'postgres') }}"
-      port: "{{ env_var('DBT_PORT', 5432) | as_number }}"
-      user: "{{ env_var('DBT_USER', 'postgres') }}"
-      pass: "{{ env_var('DBT_ENV_SECRET_PASSWORD', 'postgres') }}"
-      dbname: postgres
-      schema: "{{ env_var('DBT_SCHEMA', 'public') }}"
-  target: dev
+      client_session_keep_alive: False
+      query_tag:

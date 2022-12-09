@@ -1,9 +1,9 @@
 name: 'jaffle_shop'
 
 config-version: 2
-version: '0.1'
+version: '1.0'
 
-profile: 'my-postgres-db'
+profile: 'snowflake'
 
 model-paths: ["models"]
 seed-paths: ["seeds"]

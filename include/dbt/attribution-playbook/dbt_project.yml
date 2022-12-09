@@ -1,6 +1,6 @@
 name: acme
 
-profile: 'my-postgres-db'
+profile: 'snowflake'
 version: '1.0'
 config-version: 2
 
