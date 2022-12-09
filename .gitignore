@@ -4,3 +4,4 @@
 astro
 target/
 logs/
+__pycache__
