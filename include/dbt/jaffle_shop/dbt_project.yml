@@ -3,7 +3,7 @@ name: 'jaffle_shop'
 config-version: 2
 version: '1.0'
 
-profile: 'snowflake'
+profile: 'my-snowflake-db'
 
 model-paths: ["models"]
 seed-paths: ["seeds"]
