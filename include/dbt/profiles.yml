@@ -1,16 +1,15 @@
-snowflake:
+my-snowflake-db:
   target: sandbox
   outputs:
-    sandbox:
+    dev:
       type: snowflake
-      account: "{{ env_var('SNOWFLAKE_ACCOUNT') }}"
-      # User/password auth
-      user: benji
-      password: "{{ env_var('SNOWFLAKE_PASSWORD') }}"
-      role: BENJI
-      database: SANDBOX
-      warehouse: HUMANS
-      schema: BENJI
       threads: 1
+      account: "{{ env_var('DBT_ACCOUNT'}}.{{ env_var('DBT_REGION') }}"
+      user: "{{ env_var('DBT_USER') }}"
+      password: "{{ env_var('DBT_PASSWORD') }}"
+      database: "{{ env_var('DBT_DATABASE') }}"
+      schema: "demo"
+      warehouse: "{{ env_var('DBT_WAREHOUSE') }}"
+      role: "{{ env_var('DBT_USER') }}"
+      query_tag: "airflow_dbt"
       client_session_keep_alive: False
-      query_tag:

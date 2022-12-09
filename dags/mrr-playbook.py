@@ -11,9 +11,12 @@ from airflow.operators.bash_operator import BashOperator
 from airflow.utils.task_group import TaskGroup
 from include.utils.dbt_dag_parser import DbtDagParser
 from include.utils.dbt_env import dbt_env_vars
+from include.utils.team_args import args
 
 
 DBT_PROJECT_DIR = "/usr/local/airflow/include/dbt"
+
+args["owner"] = "02-TRANSFORM"
 
 with DAG(
     dag_id="mrr-playbook",
@@ -21,17 +24,8 @@ with DAG(
     schedule=[Dataset("DAG://EXTRACT_DAG")],
     doc_md=__doc__,
     catchup=False,
-    default_args={
-        "owner": "02-TRANSFORM"
-    }
+    default_args=args
 ) as dag:
-
-    # We're using the dbt seed command here to populate the database for the purpose of this demo
-    seed = BashOperator(
-        task_id="dbt_seed",
-        bash_command=f"dbt seed --profiles-dir {DBT_PROJECT_DIR} --project-dir {DBT_PROJECT_DIR}/mrr-playbook",
-        env=dbt_env_vars
-    )
 
     docs = BashOperator(
         task_id="dbt_docs",
@@ -42,7 +36,8 @@ with DAG(
     run = BashOperator(
         task_id="dbt_run",
         bash_command=f"dbt-ol run --profiles-dir {DBT_PROJECT_DIR} --project-dir {DBT_PROJECT_DIR}/mrr-playbook",
-        env=dbt_env_vars
+        env=dbt_env_vars,
+        outlets=[Dataset("DBT://MRR-PLAYBOOK")]
     )
 
     # with TaskGroup(group_id="dbt") as dbt:
@@ -51,4 +46,4 @@ with DAG(
     #         dbt_global_cli_flags="--no-write-json"
     #     )
 
-    seed >> docs >> run
+    docs >> run
