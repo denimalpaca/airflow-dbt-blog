@@ -21152,3 +21152,784 @@ having count(*) > 1
 [0m23:46:16.246078 [info ] [MainThread]: Done. PASS=10 WARN=0 ERROR=0 SKIP=0 TOTAL=10
 [0m23:46:16.249581 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f303d7d9280>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f303d7d91c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f303d7d9e80>]}
 [0m23:46:16.253841 [debug] [MainThread]: Flushing usage events
+
+
+============================== 2022-12-12 18:39:38.689959 | 0351bbb0-1fd8-42c6-afc5-15adae09dcdd ==============================
+[0m18:39:38.689976 [info ] [MainThread]: Running with dbt=1.3.0
+[0m18:39:38.691889 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/usr/local/airflow/include/dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'project_dir': '/usr/local/airflow/include/dbt/jaffle_shop', 'compile': True, 'which': 'generate', 'rpc_method': 'docs.generate', 'indirect_selection': 'eager'}
+[0m18:39:38.694364 [debug] [MainThread]: Tracking: tracking
+[0m18:39:38.696795 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa160065be0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa160065b80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa160065b20>]}
+[0m18:39:38.717981 [info ] [MainThread]: Partial parse save file not found. Starting full parse.
+[0m18:39:38.719824 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '0351bbb0-1fd8-42c6-afc5-15adae09dcdd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa1574ef310>]}
+[0m18:39:38.808250 [debug] [MainThread]: Parsing macros/apply_grants.sql
+[0m18:39:38.812092 [debug] [MainThread]: Parsing macros/catalog.sql
+[0m18:39:38.816722 [debug] [MainThread]: Parsing macros/adapters.sql
+[0m18:39:38.893332 [debug] [MainThread]: Parsing macros/materializations/seed.sql
+[0m18:39:38.904899 [debug] [MainThread]: Parsing macros/materializations/snapshot.sql
+[0m18:39:38.908645 [debug] [MainThread]: Parsing macros/materializations/table.sql
+[0m18:39:38.920903 [debug] [MainThread]: Parsing macros/materializations/test.sql
+[0m18:39:38.924541 [debug] [MainThread]: Parsing macros/materializations/view.sql
+[0m18:39:38.928843 [debug] [MainThread]: Parsing macros/materializations/merge.sql
+[0m18:39:38.937087 [debug] [MainThread]: Parsing macros/materializations/incremental.sql
+[0m18:39:38.955962 [debug] [MainThread]: Parsing macros/utils/bool_or.sql
+[0m18:39:38.959781 [debug] [MainThread]: Parsing macros/utils/safe_cast.sql
+[0m18:39:38.963293 [debug] [MainThread]: Parsing macros/utils/escape_single_quotes.sql
+[0m18:39:38.967132 [debug] [MainThread]: Parsing macros/utils/right.sql
+[0m18:39:38.969914 [debug] [MainThread]: Parsing macros/utils/array_construct.sql
+[0m18:39:38.972685 [debug] [MainThread]: Parsing macros/utils/timestamps.sql
+[0m18:39:38.977070 [debug] [MainThread]: Parsing macros/python_model/python.sql
+[0m18:39:38.988278 [debug] [MainThread]: Parsing macros/materializations/configs.sql
+[0m18:39:38.993492 [debug] [MainThread]: Parsing macros/materializations/hooks.sql
+[0m18:39:39.002244 [debug] [MainThread]: Parsing macros/materializations/seeds/seed.sql
+[0m18:39:39.013853 [debug] [MainThread]: Parsing macros/materializations/seeds/helpers.sql
+[0m18:39:39.043468 [debug] [MainThread]: Parsing macros/materializations/models/view/create_view_as.sql
+[0m18:39:39.048737 [debug] [MainThread]: Parsing macros/materializations/models/view/create_or_replace_view.sql
+[0m18:39:39.055026 [debug] [MainThread]: Parsing macros/materializations/models/view/helpers.sql
+[0m18:39:39.058734 [debug] [MainThread]: Parsing macros/materializations/models/view/view.sql
+[0m18:39:39.068297 [debug] [MainThread]: Parsing macros/materializations/models/table/table.sql
+[0m18:39:39.077996 [debug] [MainThread]: Parsing macros/materializations/models/table/create_table_as.sql
+[0m18:39:39.084255 [debug] [MainThread]: Parsing macros/materializations/models/incremental/strategies.sql
+[0m18:39:39.094920 [debug] [MainThread]: Parsing macros/materializations/models/incremental/column_helpers.sql
+[0m18:39:39.107892 [debug] [MainThread]: Parsing macros/materializations/models/incremental/on_schema_change.sql
+[0m18:39:39.136305 [debug] [MainThread]: Parsing macros/materializations/models/incremental/merge.sql
+[0m18:39:39.162381 [debug] [MainThread]: Parsing macros/materializations/models/incremental/incremental.sql
+[0m18:39:39.182973 [debug] [MainThread]: Parsing macros/materializations/models/incremental/is_incremental.sql
+[0m18:39:39.187196 [debug] [MainThread]: Parsing macros/materializations/tests/where_subquery.sql
+[0m18:39:39.191539 [debug] [MainThread]: Parsing macros/materializations/tests/helpers.sql
+[0m18:39:39.195481 [debug] [MainThread]: Parsing macros/materializations/tests/test.sql
+[0m18:39:39.203141 [debug] [MainThread]: Parsing macros/materializations/snapshots/strategies.sql
+[0m18:39:39.227247 [debug] [MainThread]: Parsing macros/materializations/snapshots/snapshot.sql
+[0m18:39:39.246046 [debug] [MainThread]: Parsing macros/materializations/snapshots/snapshot_merge.sql
+[0m18:39:39.250285 [debug] [MainThread]: Parsing macros/materializations/snapshots/helpers.sql
+[0m18:39:39.271937 [debug] [MainThread]: Parsing macros/adapters/apply_grants.sql
+[0m18:39:39.292250 [debug] [MainThread]: Parsing macros/adapters/freshness.sql
+[0m18:39:39.296776 [debug] [MainThread]: Parsing macros/adapters/indexes.sql
+[0m18:39:39.301913 [debug] [MainThread]: Parsing macros/adapters/metadata.sql
+[0m18:39:39.313712 [debug] [MainThread]: Parsing macros/adapters/timestamps.sql
+[0m18:39:39.319906 [debug] [MainThread]: Parsing macros/adapters/schema.sql
+[0m18:39:39.324585 [debug] [MainThread]: Parsing macros/adapters/relation.sql
+[0m18:39:39.350862 [debug] [MainThread]: Parsing macros/adapters/persist_docs.sql
+[0m18:39:39.360041 [debug] [MainThread]: Parsing macros/adapters/columns.sql
+[0m18:39:39.376503 [debug] [MainThread]: Parsing macros/etc/datetime.sql
+[0m18:39:39.393203 [debug] [MainThread]: Parsing macros/etc/statement.sql
+[0m18:39:39.403086 [debug] [MainThread]: Parsing macros/utils/array_append.sql
+[0m18:39:39.406853 [debug] [MainThread]: Parsing macros/utils/bool_or.sql
+[0m18:39:39.410364 [debug] [MainThread]: Parsing macros/utils/intersect.sql
+[0m18:39:39.413506 [debug] [MainThread]: Parsing macros/utils/safe_cast.sql
+[0m18:39:39.417111 [debug] [MainThread]: Parsing macros/utils/except.sql
+[0m18:39:39.420752 [debug] [MainThread]: Parsing macros/utils/replace.sql
+[0m18:39:39.424711 [debug] [MainThread]: Parsing macros/utils/position.sql
+[0m18:39:39.429130 [debug] [MainThread]: Parsing macros/utils/escape_single_quotes.sql
+[0m18:39:39.432903 [debug] [MainThread]: Parsing macros/utils/data_types.sql
+[0m18:39:39.445992 [debug] [MainThread]: Parsing macros/utils/length.sql
+[0m18:39:39.449530 [debug] [MainThread]: Parsing macros/utils/date_trunc.sql
+[0m18:39:39.454327 [debug] [MainThread]: Parsing macros/utils/right.sql
+[0m18:39:39.459335 [debug] [MainThread]: Parsing macros/utils/datediff.sql
+[0m18:39:39.464050 [debug] [MainThread]: Parsing macros/utils/listagg.sql
+[0m18:39:39.470126 [debug] [MainThread]: Parsing macros/utils/hash.sql
+[0m18:39:39.473986 [debug] [MainThread]: Parsing macros/utils/any_value.sql
+[0m18:39:39.477530 [debug] [MainThread]: Parsing macros/utils/array_construct.sql
+[0m18:39:39.481727 [debug] [MainThread]: Parsing macros/utils/array_concat.sql
+[0m18:39:39.485228 [debug] [MainThread]: Parsing macros/utils/cast_bool_to_text.sql
+[0m18:39:39.488613 [debug] [MainThread]: Parsing macros/utils/last_day.sql
+[0m18:39:39.493196 [debug] [MainThread]: Parsing macros/utils/concat.sql
+[0m18:39:39.496756 [debug] [MainThread]: Parsing macros/utils/dateadd.sql
+[0m18:39:39.504157 [debug] [MainThread]: Parsing macros/utils/split_part.sql
+[0m18:39:39.512005 [debug] [MainThread]: Parsing macros/utils/literal.sql
+[0m18:39:39.515802 [debug] [MainThread]: Parsing macros/generic_test_sql/relationships.sql
+[0m18:39:39.519065 [debug] [MainThread]: Parsing macros/generic_test_sql/unique.sql
+[0m18:39:39.521826 [debug] [MainThread]: Parsing macros/generic_test_sql/not_null.sql
+[0m18:39:39.524842 [debug] [MainThread]: Parsing macros/generic_test_sql/accepted_values.sql
+[0m18:39:39.529199 [debug] [MainThread]: Parsing macros/get_custom_name/get_custom_database.sql
+[0m18:39:39.533523 [debug] [MainThread]: Parsing macros/get_custom_name/get_custom_schema.sql
+[0m18:39:39.539240 [debug] [MainThread]: Parsing macros/get_custom_name/get_custom_alias.sql
+[0m18:39:39.543671 [debug] [MainThread]: Parsing tests/generic/builtin.sql
+[0m18:39:39.957410 [debug] [MainThread]: 1699: static parser successfully parsed customers.sql
+[0m18:39:39.976590 [debug] [MainThread]: 1603: static parser failed on orders.sql
+[0m18:39:39.986979 [debug] [MainThread]: 1602: parser fallback to jinja rendering on orders.sql
+[0m18:39:39.991525 [debug] [MainThread]: 1699: static parser successfully parsed staging/stg_customers.sql
+[0m18:39:39.996913 [debug] [MainThread]: 1699: static parser successfully parsed staging/stg_orders.sql
+[0m18:39:40.002058 [debug] [MainThread]: 1699: static parser successfully parsed staging/stg_payments.sql
+[0m18:39:40.220730 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '0351bbb0-1fd8-42c6-afc5-15adae09dcdd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa156503640>]}
+[0m18:39:40.313659 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '0351bbb0-1fd8-42c6-afc5-15adae09dcdd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa160159eb0>]}
+[0m18:39:40.316623 [info ] [MainThread]: Found 5 models, 20 tests, 0 snapshots, 0 analyses, 303 macros, 0 operations, 3 seed files, 0 sources, 0 exposures, 0 metrics
+[0m18:39:40.319294 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '0351bbb0-1fd8-42c6-afc5-15adae09dcdd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa179990be0>]}
+[0m18:39:40.325666 [info ] [MainThread]: 
+[0m18:39:40.328864 [debug] [MainThread]: Acquiring new snowflake connection "master"
+[0m18:39:40.332811 [debug] [ThreadPool]: Acquiring new snowflake connection "list_CS_DEV_demo"
+[0m18:39:40.354927 [debug] [ThreadPool]: Using snowflake connection "list_CS_DEV_demo"
+[0m18:39:40.357714 [debug] [ThreadPool]: On list_CS_DEV_demo: /* {"app": "dbt", "dbt_version": "1.3.0", "profile_name": "my-snowflake-db", "target_name": "dev", "connection_name": "list_CS_DEV_demo"} */
+show terse objects in CS_DEV.demo
+[0m18:39:40.360244 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m18:39:41.363202 [debug] [ThreadPool]: SQL status: SUCCESS 7 in 1.0 seconds
+[0m18:39:41.403298 [debug] [ThreadPool]: On list_CS_DEV_demo: Close
+[0m18:39:41.586172 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '0351bbb0-1fd8-42c6-afc5-15adae09dcdd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa160073310>]}
+[0m18:39:41.590303 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m18:39:41.593632 [info ] [MainThread]: 
+[0m18:39:41.614689 [debug] [Thread-1  ]: Began running node seed.jaffle_shop.raw_customers
+[0m18:39:41.618543 [debug] [Thread-1  ]: Acquiring new snowflake connection "seed.jaffle_shop.raw_customers"
+[0m18:39:41.621071 [debug] [Thread-1  ]: Began compiling node seed.jaffle_shop.raw_customers
+[0m18:39:41.623847 [debug] [Thread-1  ]: Compiling seed.jaffle_shop.raw_customers
+[0m18:39:41.629627 [debug] [Thread-1  ]: Writing injected SQL for node "seed.jaffle_shop.raw_customers"
+[0m18:39:41.631686 [debug] [Thread-1  ]: finished collecting timing info
+[0m18:39:41.633924 [debug] [Thread-1  ]: Began executing node seed.jaffle_shop.raw_customers
+[0m18:39:41.635970 [debug] [Thread-1  ]: finished collecting timing info
+[0m18:39:41.638819 [debug] [Thread-1  ]: Finished running node seed.jaffle_shop.raw_customers
+[0m18:39:41.640655 [debug] [Thread-1  ]: Began running node seed.jaffle_shop.raw_orders
+[0m18:39:41.642979 [debug] [Thread-1  ]: Acquiring new snowflake connection "seed.jaffle_shop.raw_orders"
+[0m18:39:41.644804 [debug] [Thread-1  ]: Began compiling node seed.jaffle_shop.raw_orders
+[0m18:39:41.646539 [debug] [Thread-1  ]: Compiling seed.jaffle_shop.raw_orders
+[0m18:39:41.649864 [debug] [Thread-1  ]: Writing injected SQL for node "seed.jaffle_shop.raw_orders"
+[0m18:39:41.651525 [debug] [Thread-1  ]: finished collecting timing info
+[0m18:39:41.653035 [debug] [Thread-1  ]: Began executing node seed.jaffle_shop.raw_orders
+[0m18:39:41.654671 [debug] [Thread-1  ]: finished collecting timing info
+[0m18:39:41.656675 [debug] [Thread-1  ]: Finished running node seed.jaffle_shop.raw_orders
+[0m18:39:41.658273 [debug] [Thread-1  ]: Began running node seed.jaffle_shop.raw_payments
+[0m18:39:41.660723 [debug] [Thread-1  ]: Acquiring new snowflake connection "seed.jaffle_shop.raw_payments"
+[0m18:39:41.662364 [debug] [Thread-1  ]: Began compiling node seed.jaffle_shop.raw_payments
+[0m18:39:41.663951 [debug] [Thread-1  ]: Compiling seed.jaffle_shop.raw_payments
+[0m18:39:41.667205 [debug] [Thread-1  ]: Writing injected SQL for node "seed.jaffle_shop.raw_payments"
+[0m18:39:41.668657 [debug] [Thread-1  ]: finished collecting timing info
+[0m18:39:41.670230 [debug] [Thread-1  ]: Began executing node seed.jaffle_shop.raw_payments
+[0m18:39:41.671852 [debug] [Thread-1  ]: finished collecting timing info
+[0m18:39:41.673928 [debug] [Thread-1  ]: Finished running node seed.jaffle_shop.raw_payments
+[0m18:39:41.675811 [debug] [Thread-1  ]: Began running node model.jaffle_shop.stg_customers
+[0m18:39:41.678040 [debug] [Thread-1  ]: Acquiring new snowflake connection "model.jaffle_shop.stg_customers"
+[0m18:39:41.679572 [debug] [Thread-1  ]: Began compiling node model.jaffle_shop.stg_customers
+[0m18:39:41.681216 [debug] [Thread-1  ]: Compiling model.jaffle_shop.stg_customers
+[0m18:39:41.686689 [debug] [Thread-1  ]: Writing injected SQL for node "model.jaffle_shop.stg_customers"
+[0m18:39:41.706990 [debug] [Thread-1  ]: finished collecting timing info
+[0m18:39:41.708940 [debug] [Thread-1  ]: Began executing node model.jaffle_shop.stg_customers
+[0m18:39:41.710751 [debug] [Thread-1  ]: finished collecting timing info
+[0m18:39:41.712908 [debug] [Thread-1  ]: Finished running node model.jaffle_shop.stg_customers
+[0m18:39:41.714610 [debug] [Thread-1  ]: Began running node model.jaffle_shop.stg_orders
+[0m18:39:41.717509 [debug] [Thread-1  ]: Acquiring new snowflake connection "model.jaffle_shop.stg_orders"
+[0m18:39:41.720454 [debug] [Thread-1  ]: Began compiling node model.jaffle_shop.stg_orders
+[0m18:39:41.722624 [debug] [Thread-1  ]: Compiling model.jaffle_shop.stg_orders
+[0m18:39:41.729064 [debug] [Thread-1  ]: Writing injected SQL for node "model.jaffle_shop.stg_orders"
+[0m18:39:41.735436 [debug] [Thread-1  ]: finished collecting timing info
+[0m18:39:41.737161 [debug] [Thread-1  ]: Began executing node model.jaffle_shop.stg_orders
+[0m18:39:41.738844 [debug] [Thread-1  ]: finished collecting timing info
+[0m18:39:41.741010 [debug] [Thread-1  ]: Finished running node model.jaffle_shop.stg_orders
+[0m18:39:41.743141 [debug] [Thread-1  ]: Began running node model.jaffle_shop.stg_payments
+[0m18:39:41.745517 [debug] [Thread-1  ]: Acquiring new snowflake connection "model.jaffle_shop.stg_payments"
+[0m18:39:41.747672 [debug] [Thread-1  ]: Began compiling node model.jaffle_shop.stg_payments
+[0m18:39:41.749602 [debug] [Thread-1  ]: Compiling model.jaffle_shop.stg_payments
+[0m18:39:41.754476 [debug] [Thread-1  ]: Writing injected SQL for node "model.jaffle_shop.stg_payments"
+[0m18:39:41.760683 [debug] [Thread-1  ]: finished collecting timing info
+[0m18:39:41.762459 [debug] [Thread-1  ]: Began executing node model.jaffle_shop.stg_payments
+[0m18:39:41.764179 [debug] [Thread-1  ]: finished collecting timing info
+[0m18:39:41.767247 [debug] [Thread-1  ]: Finished running node model.jaffle_shop.stg_payments
+[0m18:39:41.770227 [debug] [Thread-1  ]: Began running node test.jaffle_shop.not_null_stg_customers_customer_id.e2cfb1f9aa
+[0m18:39:41.772782 [debug] [Thread-1  ]: Acquiring new snowflake connection "test.jaffle_shop.not_null_stg_customers_customer_id.e2cfb1f9aa"
+[0m18:39:41.774681 [debug] [Thread-1  ]: Began compiling node test.jaffle_shop.not_null_stg_customers_customer_id.e2cfb1f9aa
+[0m18:39:41.777744 [debug] [Thread-1  ]: Compiling test.jaffle_shop.not_null_stg_customers_customer_id.e2cfb1f9aa
+[0m18:39:41.790664 [debug] [Thread-1  ]: Writing injected SQL for node "test.jaffle_shop.not_null_stg_customers_customer_id.e2cfb1f9aa"
+[0m18:39:41.800949 [debug] [Thread-1  ]: finished collecting timing info
+[0m18:39:41.802597 [debug] [Thread-1  ]: Began executing node test.jaffle_shop.not_null_stg_customers_customer_id.e2cfb1f9aa
+[0m18:39:41.804207 [debug] [Thread-1  ]: finished collecting timing info
+[0m18:39:41.806357 [debug] [Thread-1  ]: Finished running node test.jaffle_shop.not_null_stg_customers_customer_id.e2cfb1f9aa
+[0m18:39:41.807948 [debug] [Thread-1  ]: Began running node test.jaffle_shop.unique_stg_customers_customer_id.c7614daada
+[0m18:39:41.810069 [debug] [Thread-1  ]: Acquiring new snowflake connection "test.jaffle_shop.unique_stg_customers_customer_id.c7614daada"
+[0m18:39:41.811688 [debug] [Thread-1  ]: Began compiling node test.jaffle_shop.unique_stg_customers_customer_id.c7614daada
+[0m18:39:41.813333 [debug] [Thread-1  ]: Compiling test.jaffle_shop.unique_stg_customers_customer_id.c7614daada
+[0m18:39:41.822169 [debug] [Thread-1  ]: Writing injected SQL for node "test.jaffle_shop.unique_stg_customers_customer_id.c7614daada"
+[0m18:39:41.828087 [debug] [Thread-1  ]: finished collecting timing info
+[0m18:39:41.829688 [debug] [Thread-1  ]: Began executing node test.jaffle_shop.unique_stg_customers_customer_id.c7614daada
+[0m18:39:41.831202 [debug] [Thread-1  ]: finished collecting timing info
+[0m18:39:41.834352 [debug] [Thread-1  ]: Finished running node test.jaffle_shop.unique_stg_customers_customer_id.c7614daada
+[0m18:39:41.836704 [debug] [Thread-1  ]: Began running node test.jaffle_shop.accepted_values_stg_orders_status__placed__shipped__completed__return_pending__returned.080fb20aad
+[0m18:39:41.838529 [debug] [Thread-1  ]: Acquiring new snowflake connection "test.jaffle_shop.accepted_values_stg_orders_status__placed__shipped__completed__return_pending__returned.080fb20aad"
+[0m18:39:41.840047 [debug] [Thread-1  ]: Began compiling node test.jaffle_shop.accepted_values_stg_orders_status__placed__shipped__completed__return_pending__returned.080fb20aad
+[0m18:39:41.841721 [debug] [Thread-1  ]: Compiling test.jaffle_shop.accepted_values_stg_orders_status__placed__shipped__completed__return_pending__returned.080fb20aad
+[0m18:39:41.851199 [debug] [Thread-1  ]: Writing injected SQL for node "test.jaffle_shop.accepted_values_stg_orders_status__placed__shipped__completed__return_pending__returned.080fb20aad"
+[0m18:39:41.857734 [debug] [Thread-1  ]: finished collecting timing info
+[0m18:39:41.859793 [debug] [Thread-1  ]: Began executing node test.jaffle_shop.accepted_values_stg_orders_status__placed__shipped__completed__return_pending__returned.080fb20aad
+[0m18:39:41.861457 [debug] [Thread-1  ]: finished collecting timing info
+[0m18:39:41.863533 [debug] [Thread-1  ]: Finished running node test.jaffle_shop.accepted_values_stg_orders_status__placed__shipped__completed__return_pending__returned.080fb20aad
+[0m18:39:41.865108 [debug] [Thread-1  ]: Began running node test.jaffle_shop.not_null_stg_orders_order_id.81cfe2fe64
+[0m18:39:41.867256 [debug] [Thread-1  ]: Acquiring new snowflake connection "test.jaffle_shop.not_null_stg_orders_order_id.81cfe2fe64"
+[0m18:39:41.868952 [debug] [Thread-1  ]: Began compiling node test.jaffle_shop.not_null_stg_orders_order_id.81cfe2fe64
+[0m18:39:41.870631 [debug] [Thread-1  ]: Compiling test.jaffle_shop.not_null_stg_orders_order_id.81cfe2fe64
+[0m18:39:41.877947 [debug] [Thread-1  ]: Writing injected SQL for node "test.jaffle_shop.not_null_stg_orders_order_id.81cfe2fe64"
+[0m18:39:41.885141 [debug] [Thread-1  ]: finished collecting timing info
+[0m18:39:41.887183 [debug] [Thread-1  ]: Began executing node test.jaffle_shop.not_null_stg_orders_order_id.81cfe2fe64
+[0m18:39:41.889109 [debug] [Thread-1  ]: finished collecting timing info
+[0m18:39:41.891612 [debug] [Thread-1  ]: Finished running node test.jaffle_shop.not_null_stg_orders_order_id.81cfe2fe64
+[0m18:39:41.893810 [debug] [Thread-1  ]: Began running node test.jaffle_shop.unique_stg_orders_order_id.e3b841c71a
+[0m18:39:41.896040 [debug] [Thread-1  ]: Acquiring new snowflake connection "test.jaffle_shop.unique_stg_orders_order_id.e3b841c71a"
+[0m18:39:41.897593 [debug] [Thread-1  ]: Began compiling node test.jaffle_shop.unique_stg_orders_order_id.e3b841c71a
+[0m18:39:41.899093 [debug] [Thread-1  ]: Compiling test.jaffle_shop.unique_stg_orders_order_id.e3b841c71a
+[0m18:39:41.905212 [debug] [Thread-1  ]: Writing injected SQL for node "test.jaffle_shop.unique_stg_orders_order_id.e3b841c71a"
+[0m18:39:41.912666 [debug] [Thread-1  ]: finished collecting timing info
+[0m18:39:41.914933 [debug] [Thread-1  ]: Began executing node test.jaffle_shop.unique_stg_orders_order_id.e3b841c71a
+[0m18:39:41.917383 [debug] [Thread-1  ]: finished collecting timing info
+[0m18:39:41.920863 [debug] [Thread-1  ]: Finished running node test.jaffle_shop.unique_stg_orders_order_id.e3b841c71a
+[0m18:39:41.923145 [debug] [Thread-1  ]: Began running node model.jaffle_shop.customers
+[0m18:39:41.926226 [debug] [Thread-1  ]: Acquiring new snowflake connection "model.jaffle_shop.customers"
+[0m18:39:41.928585 [debug] [Thread-1  ]: Began compiling node model.jaffle_shop.customers
+[0m18:39:41.930870 [debug] [Thread-1  ]: Compiling model.jaffle_shop.customers
+[0m18:39:41.937195 [debug] [Thread-1  ]: Writing injected SQL for node "model.jaffle_shop.customers"
+[0m18:39:41.945714 [debug] [Thread-1  ]: finished collecting timing info
+[0m18:39:41.947675 [debug] [Thread-1  ]: Began executing node model.jaffle_shop.customers
+[0m18:39:41.950803 [debug] [Thread-1  ]: finished collecting timing info
+[0m18:39:41.953602 [debug] [Thread-1  ]: Finished running node model.jaffle_shop.customers
+[0m18:39:41.955362 [debug] [Thread-1  ]: Began running node model.jaffle_shop.orders
+[0m18:39:41.957772 [debug] [Thread-1  ]: Acquiring new snowflake connection "model.jaffle_shop.orders"
+[0m18:39:41.960106 [debug] [Thread-1  ]: Began compiling node model.jaffle_shop.orders
+[0m18:39:41.962259 [debug] [Thread-1  ]: Compiling model.jaffle_shop.orders
+[0m18:39:41.970448 [debug] [Thread-1  ]: Writing injected SQL for node "model.jaffle_shop.orders"
+[0m18:39:41.976558 [debug] [Thread-1  ]: finished collecting timing info
+[0m18:39:41.978268 [debug] [Thread-1  ]: Began executing node model.jaffle_shop.orders
+[0m18:39:41.980039 [debug] [Thread-1  ]: finished collecting timing info
+[0m18:39:41.982245 [debug] [Thread-1  ]: Finished running node model.jaffle_shop.orders
+[0m18:39:41.983963 [debug] [Thread-1  ]: Began running node test.jaffle_shop.accepted_values_stg_payments_payment_method__credit_card__coupon__bank_transfer__gift_card.3c3820f278
+[0m18:39:41.986022 [debug] [Thread-1  ]: Acquiring new snowflake connection "test.jaffle_shop.accepted_values_stg_payments_payment_method__credit_card__coupon__bank_transfer__gift_card.3c3820f278"
+[0m18:39:41.987565 [debug] [Thread-1  ]: Began compiling node test.jaffle_shop.accepted_values_stg_payments_payment_method__credit_card__coupon__bank_transfer__gift_card.3c3820f278
+[0m18:39:41.989034 [debug] [Thread-1  ]: Compiling test.jaffle_shop.accepted_values_stg_payments_payment_method__credit_card__coupon__bank_transfer__gift_card.3c3820f278
+[0m18:39:41.997735 [debug] [Thread-1  ]: Writing injected SQL for node "test.jaffle_shop.accepted_values_stg_payments_payment_method__credit_card__coupon__bank_transfer__gift_card.3c3820f278"
+[0m18:39:42.005599 [debug] [Thread-1  ]: finished collecting timing info
+[0m18:39:42.007483 [debug] [Thread-1  ]: Began executing node test.jaffle_shop.accepted_values_stg_payments_payment_method__credit_card__coupon__bank_transfer__gift_card.3c3820f278
+[0m18:39:42.009678 [debug] [Thread-1  ]: finished collecting timing info
+[0m18:39:42.012041 [debug] [Thread-1  ]: Finished running node test.jaffle_shop.accepted_values_stg_payments_payment_method__credit_card__coupon__bank_transfer__gift_card.3c3820f278
+[0m18:39:42.013817 [debug] [Thread-1  ]: Began running node test.jaffle_shop.not_null_stg_payments_payment_id.c19cc50075
+[0m18:39:42.016004 [debug] [Thread-1  ]: Acquiring new snowflake connection "test.jaffle_shop.not_null_stg_payments_payment_id.c19cc50075"
+[0m18:39:42.017966 [debug] [Thread-1  ]: Began compiling node test.jaffle_shop.not_null_stg_payments_payment_id.c19cc50075
+[0m18:39:42.019727 [debug] [Thread-1  ]: Compiling test.jaffle_shop.not_null_stg_payments_payment_id.c19cc50075
+[0m18:39:42.025951 [debug] [Thread-1  ]: Writing injected SQL for node "test.jaffle_shop.not_null_stg_payments_payment_id.c19cc50075"
+[0m18:39:42.031874 [debug] [Thread-1  ]: finished collecting timing info
+[0m18:39:42.033817 [debug] [Thread-1  ]: Began executing node test.jaffle_shop.not_null_stg_payments_payment_id.c19cc50075
+[0m18:39:42.035580 [debug] [Thread-1  ]: finished collecting timing info
+[0m18:39:42.037798 [debug] [Thread-1  ]: Finished running node test.jaffle_shop.not_null_stg_payments_payment_id.c19cc50075
+[0m18:39:42.039320 [debug] [Thread-1  ]: Began running node test.jaffle_shop.unique_stg_payments_payment_id.3744510712
+[0m18:39:42.041307 [debug] [Thread-1  ]: Acquiring new snowflake connection "test.jaffle_shop.unique_stg_payments_payment_id.3744510712"
+[0m18:39:42.043281 [debug] [Thread-1  ]: Began compiling node test.jaffle_shop.unique_stg_payments_payment_id.3744510712
+[0m18:39:42.045032 [debug] [Thread-1  ]: Compiling test.jaffle_shop.unique_stg_payments_payment_id.3744510712
+[0m18:39:42.051100 [debug] [Thread-1  ]: Writing injected SQL for node "test.jaffle_shop.unique_stg_payments_payment_id.3744510712"
+[0m18:39:42.057826 [debug] [Thread-1  ]: finished collecting timing info
+[0m18:39:42.079564 [debug] [Thread-1  ]: Began executing node test.jaffle_shop.unique_stg_payments_payment_id.3744510712
+[0m18:39:42.081711 [debug] [Thread-1  ]: finished collecting timing info
+[0m18:39:42.084131 [debug] [Thread-1  ]: Finished running node test.jaffle_shop.unique_stg_payments_payment_id.3744510712
+[0m18:39:42.085942 [debug] [Thread-1  ]: Began running node test.jaffle_shop.not_null_customers_customer_id.5c9bf9911d
+[0m18:39:42.087906 [debug] [Thread-1  ]: Acquiring new snowflake connection "test.jaffle_shop.not_null_customers_customer_id.5c9bf9911d"
+[0m18:39:42.089578 [debug] [Thread-1  ]: Began compiling node test.jaffle_shop.not_null_customers_customer_id.5c9bf9911d
+[0m18:39:42.091238 [debug] [Thread-1  ]: Compiling test.jaffle_shop.not_null_customers_customer_id.5c9bf9911d
+[0m18:39:42.097747 [debug] [Thread-1  ]: Writing injected SQL for node "test.jaffle_shop.not_null_customers_customer_id.5c9bf9911d"
+[0m18:39:42.107109 [debug] [Thread-1  ]: finished collecting timing info
+[0m18:39:42.109507 [debug] [Thread-1  ]: Began executing node test.jaffle_shop.not_null_customers_customer_id.5c9bf9911d
+[0m18:39:42.111545 [debug] [Thread-1  ]: finished collecting timing info
+[0m18:39:42.113835 [debug] [Thread-1  ]: Finished running node test.jaffle_shop.not_null_customers_customer_id.5c9bf9911d
+[0m18:39:42.115554 [debug] [Thread-1  ]: Began running node test.jaffle_shop.unique_customers_customer_id.c5af1ff4b1
+[0m18:39:42.117626 [debug] [Thread-1  ]: Acquiring new snowflake connection "test.jaffle_shop.unique_customers_customer_id.c5af1ff4b1"
+[0m18:39:42.119105 [debug] [Thread-1  ]: Began compiling node test.jaffle_shop.unique_customers_customer_id.c5af1ff4b1
+[0m18:39:42.120848 [debug] [Thread-1  ]: Compiling test.jaffle_shop.unique_customers_customer_id.c5af1ff4b1
+[0m18:39:42.127058 [debug] [Thread-1  ]: Writing injected SQL for node "test.jaffle_shop.unique_customers_customer_id.c5af1ff4b1"
+[0m18:39:42.133133 [debug] [Thread-1  ]: finished collecting timing info
+[0m18:39:42.134838 [debug] [Thread-1  ]: Began executing node test.jaffle_shop.unique_customers_customer_id.c5af1ff4b1
+[0m18:39:42.136368 [debug] [Thread-1  ]: finished collecting timing info
+[0m18:39:42.138310 [debug] [Thread-1  ]: Finished running node test.jaffle_shop.unique_customers_customer_id.c5af1ff4b1
+[0m18:39:42.139883 [debug] [Thread-1  ]: Began running node test.jaffle_shop.accepted_values_orders_status__placed__shipped__completed__return_pending__returned.be6b5b5ec3
+[0m18:39:42.142093 [debug] [Thread-1  ]: Acquiring new snowflake connection "test.jaffle_shop.accepted_values_orders_status__placed__shipped__completed__return_pending__returned.be6b5b5ec3"
+[0m18:39:42.144068 [debug] [Thread-1  ]: Began compiling node test.jaffle_shop.accepted_values_orders_status__placed__shipped__completed__return_pending__returned.be6b5b5ec3
+[0m18:39:42.145790 [debug] [Thread-1  ]: Compiling test.jaffle_shop.accepted_values_orders_status__placed__shipped__completed__return_pending__returned.be6b5b5ec3
+[0m18:39:42.155520 [debug] [Thread-1  ]: Writing injected SQL for node "test.jaffle_shop.accepted_values_orders_status__placed__shipped__completed__return_pending__returned.be6b5b5ec3"
+[0m18:39:42.163427 [debug] [Thread-1  ]: finished collecting timing info
+[0m18:39:42.165724 [debug] [Thread-1  ]: Began executing node test.jaffle_shop.accepted_values_orders_status__placed__shipped__completed__return_pending__returned.be6b5b5ec3
+[0m18:39:42.167850 [debug] [Thread-1  ]: finished collecting timing info
+[0m18:39:42.170721 [debug] [Thread-1  ]: Finished running node test.jaffle_shop.accepted_values_orders_status__placed__shipped__completed__return_pending__returned.be6b5b5ec3
+[0m18:39:42.173005 [debug] [Thread-1  ]: Began running node test.jaffle_shop.not_null_orders_amount.106140f9fd
+[0m18:39:42.176079 [debug] [Thread-1  ]: Acquiring new snowflake connection "test.jaffle_shop.not_null_orders_amount.106140f9fd"
+[0m18:39:42.178350 [debug] [Thread-1  ]: Began compiling node test.jaffle_shop.not_null_orders_amount.106140f9fd
+[0m18:39:42.181085 [debug] [Thread-1  ]: Compiling test.jaffle_shop.not_null_orders_amount.106140f9fd
+[0m18:39:42.188317 [debug] [Thread-1  ]: Writing injected SQL for node "test.jaffle_shop.not_null_orders_amount.106140f9fd"
+[0m18:39:42.196091 [debug] [Thread-1  ]: finished collecting timing info
+[0m18:39:42.198375 [debug] [Thread-1  ]: Began executing node test.jaffle_shop.not_null_orders_amount.106140f9fd
+[0m18:39:42.200519 [debug] [Thread-1  ]: finished collecting timing info
+[0m18:39:42.202961 [debug] [Thread-1  ]: Finished running node test.jaffle_shop.not_null_orders_amount.106140f9fd
+[0m18:39:42.205000 [debug] [Thread-1  ]: Began running node test.jaffle_shop.not_null_orders_bank_transfer_amount.7743500c49
+[0m18:39:42.207711 [debug] [Thread-1  ]: Acquiring new snowflake connection "test.jaffle_shop.not_null_orders_bank_transfer_amount.7743500c49"
+[0m18:39:42.209818 [debug] [Thread-1  ]: Began compiling node test.jaffle_shop.not_null_orders_bank_transfer_amount.7743500c49
+[0m18:39:42.211838 [debug] [Thread-1  ]: Compiling test.jaffle_shop.not_null_orders_bank_transfer_amount.7743500c49
+[0m18:39:42.219918 [debug] [Thread-1  ]: Writing injected SQL for node "test.jaffle_shop.not_null_orders_bank_transfer_amount.7743500c49"
+[0m18:39:42.227844 [debug] [Thread-1  ]: finished collecting timing info
+[0m18:39:42.229943 [debug] [Thread-1  ]: Began executing node test.jaffle_shop.not_null_orders_bank_transfer_amount.7743500c49
+[0m18:39:42.231910 [debug] [Thread-1  ]: finished collecting timing info
+[0m18:39:42.234207 [debug] [Thread-1  ]: Finished running node test.jaffle_shop.not_null_orders_bank_transfer_amount.7743500c49
+[0m18:39:42.236066 [debug] [Thread-1  ]: Began running node test.jaffle_shop.not_null_orders_coupon_amount.ab90c90625
+[0m18:39:42.238083 [debug] [Thread-1  ]: Acquiring new snowflake connection "test.jaffle_shop.not_null_orders_coupon_amount.ab90c90625"
+[0m18:39:42.239811 [debug] [Thread-1  ]: Began compiling node test.jaffle_shop.not_null_orders_coupon_amount.ab90c90625
+[0m18:39:42.241714 [debug] [Thread-1  ]: Compiling test.jaffle_shop.not_null_orders_coupon_amount.ab90c90625
+[0m18:39:42.248784 [debug] [Thread-1  ]: Writing injected SQL for node "test.jaffle_shop.not_null_orders_coupon_amount.ab90c90625"
+[0m18:39:42.256138 [debug] [Thread-1  ]: finished collecting timing info
+[0m18:39:42.258532 [debug] [Thread-1  ]: Began executing node test.jaffle_shop.not_null_orders_coupon_amount.ab90c90625
+[0m18:39:42.261003 [debug] [Thread-1  ]: finished collecting timing info
+[0m18:39:42.264142 [debug] [Thread-1  ]: Finished running node test.jaffle_shop.not_null_orders_coupon_amount.ab90c90625
+[0m18:39:42.266269 [debug] [Thread-1  ]: Began running node test.jaffle_shop.not_null_orders_credit_card_amount.d3ca593b59
+[0m18:39:42.269168 [debug] [Thread-1  ]: Acquiring new snowflake connection "test.jaffle_shop.not_null_orders_credit_card_amount.d3ca593b59"
+[0m18:39:42.271311 [debug] [Thread-1  ]: Began compiling node test.jaffle_shop.not_null_orders_credit_card_amount.d3ca593b59
+[0m18:39:42.273466 [debug] [Thread-1  ]: Compiling test.jaffle_shop.not_null_orders_credit_card_amount.d3ca593b59
+[0m18:39:42.281249 [debug] [Thread-1  ]: Writing injected SQL for node "test.jaffle_shop.not_null_orders_credit_card_amount.d3ca593b59"
+[0m18:39:42.288882 [debug] [Thread-1  ]: finished collecting timing info
+[0m18:39:42.291495 [debug] [Thread-1  ]: Began executing node test.jaffle_shop.not_null_orders_credit_card_amount.d3ca593b59
+[0m18:39:42.293702 [debug] [Thread-1  ]: finished collecting timing info
+[0m18:39:42.296449 [debug] [Thread-1  ]: Finished running node test.jaffle_shop.not_null_orders_credit_card_amount.d3ca593b59
+[0m18:39:42.298598 [debug] [Thread-1  ]: Began running node test.jaffle_shop.not_null_orders_customer_id.c5f02694af
+[0m18:39:42.301658 [debug] [Thread-1  ]: Acquiring new snowflake connection "test.jaffle_shop.not_null_orders_customer_id.c5f02694af"
+[0m18:39:42.304475 [debug] [Thread-1  ]: Began compiling node test.jaffle_shop.not_null_orders_customer_id.c5f02694af
+[0m18:39:42.308111 [debug] [Thread-1  ]: Compiling test.jaffle_shop.not_null_orders_customer_id.c5f02694af
+[0m18:39:42.316727 [debug] [Thread-1  ]: Writing injected SQL for node "test.jaffle_shop.not_null_orders_customer_id.c5f02694af"
+[0m18:39:42.324737 [debug] [Thread-1  ]: finished collecting timing info
+[0m18:39:42.327571 [debug] [Thread-1  ]: Began executing node test.jaffle_shop.not_null_orders_customer_id.c5f02694af
+[0m18:39:42.329878 [debug] [Thread-1  ]: finished collecting timing info
+[0m18:39:42.332573 [debug] [Thread-1  ]: Finished running node test.jaffle_shop.not_null_orders_customer_id.c5f02694af
+[0m18:39:42.334692 [debug] [Thread-1  ]: Began running node test.jaffle_shop.not_null_orders_gift_card_amount.413a0d2d7a
+[0m18:39:42.337396 [debug] [Thread-1  ]: Acquiring new snowflake connection "test.jaffle_shop.not_null_orders_gift_card_amount.413a0d2d7a"
+[0m18:39:42.339520 [debug] [Thread-1  ]: Began compiling node test.jaffle_shop.not_null_orders_gift_card_amount.413a0d2d7a
+[0m18:39:42.341801 [debug] [Thread-1  ]: Compiling test.jaffle_shop.not_null_orders_gift_card_amount.413a0d2d7a
+[0m18:39:42.348684 [debug] [Thread-1  ]: Writing injected SQL for node "test.jaffle_shop.not_null_orders_gift_card_amount.413a0d2d7a"
+[0m18:39:42.354105 [debug] [Thread-1  ]: finished collecting timing info
+[0m18:39:42.355809 [debug] [Thread-1  ]: Began executing node test.jaffle_shop.not_null_orders_gift_card_amount.413a0d2d7a
+[0m18:39:42.357452 [debug] [Thread-1  ]: finished collecting timing info
+[0m18:39:42.359769 [debug] [Thread-1  ]: Finished running node test.jaffle_shop.not_null_orders_gift_card_amount.413a0d2d7a
+[0m18:39:42.361502 [debug] [Thread-1  ]: Began running node test.jaffle_shop.not_null_orders_order_id.cf6c17daed
+[0m18:39:42.363419 [debug] [Thread-1  ]: Acquiring new snowflake connection "test.jaffle_shop.not_null_orders_order_id.cf6c17daed"
+[0m18:39:42.365341 [debug] [Thread-1  ]: Began compiling node test.jaffle_shop.not_null_orders_order_id.cf6c17daed
+[0m18:39:42.367525 [debug] [Thread-1  ]: Compiling test.jaffle_shop.not_null_orders_order_id.cf6c17daed
+[0m18:39:42.374294 [debug] [Thread-1  ]: Writing injected SQL for node "test.jaffle_shop.not_null_orders_order_id.cf6c17daed"
+[0m18:39:42.380809 [debug] [Thread-1  ]: finished collecting timing info
+[0m18:39:42.382536 [debug] [Thread-1  ]: Began executing node test.jaffle_shop.not_null_orders_order_id.cf6c17daed
+[0m18:39:42.384386 [debug] [Thread-1  ]: finished collecting timing info
+[0m18:39:42.386671 [debug] [Thread-1  ]: Finished running node test.jaffle_shop.not_null_orders_order_id.cf6c17daed
+[0m18:39:42.388281 [debug] [Thread-1  ]: Began running node test.jaffle_shop.relationships_orders_customer_id__customer_id__ref_customers_.c6ec7f58f2
+[0m18:39:42.390262 [debug] [Thread-1  ]: Acquiring new snowflake connection "test.jaffle_shop.relationships_orders_customer_id__customer_id__ref_customers_.c6ec7f58f2"
+[0m18:39:42.391789 [debug] [Thread-1  ]: Began compiling node test.jaffle_shop.relationships_orders_customer_id__customer_id__ref_customers_.c6ec7f58f2
+[0m18:39:42.393592 [debug] [Thread-1  ]: Compiling test.jaffle_shop.relationships_orders_customer_id__customer_id__ref_customers_.c6ec7f58f2
+[0m18:39:42.400929 [debug] [Thread-1  ]: Writing injected SQL for node "test.jaffle_shop.relationships_orders_customer_id__customer_id__ref_customers_.c6ec7f58f2"
+[0m18:39:42.406999 [debug] [Thread-1  ]: finished collecting timing info
+[0m18:39:42.408981 [debug] [Thread-1  ]: Began executing node test.jaffle_shop.relationships_orders_customer_id__customer_id__ref_customers_.c6ec7f58f2
+[0m18:39:42.411007 [debug] [Thread-1  ]: finished collecting timing info
+[0m18:39:42.413296 [debug] [Thread-1  ]: Finished running node test.jaffle_shop.relationships_orders_customer_id__customer_id__ref_customers_.c6ec7f58f2
+[0m18:39:42.415038 [debug] [Thread-1  ]: Began running node test.jaffle_shop.unique_orders_order_id.fed79b3a6e
+[0m18:39:42.417341 [debug] [Thread-1  ]: Acquiring new snowflake connection "test.jaffle_shop.unique_orders_order_id.fed79b3a6e"
+[0m18:39:42.419864 [debug] [Thread-1  ]: Began compiling node test.jaffle_shop.unique_orders_order_id.fed79b3a6e
+[0m18:39:42.421532 [debug] [Thread-1  ]: Compiling test.jaffle_shop.unique_orders_order_id.fed79b3a6e
+[0m18:39:42.428220 [debug] [Thread-1  ]: Writing injected SQL for node "test.jaffle_shop.unique_orders_order_id.fed79b3a6e"
+[0m18:39:42.434303 [debug] [Thread-1  ]: finished collecting timing info
+[0m18:39:42.436076 [debug] [Thread-1  ]: Began executing node test.jaffle_shop.unique_orders_order_id.fed79b3a6e
+[0m18:39:42.437805 [debug] [Thread-1  ]: finished collecting timing info
+[0m18:39:42.439925 [debug] [Thread-1  ]: Finished running node test.jaffle_shop.unique_orders_order_id.fed79b3a6e
+[0m18:39:42.442804 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m18:39:42.444527 [debug] [MainThread]: Connection 'test.jaffle_shop.unique_orders_order_id.fed79b3a6e' was properly closed.
+[0m18:39:42.470399 [info ] [MainThread]: Done.
+[0m18:39:42.509572 [debug] [MainThread]: Acquiring new snowflake connection "generate_catalog"
+[0m18:39:42.511267 [info ] [MainThread]: Building catalog
+[0m18:39:42.515130 [debug] [ThreadPool]: Acquiring new snowflake connection "CS_DEV.information_schema"
+[0m18:39:42.525292 [debug] [ThreadPool]: Using snowflake connection "CS_DEV.information_schema"
+[0m18:39:42.527760 [debug] [ThreadPool]: On CS_DEV.information_schema: /* {"app": "dbt", "dbt_version": "1.3.0", "profile_name": "my-snowflake-db", "target_name": "dev", "connection_name": "CS_DEV.information_schema"} */
+with tables as (
+
+          select
+              table_catalog as "table_database",
+              table_schema as "table_schema",
+              table_name as "table_name",
+              table_type as "table_type",
+              comment as "table_comment",
+
+              -- note: this is the _role_ that owns the table
+              table_owner as "table_owner",
+
+              'Clustering Key' as "stats:clustering_key:label",
+              clustering_key as "stats:clustering_key:value",
+              'The key used to cluster this table' as "stats:clustering_key:description",
+              (clustering_key is not null) as "stats:clustering_key:include",
+
+              'Row Count' as "stats:row_count:label",
+              row_count as "stats:row_count:value",
+              'An approximate count of rows in this table' as "stats:row_count:description",
+              (row_count is not null) as "stats:row_count:include",
+
+              'Approximate Size' as "stats:bytes:label",
+              bytes as "stats:bytes:value",
+              'Approximate size of the table as reported by Snowflake' as "stats:bytes:description",
+              (bytes is not null) as "stats:bytes:include",
+
+              'Last Modified' as "stats:last_modified:label",
+              to_varchar(convert_timezone('UTC', last_altered), 'yyyy-mm-dd HH24:MI'||'UTC') as "stats:last_modified:value",
+              'The timestamp for last update/change' as "stats:last_modified:description",
+              (last_altered is not null and table_type='BASE TABLE') as "stats:last_modified:include"
+
+          from CS_DEV.INFORMATION_SCHEMA.tables
+
+      ),
+
+      columns as (
+
+          select
+              table_catalog as "table_database",
+              table_schema as "table_schema",
+              table_name as "table_name",
+
+              column_name as "column_name",
+              ordinal_position as "column_index",
+              data_type as "column_type",
+              comment as "column_comment"
+
+          from CS_DEV.INFORMATION_SCHEMA.columns
+      )
+
+      select *
+      from tables
+      join columns using ("table_database", "table_schema", "table_name")
+      where (upper("table_schema") = upper('demo'))
+      order by "column_index"
+[0m18:39:42.529859 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m18:39:44.835534 [debug] [ThreadPool]: SQL status: SUCCESS 31 in 2.31 seconds
+[0m18:39:44.854228 [debug] [ThreadPool]: On CS_DEV.information_schema: Close
+[0m18:39:45.029079 [info ] [MainThread]: Catalog written to /usr/local/airflow/include/dbt/jaffle_shop/target/catalog.json
+[0m18:39:45.031867 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa160065be0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa15516a6a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa15516af40>]}
+[0m18:39:45.033501 [debug] [MainThread]: Flushing usage events
+[0m18:39:45.116035 [debug] [MainThread]: Connection 'generate_catalog' was properly closed.
+[0m18:39:45.118340 [debug] [MainThread]: Connection 'CS_DEV.information_schema' was properly closed.
+
+
+============================== 2022-12-13 00:33:56.766734 | 4965e332-d52f-4d0f-99f7-b1853e0b32b8 ==============================
+[0m00:33:56.766760 [info ] [MainThread]: Running with dbt=1.3.0
+[0m00:33:56.771642 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/usr/local/airflow/include/dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'project_dir': '/usr/local/airflow/include/dbt/jaffle_shop', 'compile': True, 'which': 'generate', 'rpc_method': 'docs.generate', 'indirect_selection': 'eager'}
+[0m00:33:56.774477 [debug] [MainThread]: Tracking: tracking
+[0m00:33:56.777322 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbcde6e5b80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbcde6e5b20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbcde6e5ac0>]}
+[0m00:33:56.910855 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m00:33:56.913179 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m00:33:56.923295 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '4965e332-d52f-4d0f-99f7-b1853e0b32b8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbcddcda0d0>]}
+[0m00:33:56.952556 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '4965e332-d52f-4d0f-99f7-b1853e0b32b8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbcde636d90>]}
+[0m00:33:56.954968 [info ] [MainThread]: Found 5 models, 20 tests, 0 snapshots, 0 analyses, 303 macros, 0 operations, 3 seed files, 0 sources, 0 exposures, 0 metrics
+[0m00:33:56.957786 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '4965e332-d52f-4d0f-99f7-b1853e0b32b8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbcde636e20>]}
+[0m00:33:56.962000 [info ] [MainThread]: 
+[0m00:33:56.964874 [debug] [MainThread]: Acquiring new snowflake connection "master"
+[0m00:33:56.973195 [debug] [ThreadPool]: Acquiring new snowflake connection "list_CS_DEV_demo"
+[0m00:33:56.994181 [debug] [ThreadPool]: Using snowflake connection "list_CS_DEV_demo"
+[0m00:33:56.996427 [debug] [ThreadPool]: On list_CS_DEV_demo: /* {"app": "dbt", "dbt_version": "1.3.0", "profile_name": "my-snowflake-db", "target_name": "dev", "connection_name": "list_CS_DEV_demo"} */
+show terse objects in CS_DEV.demo
+[0m00:33:56.998771 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m00:33:58.073989 [debug] [ThreadPool]: SQL status: SUCCESS 7 in 1.08 seconds
+[0m00:33:58.078986 [debug] [ThreadPool]: On list_CS_DEV_demo: Close
+[0m00:33:58.289516 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '4965e332-d52f-4d0f-99f7-b1853e0b32b8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbcddd2fc40>]}
+[0m00:33:58.292979 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m00:33:58.296364 [info ] [MainThread]: 
+[0m00:33:58.315482 [debug] [Thread-1  ]: Began running node seed.jaffle_shop.raw_customers
+[0m00:33:58.318733 [debug] [Thread-1  ]: Acquiring new snowflake connection "seed.jaffle_shop.raw_customers"
+[0m00:33:58.320426 [debug] [Thread-1  ]: Began compiling node seed.jaffle_shop.raw_customers
+[0m00:33:58.322334 [debug] [Thread-1  ]: Compiling seed.jaffle_shop.raw_customers
+[0m00:33:58.326768 [debug] [Thread-1  ]: Writing injected SQL for node "seed.jaffle_shop.raw_customers"
+[0m00:33:58.328584 [debug] [Thread-1  ]: finished collecting timing info
+[0m00:33:58.330133 [debug] [Thread-1  ]: Began executing node seed.jaffle_shop.raw_customers
+[0m00:33:58.331923 [debug] [Thread-1  ]: finished collecting timing info
+[0m00:33:58.334234 [debug] [Thread-1  ]: Finished running node seed.jaffle_shop.raw_customers
+[0m00:33:58.336124 [debug] [Thread-1  ]: Began running node seed.jaffle_shop.raw_orders
+[0m00:33:58.338029 [debug] [Thread-1  ]: Acquiring new snowflake connection "seed.jaffle_shop.raw_orders"
+[0m00:33:58.339584 [debug] [Thread-1  ]: Began compiling node seed.jaffle_shop.raw_orders
+[0m00:33:58.341413 [debug] [Thread-1  ]: Compiling seed.jaffle_shop.raw_orders
+[0m00:33:58.345171 [debug] [Thread-1  ]: Writing injected SQL for node "seed.jaffle_shop.raw_orders"
+[0m00:33:58.346897 [debug] [Thread-1  ]: finished collecting timing info
+[0m00:33:58.348745 [debug] [Thread-1  ]: Began executing node seed.jaffle_shop.raw_orders
+[0m00:33:58.350257 [debug] [Thread-1  ]: finished collecting timing info
+[0m00:33:58.352544 [debug] [Thread-1  ]: Finished running node seed.jaffle_shop.raw_orders
+[0m00:33:58.354157 [debug] [Thread-1  ]: Began running node seed.jaffle_shop.raw_payments
+[0m00:33:58.356282 [debug] [Thread-1  ]: Acquiring new snowflake connection "seed.jaffle_shop.raw_payments"
+[0m00:33:58.358555 [debug] [Thread-1  ]: Began compiling node seed.jaffle_shop.raw_payments
+[0m00:33:58.360180 [debug] [Thread-1  ]: Compiling seed.jaffle_shop.raw_payments
+[0m00:33:58.363488 [debug] [Thread-1  ]: Writing injected SQL for node "seed.jaffle_shop.raw_payments"
+[0m00:33:58.365459 [debug] [Thread-1  ]: finished collecting timing info
+[0m00:33:58.367032 [debug] [Thread-1  ]: Began executing node seed.jaffle_shop.raw_payments
+[0m00:33:58.368711 [debug] [Thread-1  ]: finished collecting timing info
+[0m00:33:58.371089 [debug] [Thread-1  ]: Finished running node seed.jaffle_shop.raw_payments
+[0m00:33:58.373226 [debug] [Thread-1  ]: Began running node model.jaffle_shop.stg_customers
+[0m00:33:58.375530 [debug] [Thread-1  ]: Acquiring new snowflake connection "model.jaffle_shop.stg_customers"
+[0m00:33:58.377142 [debug] [Thread-1  ]: Began compiling node model.jaffle_shop.stg_customers
+[0m00:33:58.378707 [debug] [Thread-1  ]: Compiling model.jaffle_shop.stg_customers
+[0m00:33:58.384614 [debug] [Thread-1  ]: Writing injected SQL for node "model.jaffle_shop.stg_customers"
+[0m00:33:58.394711 [debug] [Thread-1  ]: finished collecting timing info
+[0m00:33:58.396752 [debug] [Thread-1  ]: Began executing node model.jaffle_shop.stg_customers
+[0m00:33:58.398411 [debug] [Thread-1  ]: finished collecting timing info
+[0m00:33:58.400555 [debug] [Thread-1  ]: Finished running node model.jaffle_shop.stg_customers
+[0m00:33:58.402139 [debug] [Thread-1  ]: Began running node model.jaffle_shop.stg_orders
+[0m00:33:58.404451 [debug] [Thread-1  ]: Acquiring new snowflake connection "model.jaffle_shop.stg_orders"
+[0m00:33:58.406506 [debug] [Thread-1  ]: Began compiling node model.jaffle_shop.stg_orders
+[0m00:33:58.408193 [debug] [Thread-1  ]: Compiling model.jaffle_shop.stg_orders
+[0m00:33:58.412914 [debug] [Thread-1  ]: Writing injected SQL for node "model.jaffle_shop.stg_orders"
+[0m00:33:58.418958 [debug] [Thread-1  ]: finished collecting timing info
+[0m00:33:58.420963 [debug] [Thread-1  ]: Began executing node model.jaffle_shop.stg_orders
+[0m00:33:58.422855 [debug] [Thread-1  ]: finished collecting timing info
+[0m00:33:58.425338 [debug] [Thread-1  ]: Finished running node model.jaffle_shop.stg_orders
+[0m00:33:58.427915 [debug] [Thread-1  ]: Began running node model.jaffle_shop.stg_payments
+[0m00:33:58.430696 [debug] [Thread-1  ]: Acquiring new snowflake connection "model.jaffle_shop.stg_payments"
+[0m00:33:58.432396 [debug] [Thread-1  ]: Began compiling node model.jaffle_shop.stg_payments
+[0m00:33:58.434330 [debug] [Thread-1  ]: Compiling model.jaffle_shop.stg_payments
+[0m00:33:58.439091 [debug] [Thread-1  ]: Writing injected SQL for node "model.jaffle_shop.stg_payments"
+[0m00:33:58.444634 [debug] [Thread-1  ]: finished collecting timing info
+[0m00:33:58.446713 [debug] [Thread-1  ]: Began executing node model.jaffle_shop.stg_payments
+[0m00:33:58.448620 [debug] [Thread-1  ]: finished collecting timing info
+[0m00:33:58.451271 [debug] [Thread-1  ]: Finished running node model.jaffle_shop.stg_payments
+[0m00:33:58.453721 [debug] [Thread-1  ]: Began running node test.jaffle_shop.not_null_stg_customers_customer_id.e2cfb1f9aa
+[0m00:33:58.456287 [debug] [Thread-1  ]: Acquiring new snowflake connection "test.jaffle_shop.not_null_stg_customers_customer_id.e2cfb1f9aa"
+[0m00:33:58.457955 [debug] [Thread-1  ]: Began compiling node test.jaffle_shop.not_null_stg_customers_customer_id.e2cfb1f9aa
+[0m00:33:58.459768 [debug] [Thread-1  ]: Compiling test.jaffle_shop.not_null_stg_customers_customer_id.e2cfb1f9aa
+[0m00:33:58.477639 [debug] [Thread-1  ]: Writing injected SQL for node "test.jaffle_shop.not_null_stg_customers_customer_id.e2cfb1f9aa"
+[0m00:33:58.487666 [debug] [Thread-1  ]: finished collecting timing info
+[0m00:33:58.490098 [debug] [Thread-1  ]: Began executing node test.jaffle_shop.not_null_stg_customers_customer_id.e2cfb1f9aa
+[0m00:33:58.492359 [debug] [Thread-1  ]: finished collecting timing info
+[0m00:33:58.495621 [debug] [Thread-1  ]: Finished running node test.jaffle_shop.not_null_stg_customers_customer_id.e2cfb1f9aa
+[0m00:33:58.497805 [debug] [Thread-1  ]: Began running node test.jaffle_shop.unique_stg_customers_customer_id.c7614daada
+[0m00:33:58.500581 [debug] [Thread-1  ]: Acquiring new snowflake connection "test.jaffle_shop.unique_stg_customers_customer_id.c7614daada"
+[0m00:33:58.502722 [debug] [Thread-1  ]: Began compiling node test.jaffle_shop.unique_stg_customers_customer_id.c7614daada
+[0m00:33:58.504958 [debug] [Thread-1  ]: Compiling test.jaffle_shop.unique_stg_customers_customer_id.c7614daada
+[0m00:33:58.516313 [debug] [Thread-1  ]: Writing injected SQL for node "test.jaffle_shop.unique_stg_customers_customer_id.c7614daada"
+[0m00:33:58.525208 [debug] [Thread-1  ]: finished collecting timing info
+[0m00:33:58.528767 [debug] [Thread-1  ]: Began executing node test.jaffle_shop.unique_stg_customers_customer_id.c7614daada
+[0m00:33:58.531657 [debug] [Thread-1  ]: finished collecting timing info
+[0m00:33:58.535182 [debug] [Thread-1  ]: Finished running node test.jaffle_shop.unique_stg_customers_customer_id.c7614daada
+[0m00:33:58.537512 [debug] [Thread-1  ]: Began running node test.jaffle_shop.accepted_values_stg_orders_status__placed__shipped__completed__return_pending__returned.080fb20aad
+[0m00:33:58.540621 [debug] [Thread-1  ]: Acquiring new snowflake connection "test.jaffle_shop.accepted_values_stg_orders_status__placed__shipped__completed__return_pending__returned.080fb20aad"
+[0m00:33:58.543283 [debug] [Thread-1  ]: Began compiling node test.jaffle_shop.accepted_values_stg_orders_status__placed__shipped__completed__return_pending__returned.080fb20aad
+[0m00:33:58.545786 [debug] [Thread-1  ]: Compiling test.jaffle_shop.accepted_values_stg_orders_status__placed__shipped__completed__return_pending__returned.080fb20aad
+[0m00:33:58.563112 [debug] [Thread-1  ]: Writing injected SQL for node "test.jaffle_shop.accepted_values_stg_orders_status__placed__shipped__completed__return_pending__returned.080fb20aad"
+[0m00:33:58.571677 [debug] [Thread-1  ]: finished collecting timing info
+[0m00:33:58.574225 [debug] [Thread-1  ]: Began executing node test.jaffle_shop.accepted_values_stg_orders_status__placed__shipped__completed__return_pending__returned.080fb20aad
+[0m00:33:58.577082 [debug] [Thread-1  ]: finished collecting timing info
+[0m00:33:58.580334 [debug] [Thread-1  ]: Finished running node test.jaffle_shop.accepted_values_stg_orders_status__placed__shipped__completed__return_pending__returned.080fb20aad
+[0m00:33:58.582890 [debug] [Thread-1  ]: Began running node test.jaffle_shop.not_null_stg_orders_order_id.81cfe2fe64
+[0m00:33:58.586014 [debug] [Thread-1  ]: Acquiring new snowflake connection "test.jaffle_shop.not_null_stg_orders_order_id.81cfe2fe64"
+[0m00:33:58.589255 [debug] [Thread-1  ]: Began compiling node test.jaffle_shop.not_null_stg_orders_order_id.81cfe2fe64
+[0m00:33:58.592090 [debug] [Thread-1  ]: Compiling test.jaffle_shop.not_null_stg_orders_order_id.81cfe2fe64
+[0m00:33:58.601120 [debug] [Thread-1  ]: Writing injected SQL for node "test.jaffle_shop.not_null_stg_orders_order_id.81cfe2fe64"
+[0m00:33:58.609287 [debug] [Thread-1  ]: finished collecting timing info
+[0m00:33:58.612038 [debug] [Thread-1  ]: Began executing node test.jaffle_shop.not_null_stg_orders_order_id.81cfe2fe64
+[0m00:33:58.614235 [debug] [Thread-1  ]: finished collecting timing info
+[0m00:33:58.617234 [debug] [Thread-1  ]: Finished running node test.jaffle_shop.not_null_stg_orders_order_id.81cfe2fe64
+[0m00:33:58.619738 [debug] [Thread-1  ]: Began running node test.jaffle_shop.unique_stg_orders_order_id.e3b841c71a
+[0m00:33:58.622169 [debug] [Thread-1  ]: Acquiring new snowflake connection "test.jaffle_shop.unique_stg_orders_order_id.e3b841c71a"
+[0m00:33:58.624100 [debug] [Thread-1  ]: Began compiling node test.jaffle_shop.unique_stg_orders_order_id.e3b841c71a
+[0m00:33:58.625983 [debug] [Thread-1  ]: Compiling test.jaffle_shop.unique_stg_orders_order_id.e3b841c71a
+[0m00:33:58.632415 [debug] [Thread-1  ]: Writing injected SQL for node "test.jaffle_shop.unique_stg_orders_order_id.e3b841c71a"
+[0m00:33:58.638858 [debug] [Thread-1  ]: finished collecting timing info
+[0m00:33:58.641124 [debug] [Thread-1  ]: Began executing node test.jaffle_shop.unique_stg_orders_order_id.e3b841c71a
+[0m00:33:58.642976 [debug] [Thread-1  ]: finished collecting timing info
+[0m00:33:58.645540 [debug] [Thread-1  ]: Finished running node test.jaffle_shop.unique_stg_orders_order_id.e3b841c71a
+[0m00:33:58.648412 [debug] [Thread-1  ]: Began running node model.jaffle_shop.customers
+[0m00:33:58.668324 [debug] [Thread-1  ]: Acquiring new snowflake connection "model.jaffle_shop.customers"
+[0m00:33:58.686824 [debug] [Thread-1  ]: Began compiling node model.jaffle_shop.customers
+[0m00:33:58.705570 [debug] [Thread-1  ]: Compiling model.jaffle_shop.customers
+[0m00:33:58.731267 [debug] [Thread-1  ]: Writing injected SQL for node "model.jaffle_shop.customers"
+[0m00:33:58.738717 [debug] [Thread-1  ]: finished collecting timing info
+[0m00:33:58.741008 [debug] [Thread-1  ]: Began executing node model.jaffle_shop.customers
+[0m00:33:58.742969 [debug] [Thread-1  ]: finished collecting timing info
+[0m00:33:58.745548 [debug] [Thread-1  ]: Finished running node model.jaffle_shop.customers
+[0m00:33:58.747458 [debug] [Thread-1  ]: Began running node model.jaffle_shop.orders
+[0m00:33:58.750212 [debug] [Thread-1  ]: Acquiring new snowflake connection "model.jaffle_shop.orders"
+[0m00:33:58.752171 [debug] [Thread-1  ]: Began compiling node model.jaffle_shop.orders
+[0m00:33:58.753938 [debug] [Thread-1  ]: Compiling model.jaffle_shop.orders
+[0m00:33:58.760959 [debug] [Thread-1  ]: Writing injected SQL for node "model.jaffle_shop.orders"
+[0m00:33:58.767663 [debug] [Thread-1  ]: finished collecting timing info
+[0m00:33:58.769937 [debug] [Thread-1  ]: Began executing node model.jaffle_shop.orders
+[0m00:33:58.771961 [debug] [Thread-1  ]: finished collecting timing info
+[0m00:33:58.774709 [debug] [Thread-1  ]: Finished running node model.jaffle_shop.orders
+[0m00:33:58.776883 [debug] [Thread-1  ]: Began running node test.jaffle_shop.accepted_values_stg_payments_payment_method__credit_card__coupon__bank_transfer__gift_card.3c3820f278
+[0m00:33:58.779767 [debug] [Thread-1  ]: Acquiring new snowflake connection "test.jaffle_shop.accepted_values_stg_payments_payment_method__credit_card__coupon__bank_transfer__gift_card.3c3820f278"
+[0m00:33:58.783978 [debug] [Thread-1  ]: Began compiling node test.jaffle_shop.accepted_values_stg_payments_payment_method__credit_card__coupon__bank_transfer__gift_card.3c3820f278
+[0m00:33:58.786368 [debug] [Thread-1  ]: Compiling test.jaffle_shop.accepted_values_stg_payments_payment_method__credit_card__coupon__bank_transfer__gift_card.3c3820f278
+[0m00:33:58.800209 [debug] [Thread-1  ]: Writing injected SQL for node "test.jaffle_shop.accepted_values_stg_payments_payment_method__credit_card__coupon__bank_transfer__gift_card.3c3820f278"
+[0m00:33:58.806817 [debug] [Thread-1  ]: finished collecting timing info
+[0m00:33:58.808687 [debug] [Thread-1  ]: Began executing node test.jaffle_shop.accepted_values_stg_payments_payment_method__credit_card__coupon__bank_transfer__gift_card.3c3820f278
+[0m00:33:58.810691 [debug] [Thread-1  ]: finished collecting timing info
+[0m00:33:58.813044 [debug] [Thread-1  ]: Finished running node test.jaffle_shop.accepted_values_stg_payments_payment_method__credit_card__coupon__bank_transfer__gift_card.3c3820f278
+[0m00:33:58.814885 [debug] [Thread-1  ]: Began running node test.jaffle_shop.not_null_stg_payments_payment_id.c19cc50075
+[0m00:33:58.818133 [debug] [Thread-1  ]: Acquiring new snowflake connection "test.jaffle_shop.not_null_stg_payments_payment_id.c19cc50075"
+[0m00:33:58.820608 [debug] [Thread-1  ]: Began compiling node test.jaffle_shop.not_null_stg_payments_payment_id.c19cc50075
+[0m00:33:58.823090 [debug] [Thread-1  ]: Compiling test.jaffle_shop.not_null_stg_payments_payment_id.c19cc50075
+[0m00:33:58.835354 [debug] [Thread-1  ]: Writing injected SQL for node "test.jaffle_shop.not_null_stg_payments_payment_id.c19cc50075"
+[0m00:33:58.844511 [debug] [Thread-1  ]: finished collecting timing info
+[0m00:33:58.846968 [debug] [Thread-1  ]: Began executing node test.jaffle_shop.not_null_stg_payments_payment_id.c19cc50075
+[0m00:33:58.849350 [debug] [Thread-1  ]: finished collecting timing info
+[0m00:33:58.852787 [debug] [Thread-1  ]: Finished running node test.jaffle_shop.not_null_stg_payments_payment_id.c19cc50075
+[0m00:33:58.855028 [debug] [Thread-1  ]: Began running node test.jaffle_shop.unique_stg_payments_payment_id.3744510712
+[0m00:33:58.858273 [debug] [Thread-1  ]: Acquiring new snowflake connection "test.jaffle_shop.unique_stg_payments_payment_id.3744510712"
+[0m00:33:58.860234 [debug] [Thread-1  ]: Began compiling node test.jaffle_shop.unique_stg_payments_payment_id.3744510712
+[0m00:33:58.862982 [debug] [Thread-1  ]: Compiling test.jaffle_shop.unique_stg_payments_payment_id.3744510712
+[0m00:33:58.879312 [debug] [Thread-1  ]: Writing injected SQL for node "test.jaffle_shop.unique_stg_payments_payment_id.3744510712"
+[0m00:33:58.889914 [debug] [Thread-1  ]: finished collecting timing info
+[0m00:33:58.891863 [debug] [Thread-1  ]: Began executing node test.jaffle_shop.unique_stg_payments_payment_id.3744510712
+[0m00:33:58.893892 [debug] [Thread-1  ]: finished collecting timing info
+[0m00:33:58.897439 [debug] [Thread-1  ]: Finished running node test.jaffle_shop.unique_stg_payments_payment_id.3744510712
+[0m00:33:58.900122 [debug] [Thread-1  ]: Began running node test.jaffle_shop.not_null_customers_customer_id.5c9bf9911d
+[0m00:33:58.906635 [debug] [Thread-1  ]: Acquiring new snowflake connection "test.jaffle_shop.not_null_customers_customer_id.5c9bf9911d"
+[0m00:33:58.910917 [debug] [Thread-1  ]: Began compiling node test.jaffle_shop.not_null_customers_customer_id.5c9bf9911d
+[0m00:33:58.918967 [debug] [Thread-1  ]: Compiling test.jaffle_shop.not_null_customers_customer_id.5c9bf9911d
+[0m00:33:58.927024 [debug] [Thread-1  ]: Writing injected SQL for node "test.jaffle_shop.not_null_customers_customer_id.5c9bf9911d"
+[0m00:33:58.939523 [debug] [Thread-1  ]: finished collecting timing info
+[0m00:33:58.942628 [debug] [Thread-1  ]: Began executing node test.jaffle_shop.not_null_customers_customer_id.5c9bf9911d
+[0m00:33:58.945016 [debug] [Thread-1  ]: finished collecting timing info
+[0m00:33:58.949409 [debug] [Thread-1  ]: Finished running node test.jaffle_shop.not_null_customers_customer_id.5c9bf9911d
+[0m00:33:58.952012 [debug] [Thread-1  ]: Began running node test.jaffle_shop.unique_customers_customer_id.c5af1ff4b1
+[0m00:33:58.954806 [debug] [Thread-1  ]: Acquiring new snowflake connection "test.jaffle_shop.unique_customers_customer_id.c5af1ff4b1"
+[0m00:33:58.957023 [debug] [Thread-1  ]: Began compiling node test.jaffle_shop.unique_customers_customer_id.c5af1ff4b1
+[0m00:33:58.967544 [debug] [Thread-1  ]: Compiling test.jaffle_shop.unique_customers_customer_id.c5af1ff4b1
+[0m00:33:58.980122 [debug] [Thread-1  ]: Writing injected SQL for node "test.jaffle_shop.unique_customers_customer_id.c5af1ff4b1"
+[0m00:33:58.992153 [debug] [Thread-1  ]: finished collecting timing info
+[0m00:33:58.994771 [debug] [Thread-1  ]: Began executing node test.jaffle_shop.unique_customers_customer_id.c5af1ff4b1
+[0m00:33:58.997196 [debug] [Thread-1  ]: finished collecting timing info
+[0m00:33:59.000928 [debug] [Thread-1  ]: Finished running node test.jaffle_shop.unique_customers_customer_id.c5af1ff4b1
+[0m00:33:59.005937 [debug] [Thread-1  ]: Began running node test.jaffle_shop.accepted_values_orders_status__placed__shipped__completed__return_pending__returned.be6b5b5ec3
+[0m00:33:59.009282 [debug] [Thread-1  ]: Acquiring new snowflake connection "test.jaffle_shop.accepted_values_orders_status__placed__shipped__completed__return_pending__returned.be6b5b5ec3"
+[0m00:33:59.012145 [debug] [Thread-1  ]: Began compiling node test.jaffle_shop.accepted_values_orders_status__placed__shipped__completed__return_pending__returned.be6b5b5ec3
+[0m00:33:59.015325 [debug] [Thread-1  ]: Compiling test.jaffle_shop.accepted_values_orders_status__placed__shipped__completed__return_pending__returned.be6b5b5ec3
+[0m00:33:59.031156 [debug] [Thread-1  ]: Writing injected SQL for node "test.jaffle_shop.accepted_values_orders_status__placed__shipped__completed__return_pending__returned.be6b5b5ec3"
+[0m00:33:59.041499 [debug] [Thread-1  ]: finished collecting timing info
+[0m00:33:59.044498 [debug] [Thread-1  ]: Began executing node test.jaffle_shop.accepted_values_orders_status__placed__shipped__completed__return_pending__returned.be6b5b5ec3
+[0m00:33:59.046849 [debug] [Thread-1  ]: finished collecting timing info
+[0m00:33:59.050305 [debug] [Thread-1  ]: Finished running node test.jaffle_shop.accepted_values_orders_status__placed__shipped__completed__return_pending__returned.be6b5b5ec3
+[0m00:33:59.052865 [debug] [Thread-1  ]: Began running node test.jaffle_shop.not_null_orders_amount.106140f9fd
+[0m00:33:59.055764 [debug] [Thread-1  ]: Acquiring new snowflake connection "test.jaffle_shop.not_null_orders_amount.106140f9fd"
+[0m00:33:59.057689 [debug] [Thread-1  ]: Began compiling node test.jaffle_shop.not_null_orders_amount.106140f9fd
+[0m00:33:59.060489 [debug] [Thread-1  ]: Compiling test.jaffle_shop.not_null_orders_amount.106140f9fd
+[0m00:33:59.074482 [debug] [Thread-1  ]: Writing injected SQL for node "test.jaffle_shop.not_null_orders_amount.106140f9fd"
+[0m00:33:59.082802 [debug] [Thread-1  ]: finished collecting timing info
+[0m00:33:59.085854 [debug] [Thread-1  ]: Began executing node test.jaffle_shop.not_null_orders_amount.106140f9fd
+[0m00:33:59.088041 [debug] [Thread-1  ]: finished collecting timing info
+[0m00:33:59.091392 [debug] [Thread-1  ]: Finished running node test.jaffle_shop.not_null_orders_amount.106140f9fd
+[0m00:33:59.093801 [debug] [Thread-1  ]: Began running node test.jaffle_shop.not_null_orders_bank_transfer_amount.7743500c49
+[0m00:33:59.096791 [debug] [Thread-1  ]: Acquiring new snowflake connection "test.jaffle_shop.not_null_orders_bank_transfer_amount.7743500c49"
+[0m00:33:59.098965 [debug] [Thread-1  ]: Began compiling node test.jaffle_shop.not_null_orders_bank_transfer_amount.7743500c49
+[0m00:33:59.101178 [debug] [Thread-1  ]: Compiling test.jaffle_shop.not_null_orders_bank_transfer_amount.7743500c49
+[0m00:33:59.178988 [debug] [Thread-1  ]: Writing injected SQL for node "test.jaffle_shop.not_null_orders_bank_transfer_amount.7743500c49"
+[0m00:33:59.188650 [debug] [Thread-1  ]: finished collecting timing info
+[0m00:33:59.191186 [debug] [Thread-1  ]: Began executing node test.jaffle_shop.not_null_orders_bank_transfer_amount.7743500c49
+[0m00:33:59.194270 [debug] [Thread-1  ]: finished collecting timing info
+[0m00:33:59.197774 [debug] [Thread-1  ]: Finished running node test.jaffle_shop.not_null_orders_bank_transfer_amount.7743500c49
+[0m00:33:59.200389 [debug] [Thread-1  ]: Began running node test.jaffle_shop.not_null_orders_coupon_amount.ab90c90625
+[0m00:33:59.203335 [debug] [Thread-1  ]: Acquiring new snowflake connection "test.jaffle_shop.not_null_orders_coupon_amount.ab90c90625"
+[0m00:33:59.206002 [debug] [Thread-1  ]: Began compiling node test.jaffle_shop.not_null_orders_coupon_amount.ab90c90625
+[0m00:33:59.208843 [debug] [Thread-1  ]: Compiling test.jaffle_shop.not_null_orders_coupon_amount.ab90c90625
+[0m00:33:59.217213 [debug] [Thread-1  ]: Writing injected SQL for node "test.jaffle_shop.not_null_orders_coupon_amount.ab90c90625"
+[0m00:33:59.225316 [debug] [Thread-1  ]: finished collecting timing info
+[0m00:33:59.227633 [debug] [Thread-1  ]: Began executing node test.jaffle_shop.not_null_orders_coupon_amount.ab90c90625
+[0m00:33:59.230053 [debug] [Thread-1  ]: finished collecting timing info
+[0m00:33:59.232811 [debug] [Thread-1  ]: Finished running node test.jaffle_shop.not_null_orders_coupon_amount.ab90c90625
+[0m00:33:59.235298 [debug] [Thread-1  ]: Began running node test.jaffle_shop.not_null_orders_credit_card_amount.d3ca593b59
+[0m00:33:59.238761 [debug] [Thread-1  ]: Acquiring new snowflake connection "test.jaffle_shop.not_null_orders_credit_card_amount.d3ca593b59"
+[0m00:33:59.241585 [debug] [Thread-1  ]: Began compiling node test.jaffle_shop.not_null_orders_credit_card_amount.d3ca593b59
+[0m00:33:59.245051 [debug] [Thread-1  ]: Compiling test.jaffle_shop.not_null_orders_credit_card_amount.d3ca593b59
+[0m00:33:59.256440 [debug] [Thread-1  ]: Writing injected SQL for node "test.jaffle_shop.not_null_orders_credit_card_amount.d3ca593b59"
+[0m00:33:59.267255 [debug] [Thread-1  ]: finished collecting timing info
+[0m00:33:59.270221 [debug] [Thread-1  ]: Began executing node test.jaffle_shop.not_null_orders_credit_card_amount.d3ca593b59
+[0m00:33:59.272807 [debug] [Thread-1  ]: finished collecting timing info
+[0m00:33:59.276267 [debug] [Thread-1  ]: Finished running node test.jaffle_shop.not_null_orders_credit_card_amount.d3ca593b59
+[0m00:33:59.280342 [debug] [Thread-1  ]: Began running node test.jaffle_shop.not_null_orders_customer_id.c5f02694af
+[0m00:33:59.285208 [debug] [Thread-1  ]: Acquiring new snowflake connection "test.jaffle_shop.not_null_orders_customer_id.c5f02694af"
+[0m00:33:59.288557 [debug] [Thread-1  ]: Began compiling node test.jaffle_shop.not_null_orders_customer_id.c5f02694af
+[0m00:33:59.292432 [debug] [Thread-1  ]: Compiling test.jaffle_shop.not_null_orders_customer_id.c5f02694af
+[0m00:33:59.303203 [debug] [Thread-1  ]: Writing injected SQL for node "test.jaffle_shop.not_null_orders_customer_id.c5f02694af"
+[0m00:33:59.311805 [debug] [Thread-1  ]: finished collecting timing info
+[0m00:33:59.314465 [debug] [Thread-1  ]: Began executing node test.jaffle_shop.not_null_orders_customer_id.c5f02694af
+[0m00:33:59.316882 [debug] [Thread-1  ]: finished collecting timing info
+[0m00:33:59.320341 [debug] [Thread-1  ]: Finished running node test.jaffle_shop.not_null_orders_customer_id.c5f02694af
+[0m00:33:59.325137 [debug] [Thread-1  ]: Began running node test.jaffle_shop.not_null_orders_gift_card_amount.413a0d2d7a
+[0m00:33:59.329651 [debug] [Thread-1  ]: Acquiring new snowflake connection "test.jaffle_shop.not_null_orders_gift_card_amount.413a0d2d7a"
+[0m00:33:59.333196 [debug] [Thread-1  ]: Began compiling node test.jaffle_shop.not_null_orders_gift_card_amount.413a0d2d7a
+[0m00:33:59.335935 [debug] [Thread-1  ]: Compiling test.jaffle_shop.not_null_orders_gift_card_amount.413a0d2d7a
+[0m00:33:59.346885 [debug] [Thread-1  ]: Writing injected SQL for node "test.jaffle_shop.not_null_orders_gift_card_amount.413a0d2d7a"
+[0m00:33:59.357225 [debug] [Thread-1  ]: finished collecting timing info
+[0m00:33:59.360029 [debug] [Thread-1  ]: Began executing node test.jaffle_shop.not_null_orders_gift_card_amount.413a0d2d7a
+[0m00:33:59.363151 [debug] [Thread-1  ]: finished collecting timing info
+[0m00:33:59.367576 [debug] [Thread-1  ]: Finished running node test.jaffle_shop.not_null_orders_gift_card_amount.413a0d2d7a
+[0m00:33:59.370281 [debug] [Thread-1  ]: Began running node test.jaffle_shop.not_null_orders_order_id.cf6c17daed
+[0m00:33:59.373326 [debug] [Thread-1  ]: Acquiring new snowflake connection "test.jaffle_shop.not_null_orders_order_id.cf6c17daed"
+[0m00:33:59.375716 [debug] [Thread-1  ]: Began compiling node test.jaffle_shop.not_null_orders_order_id.cf6c17daed
+[0m00:33:59.377974 [debug] [Thread-1  ]: Compiling test.jaffle_shop.not_null_orders_order_id.cf6c17daed
+[0m00:33:59.386157 [debug] [Thread-1  ]: Writing injected SQL for node "test.jaffle_shop.not_null_orders_order_id.cf6c17daed"
+[0m00:33:59.400415 [debug] [Thread-1  ]: finished collecting timing info
+[0m00:33:59.403860 [debug] [Thread-1  ]: Began executing node test.jaffle_shop.not_null_orders_order_id.cf6c17daed
+[0m00:33:59.406004 [debug] [Thread-1  ]: finished collecting timing info
+[0m00:33:59.408820 [debug] [Thread-1  ]: Finished running node test.jaffle_shop.not_null_orders_order_id.cf6c17daed
+[0m00:33:59.411209 [debug] [Thread-1  ]: Began running node test.jaffle_shop.relationships_orders_customer_id__customer_id__ref_customers_.c6ec7f58f2
+[0m00:33:59.413876 [debug] [Thread-1  ]: Acquiring new snowflake connection "test.jaffle_shop.relationships_orders_customer_id__customer_id__ref_customers_.c6ec7f58f2"
+[0m00:33:59.416058 [debug] [Thread-1  ]: Began compiling node test.jaffle_shop.relationships_orders_customer_id__customer_id__ref_customers_.c6ec7f58f2
+[0m00:33:59.418260 [debug] [Thread-1  ]: Compiling test.jaffle_shop.relationships_orders_customer_id__customer_id__ref_customers_.c6ec7f58f2
+[0m00:33:59.433113 [debug] [Thread-1  ]: Writing injected SQL for node "test.jaffle_shop.relationships_orders_customer_id__customer_id__ref_customers_.c6ec7f58f2"
+[0m00:33:59.440621 [debug] [Thread-1  ]: finished collecting timing info
+[0m00:33:59.444296 [debug] [Thread-1  ]: Began executing node test.jaffle_shop.relationships_orders_customer_id__customer_id__ref_customers_.c6ec7f58f2
+[0m00:33:59.446834 [debug] [Thread-1  ]: finished collecting timing info
+[0m00:33:59.452830 [debug] [Thread-1  ]: Finished running node test.jaffle_shop.relationships_orders_customer_id__customer_id__ref_customers_.c6ec7f58f2
+[0m00:33:59.456017 [debug] [Thread-1  ]: Began running node test.jaffle_shop.unique_orders_order_id.fed79b3a6e
+[0m00:33:59.462724 [debug] [Thread-1  ]: Acquiring new snowflake connection "test.jaffle_shop.unique_orders_order_id.fed79b3a6e"
+[0m00:33:59.464935 [debug] [Thread-1  ]: Began compiling node test.jaffle_shop.unique_orders_order_id.fed79b3a6e
+[0m00:33:59.467652 [debug] [Thread-1  ]: Compiling test.jaffle_shop.unique_orders_order_id.fed79b3a6e
+[0m00:33:59.477623 [debug] [Thread-1  ]: Writing injected SQL for node "test.jaffle_shop.unique_orders_order_id.fed79b3a6e"
+[0m00:33:59.484835 [debug] [Thread-1  ]: finished collecting timing info
+[0m00:33:59.487279 [debug] [Thread-1  ]: Began executing node test.jaffle_shop.unique_orders_order_id.fed79b3a6e
+[0m00:33:59.489488 [debug] [Thread-1  ]: finished collecting timing info
+[0m00:33:59.493412 [debug] [Thread-1  ]: Finished running node test.jaffle_shop.unique_orders_order_id.fed79b3a6e
+[0m00:33:59.496759 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m00:33:59.503752 [debug] [MainThread]: Connection 'test.jaffle_shop.unique_orders_order_id.fed79b3a6e' was properly closed.
+[0m00:33:59.540291 [info ] [MainThread]: Done.
+[0m00:33:59.586960 [debug] [MainThread]: Acquiring new snowflake connection "generate_catalog"
+[0m00:33:59.588714 [info ] [MainThread]: Building catalog
+[0m00:33:59.593918 [debug] [ThreadPool]: Acquiring new snowflake connection "CS_DEV.information_schema"
+[0m00:33:59.609003 [debug] [ThreadPool]: Using snowflake connection "CS_DEV.information_schema"
+[0m00:33:59.611664 [debug] [ThreadPool]: On CS_DEV.information_schema: /* {"app": "dbt", "dbt_version": "1.3.0", "profile_name": "my-snowflake-db", "target_name": "dev", "connection_name": "CS_DEV.information_schema"} */
+with tables as (
+
+          select
+              table_catalog as "table_database",
+              table_schema as "table_schema",
+              table_name as "table_name",
+              table_type as "table_type",
+              comment as "table_comment",
+
+              -- note: this is the _role_ that owns the table
+              table_owner as "table_owner",
+
+              'Clustering Key' as "stats:clustering_key:label",
+              clustering_key as "stats:clustering_key:value",
+              'The key used to cluster this table' as "stats:clustering_key:description",
+              (clustering_key is not null) as "stats:clustering_key:include",
+
+              'Row Count' as "stats:row_count:label",
+              row_count as "stats:row_count:value",
+              'An approximate count of rows in this table' as "stats:row_count:description",
+              (row_count is not null) as "stats:row_count:include",
+
+              'Approximate Size' as "stats:bytes:label",
+              bytes as "stats:bytes:value",
+              'Approximate size of the table as reported by Snowflake' as "stats:bytes:description",
+              (bytes is not null) as "stats:bytes:include",
+
+              'Last Modified' as "stats:last_modified:label",
+              to_varchar(convert_timezone('UTC', last_altered), 'yyyy-mm-dd HH24:MI'||'UTC') as "stats:last_modified:value",
+              'The timestamp for last update/change' as "stats:last_modified:description",
+              (last_altered is not null and table_type='BASE TABLE') as "stats:last_modified:include"
+
+          from CS_DEV.INFORMATION_SCHEMA.tables
+
+      ),
+
+      columns as (
+
+          select
+              table_catalog as "table_database",
+              table_schema as "table_schema",
+              table_name as "table_name",
+
+              column_name as "column_name",
+              ordinal_position as "column_index",
+              data_type as "column_type",
+              comment as "column_comment"
+
+          from CS_DEV.INFORMATION_SCHEMA.columns
+      )
+
+      select *
+      from tables
+      join columns using ("table_database", "table_schema", "table_name")
+      where (upper("table_schema") = upper('demo'))
+      order by "column_index"
+[0m00:33:59.614378 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m00:34:01.792609 [debug] [ThreadPool]: SQL status: SUCCESS 31 in 2.18 seconds

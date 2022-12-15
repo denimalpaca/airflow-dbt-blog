@@ -4,9 +4,9 @@ my-snowflake-db:
     dev:
       type: snowflake
       threads: 1
-      account: "{{ env_var('DBT_ACCOUNT') }}.{{ env_var('DBT_REGION') }}"
+      account: "{{ env_var('SNOWFLAKE_ACCOUNT') }}"
       user: "{{ env_var('DBT_USER') }}"
-      password: "{{ env_var('DBT_PASSWORD') }}"
+      password: "{{ env_var('DBT_ENV_SECRET_PASSWORD') }}"
       database: "{{ env_var('DBT_DATABASE') }}"
       schema: "demo"
       warehouse: "{{ env_var('DBT_WAREHOUSE') }}"

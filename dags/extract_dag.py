@@ -10,11 +10,18 @@ from pendulum import datetime
 from airflow import DAG
 from airflow.datasets import Dataset
 from airflow.operators.empty import EmptyOperator
-from airflow.providers.snowflake.operators.snowflake import SnowflakeOperator
+from fivetran_provider.operators.fivetran import FivetranOperator
+from fivetran_provider.sensors.fivetran import FivetranSensor
 from airflow.utils.task_group import TaskGroup
 from include.utils.team_args import args
 
 args["owner"] = "01-EXTRACT"
+blobs = ["raw_customers", "ad_spend", "customer_conversions", "raw_orders", "sessions", "raw_payments", "subscription_periods"]
+fivetran_connector_ids = [
+    "pointy_reprise", "report_hopeful", "cropping_limitation",
+    "efficacy_dearest", "cater_aristocratic", "smith_administrative",
+    "nozzle_distension"
+]
 
 with DAG(
     dag_id="extract_dag",
@@ -27,15 +34,18 @@ with DAG(
 ) as dag:
 
     with TaskGroup(group_id="extracts") as extracts:
-        for blob in ["raw_customers", "ad_spend", "customer_conversions", "raw_orders", "sessions", "raw_payments",
-                     "subscription_periods"]:
-            SnowflakeOperator(
-                task_id=f"extract_{blob}",
-                sql=f"sql/extract_{blob}.sql",
-                params={
-                    "schema_name": "demo",
-                    "table_name": blob,
-                },
+        for fivetran_connector_id in fivetran_connector_ids:
+            FivetranOperator(
+                task_id=f"extract_{fivetran_connector_id}",
+                fivetran_conn_id="fivetran_default",
+                connector_id=fivetran_connector_id,
+                schedule_type="manual"
+            )
+            FivetranSensor(
+                task_id=f"sense_{fivetran_connector_id}",
+                fivetran_conn_id="fivetran_default",
+                connector_id=fivetran_connector_id,
+                poke_interval=15,
             )
 
     finish = EmptyOperator(task_id="finish", outlets=[Dataset("DAG://EXTRACT_DAG")])

@@ -19940,3 +19940,705 @@ having count(*) > 1
 [0m23:46:55.543337 [info ] [MainThread]: Done. PASS=15 WARN=0 ERROR=0 SKIP=0 TOTAL=15
 [0m23:46:55.545320 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa486e48fa0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa486e48ac0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa486e48d00>]}
 [0m23:46:55.546968 [debug] [MainThread]: Flushing usage events
+
+
+============================== 2022-12-12 18:39:43.670877 | 36ef4a1d-b804-4152-84fb-713435dc41d3 ==============================
+[0m18:39:43.670896 [info ] [MainThread]: Running with dbt=1.3.0
+[0m18:39:43.672811 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/usr/local/airflow/include/dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'project_dir': '/usr/local/airflow/include/dbt/mrr-playbook', 'compile': True, 'which': 'generate', 'rpc_method': 'docs.generate', 'indirect_selection': 'eager'}
+[0m18:39:43.675400 [debug] [MainThread]: Tracking: tracking
+[0m18:39:43.677551 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5f3e453940>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5f3e4538e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5f3e453880>]}
+[0m18:39:43.715302 [info ] [MainThread]: Partial parse save file not found. Starting full parse.
+[0m18:39:43.717162 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '36ef4a1d-b804-4152-84fb-713435dc41d3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5f3e456190>]}
+[0m18:39:44.086251 [debug] [MainThread]: Parsing macros/grant_select_on_schema.sql
+[0m18:39:44.089787 [debug] [MainThread]: Parsing macros/apply_grants.sql
+[0m18:39:44.092720 [debug] [MainThread]: Parsing macros/catalog.sql
+[0m18:39:44.097022 [debug] [MainThread]: Parsing macros/adapters.sql
+[0m18:39:44.164204 [debug] [MainThread]: Parsing macros/materializations/seed.sql
+[0m18:39:44.176230 [debug] [MainThread]: Parsing macros/materializations/snapshot.sql
+[0m18:39:44.179209 [debug] [MainThread]: Parsing macros/materializations/table.sql
+[0m18:39:44.188597 [debug] [MainThread]: Parsing macros/materializations/test.sql
+[0m18:39:44.193002 [debug] [MainThread]: Parsing macros/materializations/view.sql
+[0m18:39:44.196897 [debug] [MainThread]: Parsing macros/materializations/merge.sql
+[0m18:39:44.203512 [debug] [MainThread]: Parsing macros/materializations/incremental.sql
+[0m18:39:44.219230 [debug] [MainThread]: Parsing macros/utils/bool_or.sql
+[0m18:39:44.221807 [debug] [MainThread]: Parsing macros/utils/safe_cast.sql
+[0m18:39:44.223926 [debug] [MainThread]: Parsing macros/utils/escape_single_quotes.sql
+[0m18:39:44.226162 [debug] [MainThread]: Parsing macros/utils/right.sql
+[0m18:39:44.228467 [debug] [MainThread]: Parsing macros/utils/array_construct.sql
+[0m18:39:44.230433 [debug] [MainThread]: Parsing macros/utils/timestamps.sql
+[0m18:39:44.234232 [debug] [MainThread]: Parsing macros/python_model/python.sql
+[0m18:39:44.243778 [debug] [MainThread]: Parsing macros/materializations/configs.sql
+[0m18:39:44.248579 [debug] [MainThread]: Parsing macros/materializations/hooks.sql
+[0m18:39:44.255021 [debug] [MainThread]: Parsing macros/materializations/seeds/seed.sql
+[0m18:39:44.266158 [debug] [MainThread]: Parsing macros/materializations/seeds/helpers.sql
+[0m18:39:44.296378 [debug] [MainThread]: Parsing macros/materializations/models/view/create_view_as.sql
+[0m18:39:44.301392 [debug] [MainThread]: Parsing macros/materializations/models/view/create_or_replace_view.sql
+[0m18:39:44.307640 [debug] [MainThread]: Parsing macros/materializations/models/view/helpers.sql
+[0m18:39:44.310916 [debug] [MainThread]: Parsing macros/materializations/models/view/view.sql
+[0m18:39:44.320079 [debug] [MainThread]: Parsing macros/materializations/models/table/table.sql
+[0m18:39:44.329375 [debug] [MainThread]: Parsing macros/materializations/models/table/create_table_as.sql
+[0m18:39:44.335745 [debug] [MainThread]: Parsing macros/materializations/models/incremental/strategies.sql
+[0m18:39:44.346154 [debug] [MainThread]: Parsing macros/materializations/models/incremental/column_helpers.sql
+[0m18:39:44.359228 [debug] [MainThread]: Parsing macros/materializations/models/incremental/on_schema_change.sql
+[0m18:39:44.387315 [debug] [MainThread]: Parsing macros/materializations/models/incremental/merge.sql
+[0m18:39:44.413662 [debug] [MainThread]: Parsing macros/materializations/models/incremental/incremental.sql
+[0m18:39:44.430404 [debug] [MainThread]: Parsing macros/materializations/models/incremental/is_incremental.sql
+[0m18:39:44.434200 [debug] [MainThread]: Parsing macros/materializations/tests/where_subquery.sql
+[0m18:39:44.438384 [debug] [MainThread]: Parsing macros/materializations/tests/helpers.sql
+[0m18:39:44.442309 [debug] [MainThread]: Parsing macros/materializations/tests/test.sql
+[0m18:39:44.450559 [debug] [MainThread]: Parsing macros/materializations/snapshots/strategies.sql
+[0m18:39:44.474117 [debug] [MainThread]: Parsing macros/materializations/snapshots/snapshot.sql
+[0m18:39:44.493147 [debug] [MainThread]: Parsing macros/materializations/snapshots/snapshot_merge.sql
+[0m18:39:44.497799 [debug] [MainThread]: Parsing macros/materializations/snapshots/helpers.sql
+[0m18:39:44.520774 [debug] [MainThread]: Parsing macros/adapters/apply_grants.sql
+[0m18:39:44.540805 [debug] [MainThread]: Parsing macros/adapters/freshness.sql
+[0m18:39:44.545611 [debug] [MainThread]: Parsing macros/adapters/indexes.sql
+[0m18:39:44.550602 [debug] [MainThread]: Parsing macros/adapters/metadata.sql
+[0m18:39:44.562277 [debug] [MainThread]: Parsing macros/adapters/timestamps.sql
+[0m18:39:44.568281 [debug] [MainThread]: Parsing macros/adapters/schema.sql
+[0m18:39:44.572558 [debug] [MainThread]: Parsing macros/adapters/relation.sql
+[0m18:39:44.595680 [debug] [MainThread]: Parsing macros/adapters/persist_docs.sql
+[0m18:39:44.603599 [debug] [MainThread]: Parsing macros/adapters/columns.sql
+[0m18:39:44.618303 [debug] [MainThread]: Parsing macros/etc/datetime.sql
+[0m18:39:44.632329 [debug] [MainThread]: Parsing macros/etc/statement.sql
+[0m18:39:44.640733 [debug] [MainThread]: Parsing macros/utils/array_append.sql
+[0m18:39:44.643884 [debug] [MainThread]: Parsing macros/utils/bool_or.sql
+[0m18:39:44.646599 [debug] [MainThread]: Parsing macros/utils/intersect.sql
+[0m18:39:44.649052 [debug] [MainThread]: Parsing macros/utils/safe_cast.sql
+[0m18:39:44.651888 [debug] [MainThread]: Parsing macros/utils/except.sql
+[0m18:39:44.654311 [debug] [MainThread]: Parsing macros/utils/replace.sql
+[0m18:39:44.657138 [debug] [MainThread]: Parsing macros/utils/position.sql
+[0m18:39:44.660050 [debug] [MainThread]: Parsing macros/utils/escape_single_quotes.sql
+[0m18:39:44.662744 [debug] [MainThread]: Parsing macros/utils/data_types.sql
+[0m18:39:44.672623 [debug] [MainThread]: Parsing macros/utils/length.sql
+[0m18:39:44.675550 [debug] [MainThread]: Parsing macros/utils/date_trunc.sql
+[0m18:39:44.678896 [debug] [MainThread]: Parsing macros/utils/right.sql
+[0m18:39:44.682147 [debug] [MainThread]: Parsing macros/utils/datediff.sql
+[0m18:39:44.685745 [debug] [MainThread]: Parsing macros/utils/listagg.sql
+[0m18:39:44.690380 [debug] [MainThread]: Parsing macros/utils/hash.sql
+[0m18:39:44.693525 [debug] [MainThread]: Parsing macros/utils/any_value.sql
+[0m18:39:44.696160 [debug] [MainThread]: Parsing macros/utils/array_construct.sql
+[0m18:39:44.699482 [debug] [MainThread]: Parsing macros/utils/array_concat.sql
+[0m18:39:44.701968 [debug] [MainThread]: Parsing macros/utils/cast_bool_to_text.sql
+[0m18:39:44.704674 [debug] [MainThread]: Parsing macros/utils/last_day.sql
+[0m18:39:44.708399 [debug] [MainThread]: Parsing macros/utils/concat.sql
+[0m18:39:44.711487 [debug] [MainThread]: Parsing macros/utils/dateadd.sql
+[0m18:39:44.714765 [debug] [MainThread]: Parsing macros/utils/split_part.sql
+[0m18:39:44.718951 [debug] [MainThread]: Parsing macros/utils/literal.sql
+[0m18:39:44.721675 [debug] [MainThread]: Parsing macros/generic_test_sql/relationships.sql
+[0m18:39:44.724281 [debug] [MainThread]: Parsing macros/generic_test_sql/unique.sql
+[0m18:39:44.726807 [debug] [MainThread]: Parsing macros/generic_test_sql/not_null.sql
+[0m18:39:44.729462 [debug] [MainThread]: Parsing macros/generic_test_sql/accepted_values.sql
+[0m18:39:44.732656 [debug] [MainThread]: Parsing macros/get_custom_name/get_custom_database.sql
+[0m18:39:44.735993 [debug] [MainThread]: Parsing macros/get_custom_name/get_custom_schema.sql
+[0m18:39:44.740470 [debug] [MainThread]: Parsing macros/get_custom_name/get_custom_alias.sql
+[0m18:39:44.744061 [debug] [MainThread]: Parsing tests/generic/builtin.sql
+[0m18:39:44.749627 [debug] [MainThread]: Parsing macros/cross_db_utils/_is_ephemeral.sql
+[0m18:39:44.753959 [debug] [MainThread]: Parsing macros/cross_db_utils/_is_relation.sql
+[0m18:39:44.756876 [debug] [MainThread]: Parsing macros/cross_db_utils/cast_bool_to_text.sql
+[0m18:39:44.760951 [debug] [MainThread]: Parsing macros/cross_db_utils/concat.sql
+[0m18:39:44.763578 [debug] [MainThread]: Parsing macros/cross_db_utils/current_timestamp.sql
+[0m18:39:44.769343 [debug] [MainThread]: Parsing macros/cross_db_utils/datatypes.sql
+[0m18:39:44.778729 [debug] [MainThread]: Parsing macros/cross_db_utils/date_trunc.sql
+[0m18:39:44.782603 [debug] [MainThread]: Parsing macros/cross_db_utils/dateadd.sql
+[0m18:39:44.787893 [debug] [MainThread]: Parsing macros/cross_db_utils/datediff.sql
+[0m18:39:44.804582 [debug] [MainThread]: Parsing macros/cross_db_utils/except.sql
+[0m18:39:44.808825 [debug] [MainThread]: Parsing macros/cross_db_utils/hash.sql
+[0m18:39:44.812684 [debug] [MainThread]: Parsing macros/cross_db_utils/identifier.sql
+[0m18:39:44.816233 [debug] [MainThread]: Parsing macros/cross_db_utils/intersect.sql
+[0m18:39:44.818939 [debug] [MainThread]: Parsing macros/cross_db_utils/last_day.sql
+[0m18:39:44.824886 [debug] [MainThread]: Parsing macros/cross_db_utils/length.sql
+[0m18:39:44.828589 [debug] [MainThread]: Parsing macros/cross_db_utils/literal.sql
+[0m18:39:44.831596 [debug] [MainThread]: Parsing macros/cross_db_utils/position.sql
+[0m18:39:44.835451 [debug] [MainThread]: Parsing macros/cross_db_utils/replace.sql
+[0m18:39:44.839029 [debug] [MainThread]: Parsing macros/cross_db_utils/right.sql
+[0m18:39:44.844074 [debug] [MainThread]: Parsing macros/cross_db_utils/safe_cast.sql
+[0m18:39:44.848815 [debug] [MainThread]: Parsing macros/cross_db_utils/split_part.sql
+[0m18:39:44.853168 [debug] [MainThread]: Parsing macros/cross_db_utils/width_bucket.sql
+[0m18:39:44.863197 [debug] [MainThread]: Parsing macros/jinja_helpers/log_info.sql
+[0m18:39:44.866609 [debug] [MainThread]: Parsing macros/jinja_helpers/pretty_log_format.sql
+[0m18:39:44.869528 [debug] [MainThread]: Parsing macros/jinja_helpers/pretty_time.sql
+[0m18:39:44.872510 [debug] [MainThread]: Parsing macros/jinja_helpers/slugify.sql
+[0m18:39:44.875958 [debug] [MainThread]: Parsing macros/materializations/insert_by_period_materialization.sql
+[0m18:39:44.914738 [debug] [MainThread]: Parsing macros/schema_tests/accepted_range.sql
+[0m18:39:44.920160 [debug] [MainThread]: Parsing macros/schema_tests/at_least_one.sql
+[0m18:39:44.923533 [debug] [MainThread]: Parsing macros/schema_tests/cardinality_equality.sql
+[0m18:39:44.927850 [debug] [MainThread]: Parsing macros/schema_tests/equal_rowcount.sql
+[0m18:39:44.931403 [debug] [MainThread]: Parsing macros/schema_tests/equality.sql
+[0m18:39:44.937460 [debug] [MainThread]: Parsing macros/schema_tests/expression_is_true.sql
+[0m18:39:44.941213 [debug] [MainThread]: Parsing macros/schema_tests/fewer_rows_than.sql
+[0m18:39:44.945071 [debug] [MainThread]: Parsing macros/schema_tests/mutually_exclusive_ranges.sql
+[0m18:39:44.960923 [debug] [MainThread]: Parsing macros/schema_tests/not_accepted_values.sql
+[0m18:39:44.965885 [debug] [MainThread]: Parsing macros/schema_tests/not_constant.sql
+[0m18:39:44.969142 [debug] [MainThread]: Parsing macros/schema_tests/not_null_proportion.sql
+[0m18:39:44.973587 [debug] [MainThread]: Parsing macros/schema_tests/recency.sql
+[0m18:39:44.977389 [debug] [MainThread]: Parsing macros/schema_tests/relationships_where.sql
+[0m18:39:44.981821 [debug] [MainThread]: Parsing macros/schema_tests/sequential_values.sql
+[0m18:39:44.986738 [debug] [MainThread]: Parsing macros/schema_tests/test_not_null_where.sql
+[0m18:39:44.989967 [debug] [MainThread]: Parsing macros/schema_tests/test_unique_where.sql
+[0m18:39:44.993550 [debug] [MainThread]: Parsing macros/schema_tests/unique_combination_of_columns.sql
+[0m18:39:44.999109 [debug] [MainThread]: Parsing macros/sql/date_spine.sql
+[0m18:39:45.007248 [debug] [MainThread]: Parsing macros/sql/generate_series.sql
+[0m18:39:45.015859 [debug] [MainThread]: Parsing macros/sql/get_column_values.sql
+[0m18:39:45.025305 [debug] [MainThread]: Parsing macros/sql/get_query_results_as_dict.sql
+[0m18:39:45.031273 [debug] [MainThread]: Parsing macros/sql/get_relations_by_pattern.sql
+[0m18:39:45.038015 [debug] [MainThread]: Parsing macros/sql/get_relations_by_prefix.sql
+[0m18:39:45.044244 [debug] [MainThread]: Parsing macros/sql/get_tables_by_pattern_sql.sql
+[0m18:39:45.055445 [debug] [MainThread]: Parsing macros/sql/get_tables_by_prefix_sql.sql
+[0m18:39:45.059607 [debug] [MainThread]: Parsing macros/sql/groupby.sql
+[0m18:39:45.063261 [debug] [MainThread]: Parsing macros/sql/haversine_distance.sql
+[0m18:39:45.073034 [debug] [MainThread]: Parsing macros/sql/nullcheck.sql
+[0m18:39:45.076653 [debug] [MainThread]: Parsing macros/sql/nullcheck_table.sql
+[0m18:39:45.080135 [debug] [MainThread]: Parsing macros/sql/pivot.sql
+[0m18:39:45.087473 [debug] [MainThread]: Parsing macros/sql/safe_add.sql
+[0m18:39:45.091365 [debug] [MainThread]: Parsing macros/sql/star.sql
+[0m18:39:45.098501 [debug] [MainThread]: Parsing macros/sql/surrogate_key.sql
+[0m18:39:45.104657 [debug] [MainThread]: Parsing macros/sql/union.sql
+[0m18:39:45.117706 [debug] [MainThread]: Parsing macros/sql/unpivot.sql
+[0m18:39:45.131186 [debug] [MainThread]: Parsing macros/web/get_url_host.sql
+[0m18:39:45.136339 [debug] [MainThread]: Parsing macros/web/get_url_parameter.sql
+[0m18:39:45.141164 [debug] [MainThread]: Parsing macros/web/get_url_path.sql
+[0m18:39:45.732382 [debug] [MainThread]: 1699: static parser successfully parsed customer_churn_month.sql
+[0m18:39:45.750924 [debug] [MainThread]: 1699: static parser successfully parsed customer_revenue_by_month.sql
+[0m18:39:45.757782 [debug] [MainThread]: 1603: static parser failed on mrr.sql
+[0m18:39:45.775985 [warn ] [MainThread]: 
+Warning: the `surrogate_key` macro now takes a single list argument instead of multiple string arguments. Support for multiple string arguments will be deprecated in a future release of dbt-utils. The acme.mrr model triggered this warning. 
+[0m18:39:45.790878 [debug] [MainThread]: 1602: parser fallback to jinja rendering on mrr.sql
+[0m18:39:45.795243 [debug] [MainThread]: 1603: static parser failed on utils/util_months.sql
+[0m18:39:45.833369 [debug] [MainThread]: 1602: parser fallback to jinja rendering on utils/util_months.sql
+[0m18:39:46.056621 [warn ] [MainThread]: [[33mWARNING[0m]: 'subscription_periods' is a seed node, but it is specified in the models section
+of models/schema.yml. To fix this error, place the `subscription_periods`
+specification under the seeds key instead.
+[0m18:39:46.179668 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '36ef4a1d-b804-4152-84fb-713435dc41d3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5f3d460fa0>]}
+[0m18:39:46.209705 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '36ef4a1d-b804-4152-84fb-713435dc41d3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5f3d44b520>]}
+[0m18:39:46.211936 [info ] [MainThread]: Found 4 models, 21 tests, 0 snapshots, 0 analyses, 491 macros, 0 operations, 1 seed file, 0 sources, 0 exposures, 0 metrics
+[0m18:39:46.213929 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '36ef4a1d-b804-4152-84fb-713435dc41d3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5f3dba0a60>]}
+[0m18:39:46.218461 [info ] [MainThread]: 
+[0m18:39:46.220980 [debug] [MainThread]: Acquiring new snowflake connection "master"
+[0m18:39:46.224184 [debug] [ThreadPool]: Acquiring new snowflake connection "list_CS_DEV_demo"
+[0m18:39:46.238226 [debug] [ThreadPool]: Using snowflake connection "list_CS_DEV_demo"
+[0m18:39:46.240886 [debug] [ThreadPool]: On list_CS_DEV_demo: /* {"app": "dbt", "dbt_version": "1.3.0", "profile_name": "my-snowflake-db", "target_name": "dev", "connection_name": "list_CS_DEV_demo"} */
+show terse objects in CS_DEV.demo
+[0m18:39:46.243508 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m18:39:46.977575 [debug] [ThreadPool]: SQL status: SUCCESS 7 in 0.73 seconds
+[0m18:39:46.983812 [debug] [ThreadPool]: On list_CS_DEV_demo: Close
+[0m18:39:47.156235 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '36ef4a1d-b804-4152-84fb-713435dc41d3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5f3d460fd0>]}
+[0m18:39:47.160108 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m18:39:47.162729 [info ] [MainThread]: 
+[0m18:39:47.182499 [debug] [Thread-1  ]: Began running node model.acme.util_months
+[0m18:39:47.185516 [debug] [Thread-1  ]: Acquiring new snowflake connection "model.acme.util_months"
+[0m18:39:47.187708 [debug] [Thread-1  ]: Began compiling node model.acme.util_months
+[0m18:39:47.189680 [debug] [Thread-1  ]: Compiling model.acme.util_months
+[0m18:39:47.202074 [debug] [Thread-1  ]: Using snowflake connection "model.acme.util_months"
+[0m18:39:47.204254 [debug] [Thread-1  ]: On model.acme.util_months: /* {"app": "dbt", "dbt_version": "1.3.0", "profile_name": "my-snowflake-db", "target_name": "dev", "node_id": "model.acme.util_months"} */
+select 
+
+    datediff(
+        month,
+        '2018-01-01'::date,
+        date_trunc('month', current_date)
+        )
+[0m18:39:47.206294 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m18:39:48.104121 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 0.9 seconds
+[0m18:39:48.108801 [debug] [Thread-1  ]: Writing injected SQL for node "model.acme.util_months"
+[0m18:39:48.129123 [debug] [Thread-1  ]: finished collecting timing info
+[0m18:39:48.130842 [debug] [Thread-1  ]: Began executing node model.acme.util_months
+[0m18:39:48.132508 [debug] [Thread-1  ]: finished collecting timing info
+[0m18:39:48.134044 [debug] [Thread-1  ]: On model.acme.util_months: Close
+[0m18:39:48.314001 [debug] [Thread-1  ]: Finished running node model.acme.util_months
+[0m18:39:48.317126 [debug] [Thread-1  ]: Began running node seed.acme.subscription_periods
+[0m18:39:48.319778 [debug] [Thread-1  ]: Acquiring new snowflake connection "seed.acme.subscription_periods"
+[0m18:39:48.321956 [debug] [Thread-1  ]: Began compiling node seed.acme.subscription_periods
+[0m18:39:48.324281 [debug] [Thread-1  ]: Compiling seed.acme.subscription_periods
+[0m18:39:48.329186 [debug] [Thread-1  ]: Writing injected SQL for node "seed.acme.subscription_periods"
+[0m18:39:48.331196 [debug] [Thread-1  ]: finished collecting timing info
+[0m18:39:48.333117 [debug] [Thread-1  ]: Began executing node seed.acme.subscription_periods
+[0m18:39:48.335097 [debug] [Thread-1  ]: finished collecting timing info
+[0m18:39:48.337621 [debug] [Thread-1  ]: Finished running node seed.acme.subscription_periods
+[0m18:39:48.341141 [debug] [Thread-1  ]: Began running node model.acme.customer_revenue_by_month
+[0m18:39:48.343690 [debug] [Thread-1  ]: Acquiring new snowflake connection "model.acme.customer_revenue_by_month"
+[0m18:39:48.345578 [debug] [Thread-1  ]: Began compiling node model.acme.customer_revenue_by_month
+[0m18:39:48.347346 [debug] [Thread-1  ]: Compiling model.acme.customer_revenue_by_month
+[0m18:39:48.354127 [debug] [Thread-1  ]: Writing injected SQL for node "model.acme.customer_revenue_by_month"
+[0m18:39:48.360704 [debug] [Thread-1  ]: finished collecting timing info
+[0m18:39:48.362505 [debug] [Thread-1  ]: Began executing node model.acme.customer_revenue_by_month
+[0m18:39:48.364149 [debug] [Thread-1  ]: finished collecting timing info
+[0m18:39:48.366130 [debug] [Thread-1  ]: Finished running node model.acme.customer_revenue_by_month
+[0m18:39:48.367757 [debug] [Thread-1  ]: Began running node test.acme.dbt_utils_expression_is_true_subscription_periods_date_trunc_month_end_date_end_date.5f773b4670
+[0m18:39:48.369793 [debug] [Thread-1  ]: Acquiring new snowflake connection "test.acme.dbt_utils_expression_is_true_subscription_periods_date_trunc_month_end_date_end_date.5f773b4670"
+[0m18:39:48.371306 [debug] [Thread-1  ]: Began compiling node test.acme.dbt_utils_expression_is_true_subscription_periods_date_trunc_month_end_date_end_date.5f773b4670
+[0m18:39:48.372983 [debug] [Thread-1  ]: Compiling test.acme.dbt_utils_expression_is_true_subscription_periods_date_trunc_month_end_date_end_date.5f773b4670
+[0m18:39:48.381100 [debug] [Thread-1  ]: Writing injected SQL for node "test.acme.dbt_utils_expression_is_true_subscription_periods_date_trunc_month_end_date_end_date.5f773b4670"
+[0m18:39:48.390716 [debug] [Thread-1  ]: finished collecting timing info
+[0m18:39:48.392748 [debug] [Thread-1  ]: Began executing node test.acme.dbt_utils_expression_is_true_subscription_periods_date_trunc_month_end_date_end_date.5f773b4670
+[0m18:39:48.394456 [debug] [Thread-1  ]: finished collecting timing info
+[0m18:39:48.396664 [debug] [Thread-1  ]: Finished running node test.acme.dbt_utils_expression_is_true_subscription_periods_date_trunc_month_end_date_end_date.5f773b4670
+[0m18:39:48.398495 [debug] [Thread-1  ]: Began running node test.acme.dbt_utils_expression_is_true_subscription_periods_date_trunc_month_start_date_start_date.abd2cf4dfd
+[0m18:39:48.400492 [debug] [Thread-1  ]: Acquiring new snowflake connection "test.acme.dbt_utils_expression_is_true_subscription_periods_date_trunc_month_start_date_start_date.abd2cf4dfd"
+[0m18:39:48.401885 [debug] [Thread-1  ]: Began compiling node test.acme.dbt_utils_expression_is_true_subscription_periods_date_trunc_month_start_date_start_date.abd2cf4dfd
+[0m18:39:48.403316 [debug] [Thread-1  ]: Compiling test.acme.dbt_utils_expression_is_true_subscription_periods_date_trunc_month_start_date_start_date.abd2cf4dfd
+[0m18:39:48.410644 [debug] [Thread-1  ]: Writing injected SQL for node "test.acme.dbt_utils_expression_is_true_subscription_periods_date_trunc_month_start_date_start_date.abd2cf4dfd"
+[0m18:39:48.416259 [debug] [Thread-1  ]: finished collecting timing info
+[0m18:39:48.418162 [debug] [Thread-1  ]: Began executing node test.acme.dbt_utils_expression_is_true_subscription_periods_date_trunc_month_start_date_start_date.abd2cf4dfd
+[0m18:39:48.419755 [debug] [Thread-1  ]: finished collecting timing info
+[0m18:39:48.421881 [debug] [Thread-1  ]: Finished running node test.acme.dbt_utils_expression_is_true_subscription_periods_date_trunc_month_start_date_start_date.abd2cf4dfd
+[0m18:39:48.423494 [debug] [Thread-1  ]: Began running node test.acme.dbt_utils_mutually_exclusive_ranges_subscription_periods_start_date__customer_id__end_date.a4c8bc64fa
+[0m18:39:48.425903 [debug] [Thread-1  ]: Acquiring new snowflake connection "test.acme.dbt_utils_mutually_exclusive_ranges_subscription_periods_start_date__customer_id__end_date.a4c8bc64fa"
+[0m18:39:48.427833 [debug] [Thread-1  ]: Began compiling node test.acme.dbt_utils_mutually_exclusive_ranges_subscription_periods_start_date__customer_id__end_date.a4c8bc64fa
+[0m18:39:48.429626 [debug] [Thread-1  ]: Compiling test.acme.dbt_utils_mutually_exclusive_ranges_subscription_periods_start_date__customer_id__end_date.a4c8bc64fa
+[0m18:39:48.439461 [debug] [Thread-1  ]: Writing injected SQL for node "test.acme.dbt_utils_mutually_exclusive_ranges_subscription_periods_start_date__customer_id__end_date.a4c8bc64fa"
+[0m18:39:48.446392 [debug] [Thread-1  ]: finished collecting timing info
+[0m18:39:48.448057 [debug] [Thread-1  ]: Began executing node test.acme.dbt_utils_mutually_exclusive_ranges_subscription_periods_start_date__customer_id__end_date.a4c8bc64fa
+[0m18:39:48.449657 [debug] [Thread-1  ]: finished collecting timing info
+[0m18:39:48.452056 [debug] [Thread-1  ]: Finished running node test.acme.dbt_utils_mutually_exclusive_ranges_subscription_periods_start_date__customer_id__end_date.a4c8bc64fa
+[0m18:39:48.453854 [debug] [Thread-1  ]: Began running node model.acme.customer_churn_month
+[0m18:39:48.456229 [debug] [Thread-1  ]: Acquiring new snowflake connection "model.acme.customer_churn_month"
+[0m18:39:48.458164 [debug] [Thread-1  ]: Began compiling node model.acme.customer_churn_month
+[0m18:39:48.460220 [debug] [Thread-1  ]: Compiling model.acme.customer_churn_month
+[0m18:39:48.467832 [debug] [Thread-1  ]: Writing injected SQL for node "model.acme.customer_churn_month"
+[0m18:39:48.477185 [debug] [Thread-1  ]: finished collecting timing info
+[0m18:39:48.480782 [debug] [Thread-1  ]: Began executing node model.acme.customer_churn_month
+[0m18:39:48.482759 [debug] [Thread-1  ]: finished collecting timing info
+[0m18:39:48.485871 [debug] [Thread-1  ]: Finished running node model.acme.customer_churn_month
+[0m18:39:48.487854 [debug] [Thread-1  ]: Began running node test.acme.dbt_utils_unique_combination_of_columns_customer_revenue_by_month_customer_id__date_month.e8886ba716
+[0m18:39:48.489980 [debug] [Thread-1  ]: Acquiring new snowflake connection "test.acme.dbt_utils_unique_combination_of_columns_customer_revenue_by_month_customer_id__date_month.e8886ba716"
+[0m18:39:48.491873 [debug] [Thread-1  ]: Began compiling node test.acme.dbt_utils_unique_combination_of_columns_customer_revenue_by_month_customer_id__date_month.e8886ba716
+[0m18:39:48.493831 [debug] [Thread-1  ]: Compiling test.acme.dbt_utils_unique_combination_of_columns_customer_revenue_by_month_customer_id__date_month.e8886ba716
+[0m18:39:48.502115 [debug] [Thread-1  ]: Writing injected SQL for node "test.acme.dbt_utils_unique_combination_of_columns_customer_revenue_by_month_customer_id__date_month.e8886ba716"
+[0m18:39:48.511679 [debug] [Thread-1  ]: finished collecting timing info
+[0m18:39:48.514080 [debug] [Thread-1  ]: Began executing node test.acme.dbt_utils_unique_combination_of_columns_customer_revenue_by_month_customer_id__date_month.e8886ba716
+[0m18:39:48.516306 [debug] [Thread-1  ]: finished collecting timing info
+[0m18:39:48.519364 [debug] [Thread-1  ]: Finished running node test.acme.dbt_utils_unique_combination_of_columns_customer_revenue_by_month_customer_id__date_month.e8886ba716
+[0m18:39:48.521289 [debug] [Thread-1  ]: Began running node model.acme.mrr
+[0m18:39:48.523538 [debug] [Thread-1  ]: Acquiring new snowflake connection "model.acme.mrr"
+[0m18:39:48.525650 [debug] [Thread-1  ]: Began compiling node model.acme.mrr
+[0m18:39:48.527652 [debug] [Thread-1  ]: Compiling model.acme.mrr
+[0m18:39:48.535937 [warn ] [Thread-1  ]: 
+Warning: the `surrogate_key` macro now takes a single list argument instead of multiple string arguments. Support for multiple string arguments will be deprecated in a future release of dbt-utils. The acme.mrr model triggered this warning. 
+[0m18:39:48.539051 [debug] [Thread-1  ]: Writing injected SQL for node "model.acme.mrr"
+[0m18:39:48.545257 [debug] [Thread-1  ]: finished collecting timing info
+[0m18:39:48.547233 [debug] [Thread-1  ]: Began executing node model.acme.mrr
+[0m18:39:48.548875 [debug] [Thread-1  ]: finished collecting timing info
+[0m18:39:48.550987 [debug] [Thread-1  ]: Finished running node model.acme.mrr
+[0m18:39:48.552725 [debug] [Thread-1  ]: Began running node test.acme.not_null_customer_churn_month_customer_id.99e28f508c
+[0m18:39:48.554820 [debug] [Thread-1  ]: Acquiring new snowflake connection "test.acme.not_null_customer_churn_month_customer_id.99e28f508c"
+[0m18:39:48.556469 [debug] [Thread-1  ]: Began compiling node test.acme.not_null_customer_churn_month_customer_id.99e28f508c
+[0m18:39:48.558189 [debug] [Thread-1  ]: Compiling test.acme.not_null_customer_churn_month_customer_id.99e28f508c
+[0m18:39:48.570283 [debug] [Thread-1  ]: Writing injected SQL for node "test.acme.not_null_customer_churn_month_customer_id.99e28f508c"
+[0m18:39:48.577489 [debug] [Thread-1  ]: finished collecting timing info
+[0m18:39:48.579447 [debug] [Thread-1  ]: Began executing node test.acme.not_null_customer_churn_month_customer_id.99e28f508c
+[0m18:39:48.581064 [debug] [Thread-1  ]: finished collecting timing info
+[0m18:39:48.583117 [debug] [Thread-1  ]: Finished running node test.acme.not_null_customer_churn_month_customer_id.99e28f508c
+[0m18:39:48.584943 [debug] [Thread-1  ]: Began running node test.acme.unique_customer_churn_month_customer_id.a402b7af3f
+[0m18:39:48.587166 [debug] [Thread-1  ]: Acquiring new snowflake connection "test.acme.unique_customer_churn_month_customer_id.a402b7af3f"
+[0m18:39:48.589011 [debug] [Thread-1  ]: Began compiling node test.acme.unique_customer_churn_month_customer_id.a402b7af3f
+[0m18:39:48.591510 [debug] [Thread-1  ]: Compiling test.acme.unique_customer_churn_month_customer_id.a402b7af3f
+[0m18:39:48.601790 [debug] [Thread-1  ]: Writing injected SQL for node "test.acme.unique_customer_churn_month_customer_id.a402b7af3f"
+[0m18:39:48.609350 [debug] [Thread-1  ]: finished collecting timing info
+[0m18:39:48.611807 [debug] [Thread-1  ]: Began executing node test.acme.unique_customer_churn_month_customer_id.a402b7af3f
+[0m18:39:48.614335 [debug] [Thread-1  ]: finished collecting timing info
+[0m18:39:48.617707 [debug] [Thread-1  ]: Finished running node test.acme.unique_customer_churn_month_customer_id.a402b7af3f
+[0m18:39:48.619544 [debug] [Thread-1  ]: Began running node test.acme.dbt_utils_expression_is_true_mrr_date_month_date_trunc_month_current_date_.8e3ee48bc6
+[0m18:39:48.621638 [debug] [Thread-1  ]: Acquiring new snowflake connection "test.acme.dbt_utils_expression_is_true_mrr_date_month_date_trunc_month_current_date_.8e3ee48bc6"
+[0m18:39:48.623233 [debug] [Thread-1  ]: Began compiling node test.acme.dbt_utils_expression_is_true_mrr_date_month_date_trunc_month_current_date_.8e3ee48bc6
+[0m18:39:48.624920 [debug] [Thread-1  ]: Compiling test.acme.dbt_utils_expression_is_true_mrr_date_month_date_trunc_month_current_date_.8e3ee48bc6
+[0m18:39:48.633623 [debug] [Thread-1  ]: Writing injected SQL for node "test.acme.dbt_utils_expression_is_true_mrr_date_month_date_trunc_month_current_date_.8e3ee48bc6"
+[0m18:39:48.647530 [debug] [Thread-1  ]: finished collecting timing info
+[0m18:39:48.649988 [debug] [Thread-1  ]: Began executing node test.acme.dbt_utils_expression_is_true_mrr_date_month_date_trunc_month_current_date_.8e3ee48bc6
+[0m18:39:48.652377 [debug] [Thread-1  ]: finished collecting timing info
+[0m18:39:48.654978 [debug] [Thread-1  ]: Finished running node test.acme.dbt_utils_expression_is_true_mrr_date_month_date_trunc_month_current_date_.8e3ee48bc6
+[0m18:39:48.656858 [debug] [Thread-1  ]: Began running node test.acme.dbt_utils_unique_combination_of_columns_mrr_customer_id__date_month.7a5b0199cb
+[0m18:39:48.659546 [debug] [Thread-1  ]: Acquiring new snowflake connection "test.acme.dbt_utils_unique_combination_of_columns_mrr_customer_id__date_month.7a5b0199cb"
+[0m18:39:48.661248 [debug] [Thread-1  ]: Began compiling node test.acme.dbt_utils_unique_combination_of_columns_mrr_customer_id__date_month.7a5b0199cb
+[0m18:39:48.662916 [debug] [Thread-1  ]: Compiling test.acme.dbt_utils_unique_combination_of_columns_mrr_customer_id__date_month.7a5b0199cb
+[0m18:39:48.673375 [debug] [Thread-1  ]: Writing injected SQL for node "test.acme.dbt_utils_unique_combination_of_columns_mrr_customer_id__date_month.7a5b0199cb"
+[0m18:39:48.682642 [debug] [Thread-1  ]: finished collecting timing info
+[0m18:39:48.684847 [debug] [Thread-1  ]: Began executing node test.acme.dbt_utils_unique_combination_of_columns_mrr_customer_id__date_month.7a5b0199cb
+[0m18:39:48.686965 [debug] [Thread-1  ]: finished collecting timing info
+[0m18:39:48.689556 [debug] [Thread-1  ]: Finished running node test.acme.dbt_utils_unique_combination_of_columns_mrr_customer_id__date_month.7a5b0199cb
+[0m18:39:48.691537 [debug] [Thread-1  ]: Began running node test.acme.not_null_mrr_customer_id.adf44c0fb5
+[0m18:39:48.694124 [debug] [Thread-1  ]: Acquiring new snowflake connection "test.acme.not_null_mrr_customer_id.adf44c0fb5"
+[0m18:39:48.696163 [debug] [Thread-1  ]: Began compiling node test.acme.not_null_mrr_customer_id.adf44c0fb5
+[0m18:39:48.698310 [debug] [Thread-1  ]: Compiling test.acme.not_null_mrr_customer_id.adf44c0fb5
+[0m18:39:48.707015 [debug] [Thread-1  ]: Writing injected SQL for node "test.acme.not_null_mrr_customer_id.adf44c0fb5"
+[0m18:39:48.714462 [debug] [Thread-1  ]: finished collecting timing info
+[0m18:39:48.716659 [debug] [Thread-1  ]: Began executing node test.acme.not_null_mrr_customer_id.adf44c0fb5
+[0m18:39:48.718639 [debug] [Thread-1  ]: finished collecting timing info
+[0m18:39:48.721199 [debug] [Thread-1  ]: Finished running node test.acme.not_null_mrr_customer_id.adf44c0fb5
+[0m18:39:48.723373 [debug] [Thread-1  ]: Began running node test.acme.not_null_mrr_date_month.d7121d9ce6
+[0m18:39:48.726890 [debug] [Thread-1  ]: Acquiring new snowflake connection "test.acme.not_null_mrr_date_month.d7121d9ce6"
+[0m18:39:48.728780 [debug] [Thread-1  ]: Began compiling node test.acme.not_null_mrr_date_month.d7121d9ce6
+[0m18:39:48.730862 [debug] [Thread-1  ]: Compiling test.acme.not_null_mrr_date_month.d7121d9ce6
+[0m18:39:48.737480 [debug] [Thread-1  ]: Writing injected SQL for node "test.acme.not_null_mrr_date_month.d7121d9ce6"
+[0m18:39:48.743108 [debug] [Thread-1  ]: finished collecting timing info
+[0m18:39:48.744802 [debug] [Thread-1  ]: Began executing node test.acme.not_null_mrr_date_month.d7121d9ce6
+[0m18:39:48.746313 [debug] [Thread-1  ]: finished collecting timing info
+[0m18:39:48.748355 [debug] [Thread-1  ]: Finished running node test.acme.not_null_mrr_date_month.d7121d9ce6
+[0m18:39:48.749880 [debug] [Thread-1  ]: Began running node test.acme.not_null_mrr_first_active_month.a9078832e9
+[0m18:39:48.751672 [debug] [Thread-1  ]: Acquiring new snowflake connection "test.acme.not_null_mrr_first_active_month.a9078832e9"
+[0m18:39:48.753117 [debug] [Thread-1  ]: Began compiling node test.acme.not_null_mrr_first_active_month.a9078832e9
+[0m18:39:48.754801 [debug] [Thread-1  ]: Compiling test.acme.not_null_mrr_first_active_month.a9078832e9
+[0m18:39:48.761195 [debug] [Thread-1  ]: Writing injected SQL for node "test.acme.not_null_mrr_first_active_month.a9078832e9"
+[0m18:39:48.766993 [debug] [Thread-1  ]: finished collecting timing info
+[0m18:39:48.768607 [debug] [Thread-1  ]: Began executing node test.acme.not_null_mrr_first_active_month.a9078832e9
+[0m18:39:48.770265 [debug] [Thread-1  ]: finished collecting timing info
+[0m18:39:48.772804 [debug] [Thread-1  ]: Finished running node test.acme.not_null_mrr_first_active_month.a9078832e9
+[0m18:39:48.774847 [debug] [Thread-1  ]: Began running node test.acme.not_null_mrr_id.45914052fb
+[0m18:39:48.778020 [debug] [Thread-1  ]: Acquiring new snowflake connection "test.acme.not_null_mrr_id.45914052fb"
+[0m18:39:48.796988 [debug] [Thread-1  ]: Began compiling node test.acme.not_null_mrr_id.45914052fb
+[0m18:39:48.799664 [debug] [Thread-1  ]: Compiling test.acme.not_null_mrr_id.45914052fb
+[0m18:39:48.807995 [debug] [Thread-1  ]: Writing injected SQL for node "test.acme.not_null_mrr_id.45914052fb"
+[0m18:39:48.814992 [debug] [Thread-1  ]: finished collecting timing info
+[0m18:39:48.817649 [debug] [Thread-1  ]: Began executing node test.acme.not_null_mrr_id.45914052fb
+[0m18:39:48.819772 [debug] [Thread-1  ]: finished collecting timing info
+[0m18:39:48.822471 [debug] [Thread-1  ]: Finished running node test.acme.not_null_mrr_id.45914052fb
+[0m18:39:48.824733 [debug] [Thread-1  ]: Began running node test.acme.not_null_mrr_is_active.66e2203f7d
+[0m18:39:48.827521 [debug] [Thread-1  ]: Acquiring new snowflake connection "test.acme.not_null_mrr_is_active.66e2203f7d"
+[0m18:39:48.829882 [debug] [Thread-1  ]: Began compiling node test.acme.not_null_mrr_is_active.66e2203f7d
+[0m18:39:48.832630 [debug] [Thread-1  ]: Compiling test.acme.not_null_mrr_is_active.66e2203f7d
+[0m18:39:48.845009 [debug] [Thread-1  ]: Writing injected SQL for node "test.acme.not_null_mrr_is_active.66e2203f7d"
+[0m18:39:48.852526 [debug] [Thread-1  ]: finished collecting timing info
+[0m18:39:48.854935 [debug] [Thread-1  ]: Began executing node test.acme.not_null_mrr_is_active.66e2203f7d
+[0m18:39:48.856957 [debug] [Thread-1  ]: finished collecting timing info
+[0m18:39:48.860275 [debug] [Thread-1  ]: Finished running node test.acme.not_null_mrr_is_active.66e2203f7d
+[0m18:39:48.862792 [debug] [Thread-1  ]: Began running node test.acme.not_null_mrr_is_first_month.97ecc2049e
+[0m18:39:48.865320 [debug] [Thread-1  ]: Acquiring new snowflake connection "test.acme.not_null_mrr_is_first_month.97ecc2049e"
+[0m18:39:48.867540 [debug] [Thread-1  ]: Began compiling node test.acme.not_null_mrr_is_first_month.97ecc2049e
+[0m18:39:48.869443 [debug] [Thread-1  ]: Compiling test.acme.not_null_mrr_is_first_month.97ecc2049e
+[0m18:39:48.878495 [debug] [Thread-1  ]: Writing injected SQL for node "test.acme.not_null_mrr_is_first_month.97ecc2049e"
+[0m18:39:48.885783 [debug] [Thread-1  ]: finished collecting timing info
+[0m18:39:48.888281 [debug] [Thread-1  ]: Began executing node test.acme.not_null_mrr_is_first_month.97ecc2049e
+[0m18:39:48.890999 [debug] [Thread-1  ]: finished collecting timing info
+[0m18:39:48.894902 [debug] [Thread-1  ]: Finished running node test.acme.not_null_mrr_is_first_month.97ecc2049e
+[0m18:39:48.896970 [debug] [Thread-1  ]: Began running node test.acme.not_null_mrr_is_last_month.a91990c0de
+[0m18:39:48.899579 [debug] [Thread-1  ]: Acquiring new snowflake connection "test.acme.not_null_mrr_is_last_month.a91990c0de"
+[0m18:39:48.902211 [debug] [Thread-1  ]: Began compiling node test.acme.not_null_mrr_is_last_month.a91990c0de
+[0m18:39:48.904121 [debug] [Thread-1  ]: Compiling test.acme.not_null_mrr_is_last_month.a91990c0de
+[0m18:39:48.912208 [debug] [Thread-1  ]: Writing injected SQL for node "test.acme.not_null_mrr_is_last_month.a91990c0de"
+[0m18:39:48.919471 [debug] [Thread-1  ]: finished collecting timing info
+[0m18:39:48.921535 [debug] [Thread-1  ]: Began executing node test.acme.not_null_mrr_is_last_month.a91990c0de
+[0m18:39:48.923552 [debug] [Thread-1  ]: finished collecting timing info
+[0m18:39:48.926437 [debug] [Thread-1  ]: Finished running node test.acme.not_null_mrr_is_last_month.a91990c0de
+[0m18:39:48.928605 [debug] [Thread-1  ]: Began running node test.acme.not_null_mrr_last_active_month.c5f2565121
+[0m18:39:48.931006 [debug] [Thread-1  ]: Acquiring new snowflake connection "test.acme.not_null_mrr_last_active_month.c5f2565121"
+[0m18:39:48.932823 [debug] [Thread-1  ]: Began compiling node test.acme.not_null_mrr_last_active_month.c5f2565121
+[0m18:39:48.934741 [debug] [Thread-1  ]: Compiling test.acme.not_null_mrr_last_active_month.c5f2565121
+[0m18:39:48.942055 [debug] [Thread-1  ]: Writing injected SQL for node "test.acme.not_null_mrr_last_active_month.c5f2565121"
+[0m18:39:48.948689 [debug] [Thread-1  ]: finished collecting timing info
+[0m18:39:48.950717 [debug] [Thread-1  ]: Began executing node test.acme.not_null_mrr_last_active_month.c5f2565121
+[0m18:39:48.952512 [debug] [Thread-1  ]: finished collecting timing info
+[0m18:39:48.954794 [debug] [Thread-1  ]: Finished running node test.acme.not_null_mrr_last_active_month.c5f2565121
+[0m18:39:48.956296 [debug] [Thread-1  ]: Began running node test.acme.not_null_mrr_mrr.7e419847d2
+[0m18:39:48.958391 [debug] [Thread-1  ]: Acquiring new snowflake connection "test.acme.not_null_mrr_mrr.7e419847d2"
+[0m18:39:48.960296 [debug] [Thread-1  ]: Began compiling node test.acme.not_null_mrr_mrr.7e419847d2
+[0m18:39:48.962132 [debug] [Thread-1  ]: Compiling test.acme.not_null_mrr_mrr.7e419847d2
+[0m18:39:48.968511 [debug] [Thread-1  ]: Writing injected SQL for node "test.acme.not_null_mrr_mrr.7e419847d2"
+[0m18:39:48.976635 [debug] [Thread-1  ]: finished collecting timing info
+[0m18:39:48.979199 [debug] [Thread-1  ]: Began executing node test.acme.not_null_mrr_mrr.7e419847d2
+[0m18:39:48.981195 [debug] [Thread-1  ]: finished collecting timing info
+[0m18:39:48.983776 [debug] [Thread-1  ]: Finished running node test.acme.not_null_mrr_mrr.7e419847d2
+[0m18:39:48.985768 [debug] [Thread-1  ]: Began running node test.acme.not_null_mrr_mrr_change.0329647bd8
+[0m18:39:48.987907 [debug] [Thread-1  ]: Acquiring new snowflake connection "test.acme.not_null_mrr_mrr_change.0329647bd8"
+[0m18:39:48.989751 [debug] [Thread-1  ]: Began compiling node test.acme.not_null_mrr_mrr_change.0329647bd8
+[0m18:39:48.991869 [debug] [Thread-1  ]: Compiling test.acme.not_null_mrr_mrr_change.0329647bd8
+[0m18:39:48.999729 [debug] [Thread-1  ]: Writing injected SQL for node "test.acme.not_null_mrr_mrr_change.0329647bd8"
+[0m18:39:49.006909 [debug] [Thread-1  ]: finished collecting timing info
+[0m18:39:49.009237 [debug] [Thread-1  ]: Began executing node test.acme.not_null_mrr_mrr_change.0329647bd8
+[0m18:39:49.011513 [debug] [Thread-1  ]: finished collecting timing info
+[0m18:39:49.015629 [debug] [Thread-1  ]: Finished running node test.acme.not_null_mrr_mrr_change.0329647bd8
+[0m18:39:49.018541 [debug] [Thread-1  ]: Began running node test.acme.not_null_mrr_previous_month_is_active.836f1724d2
+[0m18:39:49.021135 [debug] [Thread-1  ]: Acquiring new snowflake connection "test.acme.not_null_mrr_previous_month_is_active.836f1724d2"
+[0m18:39:49.023133 [debug] [Thread-1  ]: Began compiling node test.acme.not_null_mrr_previous_month_is_active.836f1724d2
+[0m18:39:49.025353 [debug] [Thread-1  ]: Compiling test.acme.not_null_mrr_previous_month_is_active.836f1724d2
+[0m18:39:49.035555 [debug] [Thread-1  ]: Writing injected SQL for node "test.acme.not_null_mrr_previous_month_is_active.836f1724d2"
+[0m18:39:49.066571 [debug] [Thread-1  ]: finished collecting timing info
+[0m18:39:49.071272 [debug] [Thread-1  ]: Began executing node test.acme.not_null_mrr_previous_month_is_active.836f1724d2
+[0m18:39:49.075534 [debug] [Thread-1  ]: finished collecting timing info
+[0m18:39:49.079763 [debug] [Thread-1  ]: Finished running node test.acme.not_null_mrr_previous_month_is_active.836f1724d2
+[0m18:39:49.082678 [debug] [Thread-1  ]: Began running node test.acme.not_null_mrr_previous_month_mrr.9a7dfac4d7
+[0m18:39:49.085568 [debug] [Thread-1  ]: Acquiring new snowflake connection "test.acme.not_null_mrr_previous_month_mrr.9a7dfac4d7"
+[0m18:39:49.088028 [debug] [Thread-1  ]: Began compiling node test.acme.not_null_mrr_previous_month_mrr.9a7dfac4d7
+[0m18:39:49.090371 [debug] [Thread-1  ]: Compiling test.acme.not_null_mrr_previous_month_mrr.9a7dfac4d7
+[0m18:39:49.098521 [debug] [Thread-1  ]: Writing injected SQL for node "test.acme.not_null_mrr_previous_month_mrr.9a7dfac4d7"
+[0m18:39:49.107331 [debug] [Thread-1  ]: finished collecting timing info
+[0m18:39:49.110113 [debug] [Thread-1  ]: Began executing node test.acme.not_null_mrr_previous_month_mrr.9a7dfac4d7
+[0m18:39:49.112663 [debug] [Thread-1  ]: finished collecting timing info
+[0m18:39:49.116060 [debug] [Thread-1  ]: Finished running node test.acme.not_null_mrr_previous_month_mrr.9a7dfac4d7
+[0m18:39:49.118933 [debug] [Thread-1  ]: Began running node test.acme.unique_mrr_id.a14d6c26bd
+[0m18:39:49.122146 [debug] [Thread-1  ]: Acquiring new snowflake connection "test.acme.unique_mrr_id.a14d6c26bd"
+[0m18:39:49.124519 [debug] [Thread-1  ]: Began compiling node test.acme.unique_mrr_id.a14d6c26bd
+[0m18:39:49.127662 [debug] [Thread-1  ]: Compiling test.acme.unique_mrr_id.a14d6c26bd
+[0m18:39:49.137039 [debug] [Thread-1  ]: Writing injected SQL for node "test.acme.unique_mrr_id.a14d6c26bd"
+[0m18:39:49.147523 [debug] [Thread-1  ]: finished collecting timing info
+[0m18:39:49.149942 [debug] [Thread-1  ]: Began executing node test.acme.unique_mrr_id.a14d6c26bd
+[0m18:39:49.152060 [debug] [Thread-1  ]: finished collecting timing info
+[0m18:39:49.155121 [debug] [Thread-1  ]: Finished running node test.acme.unique_mrr_id.a14d6c26bd
+[0m18:39:49.159923 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m18:39:49.162511 [debug] [MainThread]: Connection 'test.acme.unique_mrr_id.a14d6c26bd' was properly closed.
+[0m18:39:49.195819 [info ] [MainThread]: Done.
+[0m18:39:49.239306 [debug] [MainThread]: Acquiring new snowflake connection "generate_catalog"
+[0m18:39:49.243169 [info ] [MainThread]: Building catalog
+[0m18:39:49.247144 [debug] [ThreadPool]: Acquiring new snowflake connection "CS_DEV.information_schema"
+[0m18:39:49.264325 [debug] [ThreadPool]: Using snowflake connection "CS_DEV.information_schema"
+[0m18:39:49.273139 [debug] [ThreadPool]: On CS_DEV.information_schema: /* {"app": "dbt", "dbt_version": "1.3.0", "profile_name": "my-snowflake-db", "target_name": "dev", "connection_name": "CS_DEV.information_schema"} */
+with tables as (
+
+          select
+              table_catalog as "table_database",
+              table_schema as "table_schema",
+              table_name as "table_name",
+              table_type as "table_type",
+              comment as "table_comment",
+
+              -- note: this is the _role_ that owns the table
+              table_owner as "table_owner",
+
+              'Clustering Key' as "stats:clustering_key:label",
+              clustering_key as "stats:clustering_key:value",
+              'The key used to cluster this table' as "stats:clustering_key:description",
+              (clustering_key is not null) as "stats:clustering_key:include",
+
+              'Row Count' as "stats:row_count:label",
+              row_count as "stats:row_count:value",
+              'An approximate count of rows in this table' as "stats:row_count:description",
+              (row_count is not null) as "stats:row_count:include",
+
+              'Approximate Size' as "stats:bytes:label",
+              bytes as "stats:bytes:value",
+              'Approximate size of the table as reported by Snowflake' as "stats:bytes:description",
+              (bytes is not null) as "stats:bytes:include",
+
+              'Last Modified' as "stats:last_modified:label",
+              to_varchar(convert_timezone('UTC', last_altered), 'yyyy-mm-dd HH24:MI'||'UTC') as "stats:last_modified:value",
+              'The timestamp for last update/change' as "stats:last_modified:description",
+              (last_altered is not null and table_type='BASE TABLE') as "stats:last_modified:include"
+
+          from CS_DEV.INFORMATION_SCHEMA.tables
+
+      ),
+
+      columns as (
+
+          select
+              table_catalog as "table_database",
+              table_schema as "table_schema",
+              table_name as "table_name",
+
+              column_name as "column_name",
+              ordinal_position as "column_index",
+              data_type as "column_type",
+              comment as "column_comment"
+
+          from CS_DEV.INFORMATION_SCHEMA.columns
+      )
+
+      select *
+      from tables
+      join columns using ("table_database", "table_schema", "table_name")
+      where (upper("table_schema") = upper('demo'))
+      order by "column_index"
+[0m18:39:49.277056 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m18:39:51.699798 [debug] [ThreadPool]: SQL status: SUCCESS 31 in 2.42 seconds
+[0m18:39:51.723202 [debug] [ThreadPool]: On CS_DEV.information_schema: Close
+[0m18:39:51.932385 [info ] [MainThread]: Catalog written to /usr/local/airflow/include/dbt/mrr-playbook/target/catalog.json
+[0m18:39:51.934872 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5f3e453940>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5f1e7032b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5f1e703ac0>]}
+[0m18:39:51.936925 [debug] [MainThread]: Flushing usage events
+[0m18:39:52.014557 [debug] [MainThread]: Connection 'generate_catalog' was properly closed.
+[0m18:39:52.018034 [debug] [MainThread]: Connection 'CS_DEV.information_schema' was properly closed.
+
+
+============================== 2022-12-13 00:33:58.787378 | de510ab0-39f2-42c6-98a4-b32c30a98e8d ==============================
+[0m00:33:58.787409 [info ] [MainThread]: Running with dbt=1.3.0
+[0m00:33:58.790018 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/usr/local/airflow/include/dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'project_dir': '/usr/local/airflow/include/dbt/mrr-playbook', 'compile': True, 'which': 'generate', 'rpc_method': 'docs.generate', 'indirect_selection': 'eager'}
+[0m00:33:58.791650 [debug] [MainThread]: Tracking: tracking
+[0m00:33:58.794038 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc4c65479a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc4c6547940>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc4c65478e0>]}
+[0m00:33:58.964195 [info ] [MainThread]: Unable to do partial parsing because env vars used in profiles.yml have changed
+[0m00:33:58.967951 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'de510ab0-39f2-42c6-98a4-b32c30a98e8d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc4c6540760>]}
+[0m00:33:59.330885 [debug] [MainThread]: Parsing macros/grant_select_on_schema.sql
+[0m00:33:59.337706 [debug] [MainThread]: Parsing macros/apply_grants.sql
+[0m00:33:59.342900 [debug] [MainThread]: Parsing macros/catalog.sql
+[0m00:33:59.351486 [debug] [MainThread]: Parsing macros/adapters.sql
+[0m00:33:59.470015 [debug] [MainThread]: Parsing macros/materializations/seed.sql
+[0m00:33:59.488313 [debug] [MainThread]: Parsing macros/materializations/snapshot.sql
+[0m00:33:59.492079 [debug] [MainThread]: Parsing macros/materializations/table.sql
+[0m00:33:59.510528 [debug] [MainThread]: Parsing macros/materializations/test.sql
+[0m00:33:59.522936 [debug] [MainThread]: Parsing macros/materializations/view.sql
+[0m00:33:59.538164 [debug] [MainThread]: Parsing macros/materializations/merge.sql
+[0m00:33:59.548795 [debug] [MainThread]: Parsing macros/materializations/incremental.sql
+[0m00:33:59.576831 [debug] [MainThread]: Parsing macros/utils/bool_or.sql
+[0m00:33:59.580107 [debug] [MainThread]: Parsing macros/utils/safe_cast.sql
+[0m00:33:59.583122 [debug] [MainThread]: Parsing macros/utils/escape_single_quotes.sql
+[0m00:33:59.585983 [debug] [MainThread]: Parsing macros/utils/right.sql
+[0m00:33:59.589196 [debug] [MainThread]: Parsing macros/utils/array_construct.sql
+[0m00:33:59.592689 [debug] [MainThread]: Parsing macros/utils/timestamps.sql
+[0m00:33:59.597807 [debug] [MainThread]: Parsing macros/python_model/python.sql
+[0m00:33:59.611782 [debug] [MainThread]: Parsing macros/materializations/configs.sql
+[0m00:33:59.621778 [debug] [MainThread]: Parsing macros/materializations/hooks.sql
+[0m00:33:59.631823 [debug] [MainThread]: Parsing macros/materializations/seeds/seed.sql
+[0m00:33:59.643517 [debug] [MainThread]: Parsing macros/materializations/seeds/helpers.sql
+[0m00:33:59.673868 [debug] [MainThread]: Parsing macros/materializations/models/view/create_view_as.sql
+[0m00:33:59.678959 [debug] [MainThread]: Parsing macros/materializations/models/view/create_or_replace_view.sql
+[0m00:33:59.685759 [debug] [MainThread]: Parsing macros/materializations/models/view/helpers.sql
+[0m00:33:59.690539 [debug] [MainThread]: Parsing macros/materializations/models/view/view.sql
+[0m00:33:59.701367 [debug] [MainThread]: Parsing macros/materializations/models/table/table.sql
+[0m00:33:59.711602 [debug] [MainThread]: Parsing macros/materializations/models/table/create_table_as.sql
+[0m00:33:59.718353 [debug] [MainThread]: Parsing macros/materializations/models/incremental/strategies.sql
+[0m00:33:59.729410 [debug] [MainThread]: Parsing macros/materializations/models/incremental/column_helpers.sql
+[0m00:33:59.742964 [debug] [MainThread]: Parsing macros/materializations/models/incremental/on_schema_change.sql
+[0m00:33:59.772935 [debug] [MainThread]: Parsing macros/materializations/models/incremental/merge.sql
+[0m00:33:59.799095 [debug] [MainThread]: Parsing macros/materializations/models/incremental/incremental.sql
+[0m00:33:59.818691 [debug] [MainThread]: Parsing macros/materializations/models/incremental/is_incremental.sql
+[0m00:33:59.823279 [debug] [MainThread]: Parsing macros/materializations/tests/where_subquery.sql
+[0m00:33:59.827580 [debug] [MainThread]: Parsing macros/materializations/tests/helpers.sql
+[0m00:33:59.831508 [debug] [MainThread]: Parsing macros/materializations/tests/test.sql
+[0m00:33:59.838995 [debug] [MainThread]: Parsing macros/materializations/snapshots/strategies.sql
+[0m00:33:59.864437 [debug] [MainThread]: Parsing macros/materializations/snapshots/snapshot.sql
+[0m00:33:59.888604 [debug] [MainThread]: Parsing macros/materializations/snapshots/snapshot_merge.sql
+[0m00:33:59.893592 [debug] [MainThread]: Parsing macros/materializations/snapshots/helpers.sql
+[0m00:33:59.917719 [debug] [MainThread]: Parsing macros/adapters/apply_grants.sql
+[0m00:33:59.942491 [debug] [MainThread]: Parsing macros/adapters/freshness.sql
+[0m00:33:59.949589 [debug] [MainThread]: Parsing macros/adapters/indexes.sql
+[0m00:33:59.955570 [debug] [MainThread]: Parsing macros/adapters/metadata.sql
+[0m00:33:59.982570 [debug] [MainThread]: Parsing macros/adapters/timestamps.sql
+[0m00:33:59.990341 [debug] [MainThread]: Parsing macros/adapters/schema.sql
+[0m00:33:59.995022 [debug] [MainThread]: Parsing macros/adapters/relation.sql
+[0m00:34:00.041752 [debug] [MainThread]: Parsing macros/adapters/persist_docs.sql
+[0m00:34:00.049938 [debug] [MainThread]: Parsing macros/adapters/columns.sql
+[0m00:34:00.067552 [debug] [MainThread]: Parsing macros/etc/datetime.sql
+[0m00:34:00.084526 [debug] [MainThread]: Parsing macros/etc/statement.sql
+[0m00:34:00.097152 [debug] [MainThread]: Parsing macros/utils/array_append.sql
+[0m00:34:00.100111 [debug] [MainThread]: Parsing macros/utils/bool_or.sql
+[0m00:34:00.102434 [debug] [MainThread]: Parsing macros/utils/intersect.sql
+[0m00:34:00.104660 [debug] [MainThread]: Parsing macros/utils/safe_cast.sql
+[0m00:34:00.107285 [debug] [MainThread]: Parsing macros/utils/except.sql
+[0m00:34:00.109400 [debug] [MainThread]: Parsing macros/utils/replace.sql
+[0m00:34:00.111862 [debug] [MainThread]: Parsing macros/utils/position.sql
+[0m00:34:00.114199 [debug] [MainThread]: Parsing macros/utils/escape_single_quotes.sql
+[0m00:34:00.116465 [debug] [MainThread]: Parsing macros/utils/data_types.sql
+[0m00:34:00.126734 [debug] [MainThread]: Parsing macros/utils/length.sql
+[0m00:34:00.140079 [debug] [MainThread]: Parsing macros/utils/date_trunc.sql
+[0m00:34:00.150776 [debug] [MainThread]: Parsing macros/utils/right.sql
+[0m00:34:00.154454 [debug] [MainThread]: Parsing macros/utils/datediff.sql
+[0m00:34:00.160564 [debug] [MainThread]: Parsing macros/utils/listagg.sql
+[0m00:34:00.173771 [debug] [MainThread]: Parsing macros/utils/hash.sql
+[0m00:34:00.180235 [debug] [MainThread]: Parsing macros/utils/any_value.sql
+[0m00:34:00.183821 [debug] [MainThread]: Parsing macros/utils/array_construct.sql
+[0m00:34:00.187675 [debug] [MainThread]: Parsing macros/utils/array_concat.sql
+[0m00:34:00.191059 [debug] [MainThread]: Parsing macros/utils/cast_bool_to_text.sql
+[0m00:34:00.195066 [debug] [MainThread]: Parsing macros/utils/last_day.sql
+[0m00:34:00.201310 [debug] [MainThread]: Parsing macros/utils/concat.sql
+[0m00:34:00.205174 [debug] [MainThread]: Parsing macros/utils/dateadd.sql
+[0m00:34:00.209741 [debug] [MainThread]: Parsing macros/utils/split_part.sql
+[0m00:34:00.220273 [debug] [MainThread]: Parsing macros/utils/literal.sql
+[0m00:34:00.225318 [debug] [MainThread]: Parsing macros/generic_test_sql/relationships.sql
+[0m00:34:00.229726 [debug] [MainThread]: Parsing macros/generic_test_sql/unique.sql
+[0m00:34:00.233688 [debug] [MainThread]: Parsing macros/generic_test_sql/not_null.sql
+[0m00:34:00.237614 [debug] [MainThread]: Parsing macros/generic_test_sql/accepted_values.sql
+[0m00:34:00.242461 [debug] [MainThread]: Parsing macros/get_custom_name/get_custom_database.sql
+[0m00:34:00.247779 [debug] [MainThread]: Parsing macros/get_custom_name/get_custom_schema.sql
+[0m00:34:00.253843 [debug] [MainThread]: Parsing macros/get_custom_name/get_custom_alias.sql
+[0m00:34:00.258758 [debug] [MainThread]: Parsing tests/generic/builtin.sql
+[0m00:34:00.266476 [debug] [MainThread]: Parsing macros/cross_db_utils/_is_ephemeral.sql
+[0m00:34:00.272121 [debug] [MainThread]: Parsing macros/cross_db_utils/_is_relation.sql
+[0m00:34:00.276304 [debug] [MainThread]: Parsing macros/cross_db_utils/cast_bool_to_text.sql
+[0m00:34:00.281172 [debug] [MainThread]: Parsing macros/cross_db_utils/concat.sql
+[0m00:34:00.285104 [debug] [MainThread]: Parsing macros/cross_db_utils/current_timestamp.sql
+[0m00:34:00.292651 [debug] [MainThread]: Parsing macros/cross_db_utils/datatypes.sql
+[0m00:34:00.301996 [debug] [MainThread]: Parsing macros/cross_db_utils/date_trunc.sql
+[0m00:34:00.306319 [debug] [MainThread]: Parsing macros/cross_db_utils/dateadd.sql
+[0m00:34:00.313150 [debug] [MainThread]: Parsing macros/cross_db_utils/datediff.sql
+[0m00:34:00.330731 [debug] [MainThread]: Parsing macros/cross_db_utils/except.sql
+[0m00:34:00.334088 [debug] [MainThread]: Parsing macros/cross_db_utils/hash.sql
+[0m00:34:00.337890 [debug] [MainThread]: Parsing macros/cross_db_utils/identifier.sql
+[0m00:34:00.342015 [debug] [MainThread]: Parsing macros/cross_db_utils/intersect.sql
+[0m00:34:00.345928 [debug] [MainThread]: Parsing macros/cross_db_utils/last_day.sql
+[0m00:34:00.353812 [debug] [MainThread]: Parsing macros/cross_db_utils/length.sql
+[0m00:34:00.358193 [debug] [MainThread]: Parsing macros/cross_db_utils/literal.sql
+[0m00:34:00.361974 [debug] [MainThread]: Parsing macros/cross_db_utils/position.sql
+[0m00:34:00.366753 [debug] [MainThread]: Parsing macros/cross_db_utils/replace.sql
+[0m00:34:00.370350 [debug] [MainThread]: Parsing macros/cross_db_utils/right.sql
+[0m00:34:00.375406 [debug] [MainThread]: Parsing macros/cross_db_utils/safe_cast.sql
+[0m00:34:00.379574 [debug] [MainThread]: Parsing macros/cross_db_utils/split_part.sql
+[0m00:34:00.383346 [debug] [MainThread]: Parsing macros/cross_db_utils/width_bucket.sql
+[0m00:34:00.392443 [debug] [MainThread]: Parsing macros/jinja_helpers/log_info.sql
+[0m00:34:00.395703 [debug] [MainThread]: Parsing macros/jinja_helpers/pretty_log_format.sql
+[0m00:34:00.398524 [debug] [MainThread]: Parsing macros/jinja_helpers/pretty_time.sql
+[0m00:34:00.401390 [debug] [MainThread]: Parsing macros/jinja_helpers/slugify.sql
+[0m00:34:00.404341 [debug] [MainThread]: Parsing macros/materializations/insert_by_period_materialization.sql
+[0m00:34:00.450392 [debug] [MainThread]: Parsing macros/schema_tests/accepted_range.sql
+[0m00:34:00.457161 [debug] [MainThread]: Parsing macros/schema_tests/at_least_one.sql
+[0m00:34:00.461346 [debug] [MainThread]: Parsing macros/schema_tests/cardinality_equality.sql
+[0m00:34:00.466900 [debug] [MainThread]: Parsing macros/schema_tests/equal_rowcount.sql
+[0m00:34:00.471722 [debug] [MainThread]: Parsing macros/schema_tests/equality.sql
+[0m00:34:00.479671 [debug] [MainThread]: Parsing macros/schema_tests/expression_is_true.sql
+[0m00:34:00.484770 [debug] [MainThread]: Parsing macros/schema_tests/fewer_rows_than.sql
+[0m00:34:00.489414 [debug] [MainThread]: Parsing macros/schema_tests/mutually_exclusive_ranges.sql
+[0m00:34:00.508448 [debug] [MainThread]: Parsing macros/schema_tests/not_accepted_values.sql
+[0m00:34:00.514671 [debug] [MainThread]: Parsing macros/schema_tests/not_constant.sql
+[0m00:34:00.519100 [debug] [MainThread]: Parsing macros/schema_tests/not_null_proportion.sql
+[0m00:34:00.524669 [debug] [MainThread]: Parsing macros/schema_tests/recency.sql
+[0m00:34:00.529518 [debug] [MainThread]: Parsing macros/schema_tests/relationships_where.sql
+[0m00:34:00.535364 [debug] [MainThread]: Parsing macros/schema_tests/sequential_values.sql
+[0m00:34:00.541686 [debug] [MainThread]: Parsing macros/schema_tests/test_not_null_where.sql
+[0m00:34:00.545779 [debug] [MainThread]: Parsing macros/schema_tests/test_unique_where.sql
+[0m00:34:00.549853 [debug] [MainThread]: Parsing macros/schema_tests/unique_combination_of_columns.sql
+[0m00:34:00.556539 [debug] [MainThread]: Parsing macros/sql/date_spine.sql
+[0m00:34:00.565953 [debug] [MainThread]: Parsing macros/sql/generate_series.sql
+[0m00:34:00.575119 [debug] [MainThread]: Parsing macros/sql/get_column_values.sql
+[0m00:34:00.584710 [debug] [MainThread]: Parsing macros/sql/get_query_results_as_dict.sql
+[0m00:34:00.589403 [debug] [MainThread]: Parsing macros/sql/get_relations_by_pattern.sql
+[0m00:34:00.595611 [debug] [MainThread]: Parsing macros/sql/get_relations_by_prefix.sql
+[0m00:34:00.601792 [debug] [MainThread]: Parsing macros/sql/get_tables_by_pattern_sql.sql
+[0m00:34:00.613213 [debug] [MainThread]: Parsing macros/sql/get_tables_by_prefix_sql.sql
+[0m00:34:00.619881 [debug] [MainThread]: Parsing macros/sql/groupby.sql
+[0m00:34:00.625101 [debug] [MainThread]: Parsing macros/sql/haversine_distance.sql
+[0m00:34:00.649810 [debug] [MainThread]: Parsing macros/sql/nullcheck.sql
+[0m00:34:00.658559 [debug] [MainThread]: Parsing macros/sql/nullcheck_table.sql
+[0m00:34:00.673793 [debug] [MainThread]: Parsing macros/sql/pivot.sql
+[0m00:34:00.688466 [debug] [MainThread]: Parsing macros/sql/safe_add.sql
+[0m00:34:00.695917 [debug] [MainThread]: Parsing macros/sql/star.sql
+[0m00:34:00.711341 [debug] [MainThread]: Parsing macros/sql/surrogate_key.sql
+[0m00:34:00.721614 [debug] [MainThread]: Parsing macros/sql/union.sql
+[0m00:34:00.744617 [debug] [MainThread]: Parsing macros/sql/unpivot.sql
+[0m00:34:00.762201 [debug] [MainThread]: Parsing macros/web/get_url_host.sql
+[0m00:34:00.767787 [debug] [MainThread]: Parsing macros/web/get_url_parameter.sql
+[0m00:34:00.771642 [debug] [MainThread]: Parsing macros/web/get_url_path.sql
+
+
+============================== 2022-12-13 00:34:00.848619 | 34fb8792-6d99-4dbf-9432-bd2859b786dc ==============================
+[0m00:34:00.848693 [info ] [MainThread]: Running with dbt=1.3.0
+[0m00:34:00.850631 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/usr/local/airflow/include/dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'project_dir': '/usr/local/airflow/include/dbt/mrr-playbook', 'compile': True, 'which': 'generate', 'rpc_method': 'docs.generate', 'indirect_selection': 'eager'}
+[0m00:34:00.853210 [debug] [MainThread]: Tracking: tracking
+[0m00:34:00.855357 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc098a1e910>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc098a1e8b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc098a1e850>]}
+[0m00:34:02.216019 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m00:34:02.232729 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m00:34:02.303266 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '34fb8792-6d99-4dbf-9432-bd2859b786dc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc09803f0d0>]}
+[0m00:34:02.463297 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '34fb8792-6d99-4dbf-9432-bd2859b786dc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc098135c40>]}
+[0m00:34:02.476708 [info ] [MainThread]: Found 4 models, 21 tests, 0 snapshots, 0 analyses, 491 macros, 0 operations, 1 seed file, 0 sources, 0 exposures, 0 metrics
+[0m00:34:02.489897 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '34fb8792-6d99-4dbf-9432-bd2859b786dc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc098135a30>]}
+[0m00:34:02.512471 [info ] [MainThread]: 
+[0m00:34:02.527219 [debug] [MainThread]: Acquiring new snowflake connection "master"
+[0m00:34:02.548382 [debug] [ThreadPool]: Acquiring new snowflake connection "list_CS_DEV_demo"
+[0m00:34:02.661656 [debug] [ThreadPool]: Using snowflake connection "list_CS_DEV_demo"
+[0m00:34:02.674069 [debug] [ThreadPool]: On list_CS_DEV_demo: /* {"app": "dbt", "dbt_version": "1.3.0", "profile_name": "my-snowflake-db", "target_name": "dev", "connection_name": "list_CS_DEV_demo"} */
+show terse objects in CS_DEV.demo
+[0m00:34:02.685780 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m00:34:04.618526 [debug] [ThreadPool]: SQL status: SUCCESS 7 in 1.93 seconds
+[0m00:34:04.641222 [debug] [ThreadPool]: On list_CS_DEV_demo: Close
+[0m00:34:04.861215 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '34fb8792-6d99-4dbf-9432-bd2859b786dc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc09800dc70>]}
+[0m00:34:04.880478 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m00:34:04.894402 [info ] [MainThread]: 
+[0m00:34:04.997425 [debug] [Thread-1  ]: Began running node model.acme.util_months
+[0m00:34:05.013323 [debug] [Thread-1  ]: Acquiring new snowflake connection "model.acme.util_months"
+[0m00:34:05.025020 [debug] [Thread-1  ]: Began compiling node model.acme.util_months
+[0m00:34:05.036227 [debug] [Thread-1  ]: Compiling model.acme.util_months
+[0m00:34:05.164121 [debug] [Thread-1  ]: Using snowflake connection "model.acme.util_months"
+[0m00:34:05.175019 [debug] [Thread-1  ]: On model.acme.util_months: /* {"app": "dbt", "dbt_version": "1.3.0", "profile_name": "my-snowflake-db", "target_name": "dev", "node_id": "model.acme.util_months"} */
+select 
+
+    datediff(
+        month,
+        '2018-01-01'::date,
+        date_trunc('month', current_date)
+        )
+[0m00:34:05.185304 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
