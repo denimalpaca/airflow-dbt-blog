@@ -15,7 +15,9 @@ from airflow.utils.task_group import TaskGroup
 from include.utils.team_args import args
 
 args["owner"] = "01-EXTRACT"
+# These are blobs based on the Jaffle Shop dbt example
 blobs = ["raw_customers", "ad_spend", "customer_conversions", "raw_orders", "sessions", "raw_payments", "subscription_periods"]
+# Rename the below connector_ids to match your Fivetran environment
 fivetran_connector_ids = [
     "pointy_reprise", "report_hopeful", "cropping_limitation",
     "efficacy_dearest", "cater_aristocratic", "smith_administrative",
