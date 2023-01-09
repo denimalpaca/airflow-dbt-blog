@@ -4,5 +4,6 @@
 astro
 target/
 logs/
-*__pycache__*
 venv/
+include/build/*
+*__pycache__*
