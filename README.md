@@ -5,17 +5,18 @@ This is a modified version of the airflow-dbt-blog repository created by Chris H
 ## Usage
 
 To use this repo, create a .env file with the following entries:
-SNOWFLAKE_ACCOUNT
-SNOWFLAKE_USER
-SNOWFLAKE_PASSWORD
-ENV
-DBT_DATABASE
-DBT_WAREHOUSE
-OPENLINEAGE_URL # if not running on the Astro platform
-OPENLINEAGE_API_KEY # if not running on the Astro platform
-OPENLINEAGE_NAMESPACE # if not running on the Astro platform
-AIRFLOW__SECRETS__BACKEND
-AIRFLOW__SECRETS__BACKEND_KWARGS
+
+- SNOWFLAKE_ACCOUNT
+- SNOWFLAKE_USER
+- SNOWFLAKE_PASSWORD
+- ENV
+- DBT_DATABASE
+- DBT_WAREHOUSE
+- OPENLINEAGE_URL # if not running on the Astro platform
+- OPENLINEAGE_API_KEY # if not running on the Astro platform
+- OPENLINEAGE_NAMESPACE # if not running on the Astro platform
+- AIRFLOW__SECRETS__BACKEND
+- AIRFLOW__SECRETS__BACKEND_KWARGS
 
 If you are not using an Airflow secrets backend, ensure you have credentials properly set up for whichever backend your Fivetran pipeline ingests data from.
 
