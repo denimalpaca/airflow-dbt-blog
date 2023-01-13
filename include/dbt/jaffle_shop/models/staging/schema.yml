@@ -1,5 +1,12 @@
 version: 2
 
+sources:
+  - name: demo
+    tables:
+      - name: raw_customers
+      - name: raw_payments
+      - name: raw_orders
+
 models:
   - name: stg_customers
     columns:

@@ -24,6 +24,8 @@ RUN chmod -R 777 /usr/bin/dbt
 RUN cp -r /usr/local/airflow/include/fivetran_provider /usr/local/lib/python3.9/site-packages/ && \
     cp -r /usr/local/airflow/include/airflow_provider_fivetran-1.1.3.dist-info /usr/local/lib/python3.9/site-packages/ && \
     cp -r /usr/local/airflow/include/fivetran_provider_async /usr/local/lib/python3.9/site-packages/ && \
-    cp -r /usr/local/airflow/include/airflow_provider_fivetran_async-1.0.0a4.dist-info /usr/local/lib/python3.9/site-packages/
+    cp -r /usr/local/airflow/include/airflow_provider_fivetran_async-1.0.0a4.dist-info /usr/local/lib/python3.9/site-packages/ && \
+    cp -r /usr/local/airflow/include/cosmos /usr/local/lib/python3.9/site-packages/ && \
+    cp -r /usr/local/airflow/include/astronomer_cosmos-0.2.0.dist-info /usr/local/lib/python3.9/site-packages/
 
 USER astro

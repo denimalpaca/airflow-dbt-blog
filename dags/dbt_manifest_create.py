@@ -10,6 +10,8 @@ from datetime import datetime
 
 from airflow import DAG
 from airflow.operators.bash import BashOperator
+from include.utils.dbt_env import dbt_env_vars
+
 
 DBT_PROJECT_DIR = "/usr/local/airflow/include/dbt"
 
@@ -30,6 +32,7 @@ with DAG(
         bash_command=(
             f"dbt ls --profiles-dir {DBT_PROJECT_DIR} --project-dir {DBT_PROJECT_DIR}/jaffle_shop"
         ),
+        env=dbt_env_vars
     )
 
     mrr_playbook_ls = BashOperator(
@@ -37,12 +40,14 @@ with DAG(
         bash_command=(
             f"dbt deps --profiles-dir {DBT_PROJECT_DIR} --project-dir {DBT_PROJECT_DIR}/mrr-playbook && \
              dbt ls --profiles-dir {DBT_PROJECT_DIR} --project-dir {DBT_PROJECT_DIR}/mrr-playbook"
-        )
+        ),
+        env=dbt_env_vars
     )
 
     attribution_playbook = BashOperator(
         task_id="attribution_playbook_manifest",
         bash_command=(
             f"dbt ls --profiles-dir {DBT_PROJECT_DIR} --project-dir {DBT_PROJECT_DIR}/attribution-playbook"
-        )
+        ),
+        env=dbt_env_vars
     )

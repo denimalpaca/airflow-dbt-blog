@@ -7,14 +7,28 @@
 
 airflow:
   connections:
-    - conn_id: postgres
-      conn_type: postgres
-      conn_host: postgres
-      conn_schema: public
-      conn_login: postgres
-      conn_password: postgres
-      conn_port: 5432
-      conn_extra: ''
+    - conn_id: fivetran_default
+      conn_type: fivetran
+      description: ''
+      extra: ''
+      host: ''
+      login: igwsWZWRVLctjzkE
+      password: vWz9vc3fGaTSqzgfVkZiMzF4vh6yjmvv
+      port: null
+      schema: ''
+    - conn_id: snowflake_default
+      conn_type: snowflake
+      description: ''
+      extra: '{"extra__snowflake__account": "gp21411", "extra__snowflake__database": "SANDBOX",
+        "extra__snowflake__insecure_mode": false, "extra__snowflake__region": "us-east-1",
+        "extra__snowflake__role": "BENJI", "extra__snowflake__warehouse": "DEMO", "extra__snowflake__aws_access_key_id":
+        "AKIAYEO4VWCFGQB7GE3Z", "extra__snowflake__aws_secret_access_key": "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",
+        "insecure_mode": false}'
+      host: gp21411.us-east-1.snowflakecomputing.com
+      login: benji
+      password: uyg6fU4MYF3YDrfZwHWM
+      port: null
+      schema: BENJI
   pools:
     - pool_name:
       pool_slot:
@@ -22,4 +36,3 @@ airflow:
   variables:
     - variable_name:
       variable_value:
-
