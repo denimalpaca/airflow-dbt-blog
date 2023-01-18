@@ -1,6 +1,6 @@
 with subscription_periods as (
 
-    select * from {{ ref('subscription_periods') }}
+    select * from {{ source('demo', 'subscription_periods') }}
 
 ),
 

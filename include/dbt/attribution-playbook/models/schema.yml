@@ -1,5 +1,11 @@
 version: 2
 
+sources:
+  - name: demo
+    tables:
+      - name: sessions
+      - name: customer_conversions
+
 models:
   - name: attribution_touches
     description: One record per web session prior to conversion AND within the last 30 days.

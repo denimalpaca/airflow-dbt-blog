@@ -1,6 +1,5 @@
 name: acme
 
-profile: 'my-snowflake-db'
 version: '1.0'
 config-version: 2
 

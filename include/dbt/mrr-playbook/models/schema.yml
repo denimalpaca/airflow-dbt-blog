@@ -1,5 +1,10 @@
 version: 2
 
+sources:
+  - name: demo
+    tables:
+      - name: subscription_periods
+
 models:
   - name: subscription_periods
     tests:

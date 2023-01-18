@@ -1,12 +1,12 @@
 with sessions as (
 
-    select * from {{ ref('sessions') }}
+    select * from {{ source('demo', 'sessions') }}
 
 ),
 
 customer_conversions as (
 
-    select * from {{ ref('customer_conversions') }}
+    select * from {{ source('demo', 'customer_conversions') }}
 
 ),
 
