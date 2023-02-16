@@ -1,4 +1,0 @@
-build
-fivetran_provider_async
-tests
-venv

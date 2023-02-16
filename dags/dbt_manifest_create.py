@@ -30,7 +30,7 @@ with DAG(
     jaffle_shop_ls = BashOperator(
         task_id="jaffle_shop_manifest",
         bash_command=(
-            f"dbt ls --profiles-dir {DBT_PROJECT_DIR} --project-dir {DBT_PROJECT_DIR}/jaffle_shop"
+            f"dbt ls --project-dir {DBT_PROJECT_DIR}/jaffle_shop"
         ),
         env=dbt_env_vars
     )
@@ -38,8 +38,8 @@ with DAG(
     mrr_playbook_ls = BashOperator(
         task_id="mrr_playbook_manifest",
         bash_command=(
-            f"dbt deps --profiles-dir {DBT_PROJECT_DIR} --project-dir {DBT_PROJECT_DIR}/mrr-playbook && \
-             dbt ls --profiles-dir {DBT_PROJECT_DIR} --project-dir {DBT_PROJECT_DIR}/mrr-playbook"
+            f"dbt deps --project-dir {DBT_PROJECT_DIR}/mrr-playbook && \
+             dbt ls --project-dir {DBT_PROJECT_DIR}/mrr-playbook"
         ),
         env=dbt_env_vars
     )
@@ -47,7 +47,7 @@ with DAG(
     attribution_playbook = BashOperator(
         task_id="attribution_playbook_manifest",
         bash_command=(
-            f"dbt ls --profiles-dir {DBT_PROJECT_DIR} --project-dir {DBT_PROJECT_DIR}/attribution-playbook"
+            f"dbt ls --project-dir {DBT_PROJECT_DIR}/attribution-playbook"
         ),
         env=dbt_env_vars
     )
